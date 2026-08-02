@@ -1,5 +1,1679 @@
 [
   {
+    "id": 101,
+    "word": "zero",
+    "pos": "n.",
+    "meaning": "零",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 102,
+        "word_id": 101,
+        "sentence": "The score is zero to zero.",
+        "translation": "比分是零比零。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20score%20is%20zero%20to%20zero.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=zero&op=translate"
+  },
+  {
+    "id": 100,
+    "word": "yesterday",
+    "pos": "n.",
+    "meaning": "昨天",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 101,
+        "word_id": 100,
+        "sentence": "I went fishing yesterday.",
+        "translation": "我昨天去釣魚了。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20went%20fishing%20yesterday.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=yesterday&op=translate"
+  },
+  {
+    "id": 99,
+    "word": "young",
+    "pos": "adj.",
+    "meaning": "年輕的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 100,
+        "word_id": 99,
+        "sentence": "My uncle is young and strong.",
+        "translation": "我叔叔又年輕又強壯。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20uncle%20is%20young%20and%20strong.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=young&op=translate"
+  },
+  {
+    "id": 98,
+    "word": "zoo",
+    "pos": "n.",
+    "meaning": "動物園",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 99,
+        "word_id": 98,
+        "sentence": "We saw a panda at the zoo.",
+        "translation": "我們在動物園看到了熊貓。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20saw%20a%20panda%20at%20the%20zoo.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=zoo&op=translate"
+  },
+  {
+    "id": 97,
+    "word": "write",
+    "pos": "v.",
+    "meaning": "寫",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 98,
+        "word_id": 97,
+        "sentence": "Please write your name on the paper.",
+        "translation": "請在紙上寫下你的名字。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20write%20your%20name%20on%20the%20paper.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=write&op=translate"
+  },
+  {
+    "id": 96,
+    "word": "worry",
+    "pos": "v.",
+    "meaning": "擔心",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 97,
+        "word_id": 96,
+        "sentence": "Don't worry. Everything will be fine.",
+        "translation": "別擔心，一切都會沒事的。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Don%27t%20worry.%20Everything%20will%20be%20fine.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=worry&op=translate"
+  },
+  {
+    "id": 95,
+    "word": "wonderful",
+    "pos": "adj.",
+    "meaning": "美妙的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 96,
+        "word_id": 95,
+        "sentence": "We had a wonderful time at the party.",
+        "translation": "我們在派對上度過了美妙的時光。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20had%20a%20wonderful%20time%20at%20the%20party.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=wonderful&op=translate"
+  },
+  {
+    "id": 94,
+    "word": "winter",
+    "pos": "n.",
+    "meaning": "冬天",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 95,
+        "word_id": 94,
+        "sentence": "It is cold in winter.",
+        "translation": "冬天很冷。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=It%20is%20cold%20in%20winter.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=winter&op=translate"
+  },
+  {
+    "id": 93,
+    "word": "window",
+    "pos": "n.",
+    "meaning": "窗戶",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 94,
+        "word_id": 93,
+        "sentence": "Open the window, please.",
+        "translation": "請打開窗戶。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Open%20the%20window%2C%20please.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=window&op=translate"
+  },
+  {
+    "id": 92,
+    "word": "welcome",
+    "pos": "v.",
+    "meaning": "歡迎",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 93,
+        "word_id": 92,
+        "sentence": "Welcome to our school!",
+        "translation": "歡迎來到我們的學校！",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Welcome%20to%20our%20school%21&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=welcome&op=translate"
+  },
+  {
+    "id": 91,
+    "word": "weekend",
+    "pos": "n.",
+    "meaning": "週末",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 92,
+        "word_id": 91,
+        "sentence": "What do you do on the weekend?",
+        "translation": "你週末都做什麼？",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=What%20do%20you%20do%20on%20the%20weekend%3F&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=weekend&op=translate"
+  },
+  {
+    "id": 90,
+    "word": "weather",
+    "pos": "n.",
+    "meaning": "天氣",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 91,
+        "word_id": 90,
+        "sentence": "The weather is sunny today.",
+        "translation": "今天天氣晴朗。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20weather%20is%20sunny%20today.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=weather&op=translate"
+  },
+  {
+    "id": 89,
+    "word": "walk",
+    "pos": "v.",
+    "meaning": "走路",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 90,
+        "word_id": 89,
+        "sentence": "I walk to school with my brother.",
+        "translation": "我和弟弟走路去上學。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20walk%20to%20school%20with%20my%20brother.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=walk&op=translate"
+  },
+  {
+    "id": 88,
+    "word": "wait",
+    "pos": "v.",
+    "meaning": "等待",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 89,
+        "word_id": 88,
+        "sentence": "Please wait for me at the door.",
+        "translation": "請在門口等我。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20wait%20for%20me%20at%20the%20door.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=wait&op=translate"
+  },
+  {
+    "id": 87,
+    "word": "visit",
+    "pos": "v.",
+    "meaning": "拜訪",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 88,
+        "word_id": 87,
+        "sentence": "We visit our grandpa on Sundays.",
+        "translation": "我們星期天去看爺爺。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20visit%20our%20grandpa%20on%20Sundays.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=visit&op=translate"
+  },
+  {
+    "id": 86,
+    "word": "village",
+    "pos": "n.",
+    "meaning": "村莊",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 87,
+        "word_id": 86,
+        "sentence": "My grandma lives in a small village.",
+        "translation": "我奶奶住在一個小村莊。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20grandma%20lives%20in%20a%20small%20village.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=village&op=translate"
+  },
+  {
+    "id": 85,
+    "word": "umbrella",
+    "pos": "n.",
+    "meaning": "雨傘",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 86,
+        "word_id": 85,
+        "sentence": "Take your umbrella. It may rain.",
+        "translation": "帶你的雨傘，可能會下雨。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Take%20your%20umbrella.%20It%20may%20rain.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=umbrella&op=translate"
+  },
+  {
+    "id": 84,
+    "word": "trip",
+    "pos": "n.",
+    "meaning": "旅行",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 85,
+        "word_id": 84,
+        "sentence": "We had a great trip to the farm.",
+        "translation": "我們去農場旅行玩得很開心。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20had%20a%20great%20trip%20to%20the%20farm.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=trip&op=translate"
+  },
+  {
+    "id": 83,
+    "word": "tree",
+    "pos": "n.",
+    "meaning": "樹",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 84,
+        "word_id": 83,
+        "sentence": "The bird is singing in the tree.",
+        "translation": "鳥在樹上唱歌。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20bird%20is%20singing%20in%20the%20tree.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=tree&op=translate"
+  },
+  {
+    "id": 82,
+    "word": "travel",
+    "pos": "v.",
+    "meaning": "旅行",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 83,
+        "word_id": 82,
+        "sentence": "We travel to Japan every year.",
+        "translation": "我們每年都去日本旅行。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20travel%20to%20Japan%20every%20year.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=travel&op=translate"
+  },
+  {
+    "id": 81,
+    "word": "tired",
+    "pos": "adj.",
+    "meaning": "疲勞的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 82,
+        "word_id": 81,
+        "sentence": "I am tired after running.",
+        "translation": "跑步後我覺得很累。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20am%20tired%20after%20running.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=tired&op=translate"
+  },
+  {
+    "id": 80,
+    "word": "ticket",
+    "pos": "n.",
+    "meaning": "票",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 81,
+        "word_id": 80,
+        "sentence": "I bought a ticket for the movie.",
+        "translation": "我買了一張電影票。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20bought%20a%20ticket%20for%20the%20movie.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=ticket&op=translate"
+  },
+  {
+    "id": 79,
+    "word": "thirsty",
+    "pos": "adj.",
+    "meaning": "口渴的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 80,
+        "word_id": 79,
+        "sentence": "I am thirsty. May I have some water?",
+        "translation": "我口渴了，可以喝點水嗎？",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20am%20thirsty.%20May%20I%20have%20some%20water%3F&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=thirsty&op=translate"
+  },
+  {
+    "id": 78,
+    "word": "thank",
+    "pos": "v.",
+    "meaning": "感謝",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 79,
+        "word_id": 78,
+        "sentence": "Thank you for helping me.",
+        "translation": "謝謝你幫助我。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Thank%20you%20for%20helping%20me.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=thank&op=translate"
+  },
+  {
+    "id": 77,
+    "word": "teacher",
+    "pos": "n.",
+    "meaning": "老師",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 78,
+        "word_id": 77,
+        "sentence": "Our teacher is very nice.",
+        "translation": "我們的老師非常好。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Our%20teacher%20is%20very%20nice.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=teacher&op=translate"
+  },
+  {
+    "id": 76,
+    "word": "teach",
+    "pos": "v.",
+    "meaning": "教",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 77,
+        "word_id": 76,
+        "sentence": "My sister teaches me to draw.",
+        "translation": "我姊姊教我畫畫。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20sister%20teaches%20me%20to%20draw.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=teach&op=translate"
+  },
+  {
+    "id": 75,
+    "word": "swim",
+    "pos": "v.",
+    "meaning": "游泳",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 76,
+        "word_id": 75,
+        "sentence": "Fish swim in the water.",
+        "translation": "魚在水裡游泳。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Fish%20swim%20in%20the%20water.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=swim&op=translate"
+  },
+  {
+    "id": 74,
+    "word": "summer",
+    "pos": "n.",
+    "meaning": "夏天",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 75,
+        "word_id": 74,
+        "sentence": "We go swimming in summer.",
+        "translation": "我們夏天去游泳。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20go%20swimming%20in%20summer.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=summer&op=translate"
+  },
+  {
+    "id": 73,
+    "word": "study",
+    "pos": "v.",
+    "meaning": "讀書",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 74,
+        "word_id": 73,
+        "sentence": "I study English every evening.",
+        "translation": "我每天晚上讀英文。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20study%20English%20every%20evening.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=study&op=translate"
+  },
+  {
+    "id": 72,
+    "word": "strong",
+    "pos": "adj.",
+    "meaning": "強壯的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 73,
+        "word_id": 72,
+        "sentence": "He is strong because he swims a lot.",
+        "translation": "他很強壯，因為他常游泳。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=He%20is%20strong%20because%20he%20swims%20a%20lot.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=strong&op=translate"
+  },
+  {
+    "id": 71,
+    "word": "spring",
+    "pos": "n.",
+    "meaning": "春天",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 72,
+        "word_id": 71,
+        "sentence": "Flowers bloom in spring.",
+        "translation": "花在春天盛開。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Flowers%20bloom%20in%20spring.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=spring&op=translate"
+  },
+  {
+    "id": 70,
+    "word": "snack",
+    "pos": "n.",
+    "meaning": "點心",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 71,
+        "word_id": 70,
+        "sentence": "I eat a snack after school.",
+        "translation": "我放學後吃點心。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20eat%20a%20snack%20after%20school.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=snack&op=translate"
+  },
+  {
+    "id": 69,
+    "word": "sleep",
+    "pos": "v.",
+    "meaning": "睡覺",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 70,
+        "word_id": 69,
+        "sentence": "The baby is sleeping now.",
+        "translation": "寶寶現在正在睡覺。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20baby%20is%20sleeping%20now.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=sleep&op=translate"
+  },
+  {
+    "id": 68,
+    "word": "sing",
+    "pos": "v.",
+    "meaning": "唱歌",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 69,
+        "word_id": 68,
+        "sentence": "She can sing very well.",
+        "translation": "她唱歌唱得很好。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=She%20can%20sing%20very%20well.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=sing&op=translate"
+  },
+  {
+    "id": 67,
+    "word": "shop",
+    "pos": "n.",
+    "meaning": "商店",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 68,
+        "word_id": 67,
+        "sentence": "The toy shop is near the station.",
+        "translation": "玩具店在車站附近。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20toy%20shop%20is%20near%20the%20station.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=shop&op=translate"
+  },
+  {
+    "id": 66,
+    "word": "season",
+    "pos": "n.",
+    "meaning": "季節",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 67,
+        "word_id": 66,
+        "sentence": "Which season do you like best?",
+        "translation": "你最喜歡哪個季節？",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Which%20season%20do%20you%20like%20best%3F&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=season&op=translate"
+  },
+  {
+    "id": 65,
+    "word": "school",
+    "pos": "n.",
+    "meaning": "學校",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 66,
+        "word_id": 65,
+        "sentence": "Our school is big and clean.",
+        "translation": "我們的學校又大又乾淨。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Our%20school%20is%20big%20and%20clean.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=school&op=translate"
+  },
+  {
+    "id": 64,
+    "word": "sad",
+    "pos": "adj.",
+    "meaning": "悲傷的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 65,
+        "word_id": 64,
+        "sentence": "The little girl looks sad today.",
+        "translation": "小女孩今天看起來很傷心。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20little%20girl%20looks%20sad%20today.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=sad&op=translate"
+  },
+  {
+    "id": 63,
+    "word": "run",
+    "pos": "v.",
+    "meaning": "跑步",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 64,
+        "word_id": 63,
+        "sentence": "I run in the park every morning.",
+        "translation": "我每天早上在公園跑步。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20run%20in%20the%20park%20every%20morning.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=run&op=translate"
+  },
+  {
+    "id": 62,
+    "word": "river",
+    "pos": "n.",
+    "meaning": "河流",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 63,
+        "word_id": 62,
+        "sentence": "There is a long river near my house.",
+        "translation": "我家附近有一條長長的河流。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=There%20is%20a%20long%20river%20near%20my%20house.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=river&op=translate"
+  },
+  {
+    "id": 61,
+    "word": "restaurant",
+    "pos": "n.",
+    "meaning": "餐廳",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 62,
+        "word_id": 61,
+        "sentence": "We ate dinner at a new restaurant.",
+        "translation": "我們在一家新餐廳吃晚餐。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20ate%20dinner%20at%20a%20new%20restaurant.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=restaurant&op=translate"
+  },
+  {
+    "id": 60,
+    "word": "read",
+    "pos": "v.",
+    "meaning": "閱讀",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 61,
+        "word_id": 60,
+        "sentence": "I read a storybook every night.",
+        "translation": "我每天晚上讀一本故事書。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20read%20a%20storybook%20every%20night.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=read&op=translate"
+  },
+  {
+    "id": 59,
+    "word": "quiet",
+    "pos": "adj.",
+    "meaning": "安靜的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 60,
+        "word_id": 59,
+        "sentence": "The library is very quiet.",
+        "translation": "圖書館非常安靜。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20library%20is%20very%20quiet.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=quiet&op=translate"
+  },
+  {
+    "id": 58,
+    "word": "pretty",
+    "pos": "adj.",
+    "meaning": "漂亮的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 59,
+        "word_id": 58,
+        "sentence": "She wears a pretty dress.",
+        "translation": "她穿了一件漂亮的洋裝。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=She%20wears%20a%20pretty%20dress.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=pretty&op=translate"
+  },
+  {
+    "id": 57,
+    "word": "present",
+    "pos": "n.",
+    "meaning": "禮物",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 58,
+        "word_id": 57,
+        "sentence": "I got a nice present for my birthday.",
+        "translation": "我生日收到一份好禮物。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20got%20a%20nice%20present%20for%20my%20birthday.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=present&op=translate"
+  },
+  {
+    "id": 56,
+    "word": "play",
+    "pos": "v.",
+    "meaning": "玩耍",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 57,
+        "word_id": 56,
+        "sentence": "The children play in the yard.",
+        "translation": "孩子們在院子裡玩耍。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20children%20play%20in%20the%20yard.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=play&op=translate"
+  },
+  {
+    "id": 55,
+    "word": "plant",
+    "pos": "n.",
+    "meaning": "植物",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 56,
+        "word_id": 55,
+        "sentence": "This plant needs more sunlight.",
+        "translation": "這株植物需要更多陽光。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=This%20plant%20needs%20more%20sunlight.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=plant&op=translate"
+  },
+  {
+    "id": 54,
+    "word": "picnic",
+    "pos": "n.",
+    "meaning": "野餐",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 55,
+        "word_id": 54,
+        "sentence": "Let's have a picnic on the grass.",
+        "translation": "我們在草地上野餐吧。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Let%27s%20have%20a%20picnic%20on%20the%20grass.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=picnic&op=translate"
+  },
+  {
+    "id": 53,
+    "word": "park",
+    "pos": "n.",
+    "meaning": "公園",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 54,
+        "word_id": 53,
+        "sentence": "We play ball in the park.",
+        "translation": "我們在公園裡玩球。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20play%20ball%20in%20the%20park.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=park&op=translate"
+  },
+  {
+    "id": 52,
+    "word": "ocean",
+    "pos": "n.",
+    "meaning": "海洋",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 53,
+        "word_id": 52,
+        "sentence": "The ocean is deep and blue.",
+        "translation": "海洋又深又藍。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20ocean%20is%20deep%20and%20blue.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=ocean&op=translate"
+  },
+  {
+    "id": 51,
+    "word": "neighbor",
+    "pos": "n.",
+    "meaning": "鄰居",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 52,
+        "word_id": 51,
+        "sentence": "Our neighbor has a cute dog.",
+        "translation": "我們的鄰居養了一隻可愛的狗。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Our%20neighbor%20has%20a%20cute%20dog.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=neighbor&op=translate"
+  },
+  {
+    "id": 50,
+    "word": "music",
+    "pos": "n.",
+    "meaning": "音樂",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 51,
+        "word_id": 50,
+        "sentence": "I listen to music before bed.",
+        "translation": "我睡覺前會聽音樂。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20listen%20to%20music%20before%20bed.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=music&op=translate"
+  },
+  {
+    "id": 49,
+    "word": "museum",
+    "pos": "n.",
+    "meaning": "博物館",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 50,
+        "word_id": 49,
+        "sentence": "There are many old things in the museum.",
+        "translation": "博物館裡有很多古老的東西。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=There%20are%20many%20old%20things%20in%20the%20museum.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=museum&op=translate"
+  },
+  {
+    "id": 48,
+    "word": "mountain",
+    "pos": "n.",
+    "meaning": "山",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 49,
+        "word_id": 48,
+        "sentence": "The mountain is very tall.",
+        "translation": "這座山非常高。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20mountain%20is%20very%20tall.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=mountain&op=translate"
+  },
+  {
+    "id": 47,
+    "word": "market",
+    "pos": "n.",
+    "meaning": "市場",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 48,
+        "word_id": 47,
+        "sentence": "Mom buys fish at the market.",
+        "translation": "媽媽在市場買魚。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Mom%20buys%20fish%20at%20the%20market.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=market&op=translate"
+  },
+  {
+    "id": 46,
+    "word": "lunch",
+    "pos": "n.",
+    "meaning": "午餐",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 47,
+        "word_id": 46,
+        "sentence": "We have lunch at noon.",
+        "translation": "我們中午吃午餐。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20have%20lunch%20at%20noon.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=lunch&op=translate"
+  },
+  {
+    "id": 45,
+    "word": "lucky",
+    "pos": "adj.",
+    "meaning": "幸運的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 46,
+        "word_id": 45,
+        "sentence": "You are lucky to find the money.",
+        "translation": "你找到錢真是幸運。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=You%20are%20lucky%20to%20find%20the%20money.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=lucky&op=translate"
+  },
+  {
+    "id": 44,
+    "word": "listen",
+    "pos": "v.",
+    "meaning": "聽",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 45,
+        "word_id": 44,
+        "sentence": "Please listen to the teacher carefully.",
+        "translation": "請仔細聽老師說話。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20listen%20to%20the%20teacher%20carefully.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=listen&op=translate"
+  },
+  {
+    "id": 43,
+    "word": "library",
+    "pos": "n.",
+    "meaning": "圖書館",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 44,
+        "word_id": 43,
+        "sentence": "I borrow books from the library.",
+        "translation": "我從圖書館借書。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20borrow%20books%20from%20the%20library.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=library&op=translate"
+  },
+  {
+    "id": 42,
+    "word": "learn",
+    "pos": "v.",
+    "meaning": "學習",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 43,
+        "word_id": 42,
+        "sentence": "We learn new words every day.",
+        "translation": "我們每天學習新單字。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20learn%20new%20words%20every%20day.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=learn&op=translate"
+  },
+  {
+    "id": 41,
+    "word": "kind",
+    "pos": "adj.",
+    "meaning": "親切的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 42,
+        "word_id": 41,
+        "sentence": "The old lady is very kind to us.",
+        "translation": "那位老太太對我們很親切。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20old%20lady%20is%20very%20kind%20to%20us.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=kind&op=translate"
+  },
+  {
+    "id": 40,
+    "word": "juice",
+    "pos": "n.",
+    "meaning": "果汁",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 41,
+        "word_id": 40,
+        "sentence": "I like to drink orange juice.",
+        "translation": "我喜歡喝柳橙汁。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20like%20to%20drink%20orange%20juice.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=juice&op=translate"
+  },
+  {
+    "id": 39,
+    "word": "island",
+    "pos": "n.",
+    "meaning": "島嶼",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 40,
+        "word_id": 39,
+        "sentence": "Taiwan is a beautiful island.",
+        "translation": "台灣是一座美麗的島嶼。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Taiwan%20is%20a%20beautiful%20island.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=island&op=translate"
+  },
+  {
+    "id": 38,
+    "word": "interesting",
+    "pos": "adj.",
+    "meaning": "有趣的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 39,
+        "word_id": 38,
+        "sentence": "This story is very interesting.",
+        "translation": "這個故事非常有趣。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=This%20story%20is%20very%20interesting.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=interesting&op=translate"
+  },
+  {
+    "id": 37,
+    "word": "important",
+    "pos": "adj.",
+    "meaning": "重要的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 38,
+        "word_id": 37,
+        "sentence": "It is important to drink water.",
+        "translation": "喝水很重要。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=It%20is%20important%20to%20drink%20water.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=important&op=translate"
+  },
+  {
+    "id": 36,
+    "word": "hungry",
+    "pos": "adj.",
+    "meaning": "飢餓的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 37,
+        "word_id": 36,
+        "sentence": "I am hungry. Let's have lunch.",
+        "translation": "我餓了，我們吃午餐吧。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20am%20hungry.%20Let%27s%20have%20lunch.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=hungry&op=translate"
+  },
+  {
+    "id": 35,
+    "word": "hospital",
+    "pos": "n.",
+    "meaning": "醫院",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 36,
+        "word_id": 35,
+        "sentence": "The hospital is next to the park.",
+        "translation": "醫院在公園旁邊。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20hospital%20is%20next%20to%20the%20park.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=hospital&op=translate"
+  },
+  {
+    "id": 34,
+    "word": "homework",
+    "pos": "n.",
+    "meaning": "家庭作業",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 35,
+        "word_id": 34,
+        "sentence": "Do your homework after school.",
+        "translation": "放學後要做功課。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Do%20your%20homework%20after%20school.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=homework&op=translate"
+  },
+  {
+    "id": 33,
+    "word": "holiday",
+    "pos": "n.",
+    "meaning": "假日",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 34,
+        "word_id": 33,
+        "sentence": "We are going to Kenting on holiday.",
+        "translation": "我們假期要去墾丁。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20are%20going%20to%20Kenting%20on%20holiday.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=holiday&op=translate"
+  },
+  {
+    "id": 32,
+    "word": "help",
+    "pos": "v.",
+    "meaning": "幫助",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 33,
+        "word_id": 32,
+        "sentence": "Can you help me carry this box?",
+        "translation": "你能幫我搬這個箱子嗎？",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Can%20you%20help%20me%20carry%20this%20box%3F&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=help&op=translate"
+  },
+  {
+    "id": 31,
+    "word": "healthy",
+    "pos": "adj.",
+    "meaning": "健康的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 32,
+        "word_id": 31,
+        "sentence": "Vegetables help us stay healthy.",
+        "translation": "蔬菜幫助我們保持健康。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Vegetables%20help%20us%20stay%20healthy.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=healthy&op=translate"
+  },
+  {
+    "id": 30,
+    "word": "happy",
+    "pos": "adj.",
+    "meaning": "快樂的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 31,
+        "word_id": 30,
+        "sentence": "I am happy to see you again.",
+        "translation": "很高興再見到你。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20am%20happy%20to%20see%20you%20again.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=happy&op=translate"
+  },
+  {
+    "id": 29,
+    "word": "garden",
+    "pos": "n.",
+    "meaning": "花園",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 30,
+        "word_id": 29,
+        "sentence": "Grandma grows vegetables in her garden.",
+        "translation": "奶奶在她的花園裡種蔬菜。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Grandma%20grows%20vegetables%20in%20her%20garden.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=garden&op=translate"
+  },
+  {
+    "id": 28,
+    "word": "fruit",
+    "pos": "n.",
+    "meaning": "水果",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 29,
+        "word_id": 28,
+        "sentence": "Eating fruit is good for you.",
+        "translation": "吃水果對身體很好。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Eating%20fruit%20is%20good%20for%20you.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=fruit&op=translate"
+  },
+  {
+    "id": 27,
+    "word": "friend",
+    "pos": "n.",
+    "meaning": "朋友",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 28,
+        "word_id": 27,
+        "sentence": "Amy is my best friend.",
+        "translation": "艾美是我最好的朋友。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Amy%20is%20my%20best%20friend.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=friend&op=translate"
+  },
+  {
+    "id": 26,
+    "word": "forest",
+    "pos": "n.",
+    "meaning": "森林",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 27,
+        "word_id": 26,
+        "sentence": "Many animals live in the forest.",
+        "translation": "很多動物住在森林裡。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Many%20animals%20live%20in%20the%20forest.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=forest&op=translate"
+  },
+  {
+    "id": 25,
+    "word": "flower",
+    "pos": "n.",
+    "meaning": "花",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 26,
+        "word_id": 25,
+        "sentence": "The flowers in the garden are pretty.",
+        "translation": "花園裡的花很漂亮。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20flowers%20in%20the%20garden%20are%20pretty.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=flower&op=translate"
+  },
+  {
+    "id": 24,
+    "word": "finish",
+    "pos": "v.",
+    "meaning": "完成",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 25,
+        "word_id": 24,
+        "sentence": "I will finish my homework soon.",
+        "translation": "我很快就會完成功課。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20will%20finish%20my%20homework%20soon.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=finish&op=translate"
+  },
+  {
+    "id": 23,
+    "word": "favorite",
+    "pos": "adj.",
+    "meaning": "最喜愛的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 24,
+        "word_id": 23,
+        "sentence": "Blue is my favorite color.",
+        "translation": "藍色是我最喜歡的顏色。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Blue%20is%20my%20favorite%20color.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=favorite&op=translate"
+  },
+  {
+    "id": 22,
+    "word": "farm",
+    "pos": "n.",
+    "meaning": "農場",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 23,
+        "word_id": 22,
+        "sentence": "We visited a big farm last weekend.",
+        "translation": "我們上週末參觀了一個大農場。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20visited%20a%20big%20farm%20last%20weekend.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=farm&op=translate"
+  },
+  {
+    "id": 21,
+    "word": "family",
+    "pos": "n.",
+    "meaning": "家庭",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 22,
+        "word_id": 21,
+        "sentence": "I love my family very much.",
+        "translation": "我非常愛我的家人。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20love%20my%20family%20very%20much.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=family&op=translate"
+  },
+  {
+    "id": 20,
+    "word": "exercise",
+    "pos": "n.",
+    "meaning": "運動",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 21,
+        "word_id": 20,
+        "sentence": "Exercise keeps us healthy.",
+        "translation": "運動讓我們保持健康。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Exercise%20keeps%20us%20healthy.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=exercise&op=translate"
+  },
+  {
+    "id": 19,
+    "word": "easy",
+    "pos": "adj.",
+    "meaning": "容易的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 20,
+        "word_id": 19,
+        "sentence": "This math problem is very easy.",
+        "translation": "這道數學題非常簡單。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=This%20math%20problem%20is%20very%20easy.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=easy&op=translate"
+  },
+  {
+    "id": 18,
+    "word": "early",
+    "pos": "adj.",
+    "meaning": "早的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 19,
+        "word_id": 18,
+        "sentence": "I get up early on school days.",
+        "translation": "上學日我都很早起床。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20get%20up%20early%20on%20school%20days.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=early&op=translate"
+  },
+  {
+    "id": 17,
+    "word": "dream",
+    "pos": "n.",
+    "meaning": "夢想",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 18,
+        "word_id": 17,
+        "sentence": "My dream is to travel around the world.",
+        "translation": "我的夢想是環遊世界。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20dream%20is%20to%20travel%20around%20the%20world.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=dream&op=translate"
+  },
+  {
+    "id": 16,
+    "word": "doctor",
+    "pos": "n.",
+    "meaning": "醫生",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 17,
+        "word_id": 16,
+        "sentence": "The doctor helped the sick boy.",
+        "translation": "醫生幫助了那個生病的男孩。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20doctor%20helped%20the%20sick%20boy.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=doctor&op=translate"
+  },
+  {
+    "id": 15,
+    "word": "dance",
+    "pos": "v.",
+    "meaning": "跳舞",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 16,
+        "word_id": 15,
+        "sentence": "She likes to dance with her friends.",
+        "translation": "她喜歡和朋友們一起跳舞。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=She%20likes%20to%20dance%20with%20her%20friends.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=dance&op=translate"
+  },
+  {
+    "id": 14,
+    "word": "cook",
+    "pos": "v.",
+    "meaning": "烹飪",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 15,
+        "word_id": 14,
+        "sentence": "My dad can cook delicious food.",
+        "translation": "我爸爸會煮好吃的東西。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20dad%20can%20cook%20delicious%20food.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=cook&op=translate"
+  },
+  {
+    "id": 13,
+    "word": "clean",
+    "pos": "v.",
+    "meaning": "打掃",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 14,
+        "word_id": 13,
+        "sentence": "Please clean your room before dinner.",
+        "translation": "晚餐前請打掃你的房間。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20clean%20your%20room%20before%20dinner.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=clean&op=translate"
+  },
+  {
+    "id": 12,
+    "word": "busy",
+    "pos": "adj.",
+    "meaning": "忙碌的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 13,
+        "word_id": 12,
+        "sentence": "My mom is busy in the kitchen.",
+        "translation": "我媽媽在廚房裡忙著。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20mom%20is%20busy%20in%20the%20kitchen.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=busy&op=translate"
+  },
+  {
+    "id": 11,
+    "word": "breakfast",
+    "pos": "n.",
+    "meaning": "早餐",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 12,
+        "word_id": 11,
+        "sentence": "I eat breakfast at seven every day.",
+        "translation": "我每天七點吃早餐。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20eat%20breakfast%20at%20seven%20every%20day.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=breakfast&op=translate"
+  },
+  {
+    "id": 10,
+    "word": "beautiful",
+    "pos": "adj.",
+    "meaning": "漂亮的",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 11,
+        "word_id": 10,
+        "sentence": "What a beautiful flower!",
+        "translation": "多麼漂亮的花啊！",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=What%20a%20beautiful%20flower%21&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=beautiful&op=translate"
+  },
+  {
+    "id": 9,
+    "word": "animal",
+    "pos": "n.",
+    "meaning": "動物",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 10,
+        "word_id": 9,
+        "sentence": "The animal is sleeping in the zoo.",
+        "translation": "動物園裡的動物正在睡覺。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20animal%20is%20sleeping%20in%20the%20zoo.&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=animal&op=translate"
+  },
+  {
     "id": 8,
     "word": "careful",
     "pos": "adj.",
