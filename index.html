@@ -45,7 +45,7 @@ header {
 header h1 { font-size: 22px; }
 header .stats { font-size: 14px; color: var(--muted); margin-left: 16px; }
 .header-right { display: flex; align-items: center; gap: 12px; }
-.tabs { display: flex; gap: 8px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; }
 .tab-btn {
   padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border);
   background: var(--card); color: var(--muted); cursor: pointer; font-size: 15px;
@@ -57,7 +57,13 @@ header .stats { font-size: 14px; color: var(--muted); margin-left: 16px; }
   background: var(--card); color: var(--text); cursor: pointer; font-size: 14px;
 }
 #themeToggle:hover { border-color: var(--primary); }
-main { max-width: 900px; margin: 24px auto; padding: 0 20px; }
+.search-bar { max-width: 900px; margin: 16px auto 0; padding: 0 20px; }
+#searchInput {
+  width: 100%; padding: 10px 16px; border-radius: 24px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); font-size: 15px; outline: none;
+}
+#searchInput:focus { border-color: var(--primary); }
+main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 .page { display: none; }
 .page.active { display: block; }
 .section-title { font-size: 18px; margin: 20px 0 12px; display: flex; align-items: center; gap: 8px; }
@@ -84,6 +90,72 @@ main { max-width: 900px; margin: 24px auto; padding: 0 20px; }
 .example { font-size: 14px; margin-top: 8px; color: var(--muted); line-height: 1.6; }
 .example::before { content: "✏️ 造句："; color: var(--primary); font-weight: 600; }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 15px; }
+.hit { background: rgba(255, 200, 0, .35); border-radius: 3px; padding: 0 2px; }
+
+/* ---------- 學習計畫 ---------- */
+.plan-form-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.plan-form-row label { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
+.plan-form-row input[type="text"], .plan-form-row input[type="date"], .plan-form-row input[type="number"] {
+  padding: 7px 10px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); font-size: 14px; outline: none;
+}
+.plan-form-row input:focus { border-color: var(--primary); }
+.plan-pick { display: flex; gap: 24px; flex-wrap: wrap; }
+.plan-pick > div { flex: 1; min-width: 260px; }
+.plan-pick b { font-size: 15px; }
+.pick-list {
+  max-height: 220px; overflow-y: auto; border: 1px solid var(--border);
+  border-radius: 10px; padding: 8px; margin-top: 8px; background: var(--card);
+}
+.pick-list label { display: block; padding: 4px 8px; font-size: 14px; cursor: pointer; border-radius: 6px; }
+.pick-list label:hover { background: var(--chip); }
+.pick-list input { accent-color: var(--primary); margin-right: 6px; }
+.mini-btn {
+  font-size: 12px; padding: 2px 10px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--card); color: var(--muted); cursor: pointer; margin-left: 6px;
+}
+.mini-btn:hover { border-color: var(--primary); color: var(--primary); }
+.primary-btn {
+  padding: 10px 20px; border-radius: 20px; border: none;
+  background: var(--primary); color: #fff; cursor: pointer; font-size: 15px; font-weight: 600;
+}
+.primary-btn:hover { background: var(--primary-dark); }
+.plan-actions { margin-top: 14px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.plan-toolbar { margin: 16px 0 12px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.ghost-btn {
+  padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); cursor: pointer; font-size: 14px;
+}
+.ghost-btn:hover { border-color: var(--primary); color: var(--primary); }
+.plan-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.plan-name { font-size: 17px; font-weight: 700; color: var(--primary); }
+.plan-meta { font-size: 13px; color: var(--muted); }
+.progress { height: 8px; background: var(--chip); border-radius: 4px; overflow: hidden; margin: 10px 0; }
+.progress > div { height: 100%; background: var(--primary); border-radius: 4px; transition: width .3s; }
+.day-row {
+  display: flex; align-items: center; gap: 12px; padding: 7px 0;
+  border-bottom: 1px dashed var(--border); flex-wrap: wrap;
+}
+.day-row:last-child { border-bottom: none; }
+.day-date { min-width: 105px; font-weight: 600; font-size: 14px; }
+.day-items { display: flex; gap: 8px; flex-wrap: wrap; }
+.day-item {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 14px;
+  padding: 3px 10px; border-radius: 14px; background: var(--chip);
+}
+.day-item input { accent-color: var(--primary); cursor: pointer; }
+.day-item.done { opacity: .5; text-decoration: line-through; }
+.plan-ctrl { display: flex; gap: 8px; }
+.danger-btn {
+  padding: 6px 12px; border-radius: 16px; border: 1px solid var(--danger);
+  background: transparent; color: var(--danger); cursor: pointer; font-size: 13px;
+}
+.danger-btn:hover { background: var(--danger); color: #fff; }
+.plan-empty { text-align: center; color: var(--muted); padding: 30px 0; font-size: 14px; }
+.expand-btn {
+  background: none; border: none; color: var(--primary); cursor: pointer;
+  font-size: 13px; padding: 2px 4px;
+}
 @media (max-width: 600px) {
   header { flex-wrap: wrap; gap: 8px; }
   header .stats { width: 100%; margin-left: 0; }
@@ -101,27 +173,75 @@ main { max-width: 900px; margin: 24px auto; padding: 0 20px; }
     <div class="tabs">
       <button class="tab-btn active" data-tab="en">🇺🇸 英文</button>
       <button class="tab-btn" data-tab="cn">🀄 國語</button>
+      <button class="tab-btn" data-tab="plan">📅 學習計畫</button>
     </div>
     <button id="themeToggle">🌙 黑夜模式</button>
   </div>
 </header>
+
+<div class="search-bar">
+  <input id="searchInput" type="search" placeholder="🔍 模糊搜尋：英文可查單字/中文意思/句子(中英)，國語可查成語/解釋/造句">
+</div>
 
 <main>
   <section id="page-en" class="page active">
     <div class="section-title">🔤 英文單字 & 句子</div>
     <div id="wordsList"></div>
   </section>
+
   <section id="page-cn" class="page">
     <div class="section-title">🀄 國語成語</div>
     <div id="idiomsList"></div>
+  </section>
+
+  <section id="page-plan" class="page">
+    <div class="section-title">📅 學習計畫</div>
+
+    <!-- 建立計畫 -->
+    <div class="card">
+      <div style="font-size:16px;font-weight:700;margin-bottom:12px;">🆕 建立一個月的學習計畫</div>
+      <div class="plan-form-row">
+        <input type="text" id="planName" placeholder="計畫名稱（例如：八月衝刺）" style="min-width:180px;">
+        <label>開始日期 <input type="date" id="planStart"></label>
+        <label>天數 <input type="number" id="planDays" min="1" max="90" value="30" style="width:70px;"></label>
+      </div>
+      <div class="plan-pick">
+        <div>
+          <b>🇺🇸 英文單字</b>
+          <button class="mini-btn" data-sel="en">全選</button>
+          <button class="mini-btn" data-sel="en" data-clear="1">清空</button>
+          <div class="pick-list" id="pickWords"></div>
+        </div>
+        <div>
+          <b>🀄 國語成語</b>
+          <button class="mini-btn" data-sel="cn">全選</button>
+          <button class="mini-btn" data-sel="cn" data-clear="1">清空</button>
+          <div class="pick-list" id="pickIdioms"></div>
+        </div>
+      </div>
+      <div class="plan-actions">
+        <button class="primary-btn" id="btnCreatePlan">📝 建立計畫（隨機分配・不重複）</button>
+        <span id="createMsg" style="font-size:13px;color:var(--muted);"></span>
+      </div>
+    </div>
+
+    <!-- 匯出匯入 -->
+    <div class="plan-toolbar">
+      <button class="ghost-btn" id="btnImportCsv">📥 匯入 CSV</button>
+      <input type="file" id="csvFile" accept=".csv,text/csv" style="display:none">
+      <span id="importMsg" style="font-size:13px;color:var(--muted);"></span>
+    </div>
+
+    <div id="plansList"></div>
   </section>
 </main>
 
 <script>
 const $ = s => document.querySelector(s);
 const statsEl = $('#stats'), wordsList = $('#wordsList'), idiomsList = $('#idiomsList');
+let allWords = [], allIdioms = [];
 
-// ---------- 主題（白天：藍白 / 黑夜：桃紅+黑） ----------
+/* ================= 主題 ================= */
 const savedTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.dataset.theme = savedTheme;
 $('#themeToggle').textContent = savedTheme === 'dark' ? '☀️ 白天模式' : '🌙 黑夜模式';
@@ -132,66 +252,351 @@ $('#themeToggle').onclick = () => {
   $('#themeToggle').textContent = next === 'dark' ? '☀️ 白天模式' : '🌙 黑夜模式';
 };
 
-// ---------- 分頁 ----------
+/* ================= 分頁 ================= */
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.onclick = () => {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     $('#page-' + btn.dataset.tab).classList.add('active');
+    if (btn.dataset.tab === 'plan') loadPlans();
   };
 });
 
-// ---------- 資料載入（純靜態 JSON，可在 GitHub Pages 運作） ----------
+/* ================= 搜尋（模糊） ================= */
+let searchQ = '';
+$('#searchInput').addEventListener('input', e => {
+  searchQ = e.target.value.trim().toLowerCase();
+  renderWords(allWords);
+  renderIdioms(allIdioms);
+});
+
+function matchFields(q, ...fields) {
+  return fields.some(f => (f || '').toLowerCase().includes(q));
+}
+function highlight(text, q) {
+  const s = String(text == null ? '' : text);
+  if (!q) return esc(s);
+  const idx = s.toLowerCase().indexOf(q);
+  if (idx < 0) return esc(s);
+  return esc(s.slice(0, idx)) + '<span class="hit">' + esc(s.slice(idx, idx + q.length)) + '</span>' + esc(s.slice(idx + q.length));
+}
+
+/* ================= 資料載入 ================= */
 async function loadAll() {
   try {
     const [words, idioms] = await Promise.all([
       fetch('data/words.json').then(r => r.json()),
       fetch('data/idioms.json').then(r => r.json())
     ]);
-    renderWords(words);
-    renderIdioms(idioms);
+    allWords = words; allIdioms = idioms;
+    renderWords(words); renderIdioms(idioms); renderPickLists();
     const nSent = words.reduce((n, w) => n + (w.sentences || []).length, 0);
     statsEl.textContent = `單字 ${words.length} · 句子 ${nSent} · 成語 ${idioms.length}`;
+    loadPlans();
   } catch (e) {
     wordsList.innerHTML = `<div class="empty">載入失敗：${esc(e.message)}</div>`;
   }
 }
 
 function renderWords(words) {
-  if (!words.length) { wordsList.innerHTML = '<div class="empty">還沒有單字資料～</div>'; return; }
-  wordsList.innerHTML = words.map(w => `
+  const q = searchQ;
+  const filtered = q ? words.filter(w =>
+    matchFields(q, w.word, w.pos, w.meaning) ||
+    (w.sentences || []).some(s => matchFields(q, s.sentence, s.translation))
+  ) : words;
+  if (!filtered.length) { wordsList.innerHTML = '<div class="empty">沒有符合的單字～</div>'; return; }
+  wordsList.innerHTML = filtered.map(w => {
+    const sents = (w.sentences || []).map(s => `
+      <div class="sentence">
+        <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}</div>
+        <div class="zh">${highlight(s.translation, q)}</div>
+      </div>`).join('');
+    return `
     <div class="card">
       <div class="word-head">
-        <span class="word">${esc(w.word)}</span>
+        <span class="word">${highlight(w.word, q)}</span>
         ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
-        <span class="meaning">${esc(w.meaning || '')}</span>
+        <span class="meaning">${highlight(w.meaning, q)}</span>
         ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
       </div>
-      ${(w.sentences || []).map(s => `
-        <div class="sentence">
-          <div class="en">${esc(s.sentence)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}</div>
-          <div class="zh">${esc(s.translation || '')}</div>
-        </div>`).join('')}
-    </div>`).join('');
+      ${sents}
+    </div>`;
+  }).join('');
 }
 
 function renderIdioms(idioms) {
-  if (!idioms.length) { idiomsList.innerHTML = '<div class="empty">還沒有成語資料～</div>'; return; }
-  idiomsList.innerHTML = idioms.map(i => `
+  const q = searchQ;
+  const filtered = q ? idioms.filter(i =>
+    matchFields(q, i.idiom, i.explanation, i.example)
+  ) : idioms;
+  if (!filtered.length) { idiomsList.innerHTML = '<div class="empty">沒有符合的成語～</div>'; return; }
+  idiomsList.innerHTML = filtered.map(i => `
     <div class="card">
-      <div class="idiom-head"><span class="idiom">${esc(i.idiom)}</span></div>
-      <div class="explanation">📖 ${esc(i.explanation || '')}</div>
-      ${i.example ? `<div class="example">${esc(i.example)}</div>` : ''}
+      <div class="idiom-head"><span class="idiom">${highlight(i.idiom, q)}</span></div>
+      <div class="explanation">📖 ${highlight(i.explanation, q)}</div>
+      ${i.example ? `<div class="example">${highlight(i.example, q)}</div>` : ''}
     </div>`).join('');
 }
 
+/* ================= 學習計畫（IndexedDB） ================= */
+const DB_NAME = 'daily-learning', DB_VER = 1;
+function openDB() {
+  return new Promise((res, rej) => {
+    const req = indexedDB.open(DB_NAME, DB_VER);
+    req.onupgradeneeded = e => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains('plans'))
+        db.createObjectStore('plans', { keyPath: 'id' });
+    };
+    req.onsuccess = () => res(req.result);
+    req.onerror = () => rej(req.error);
+  });
+}
+async function idbGetAll(store) {
+  const db = await openDB();
+  return new Promise((res, rej) => {
+    const tx = db.transaction(store, 'readonly');
+    const rq = tx.objectStore(store).getAll();
+    rq.onsuccess = () => res(rq.result || []);
+    rq.onerror = () => rej(rq.error);
+  });
+}
+async function idbPut(store, val) {
+  const db = await openDB();
+  return new Promise((res, rej) => {
+    const tx = db.transaction(store, 'readwrite');
+    tx.objectStore(store).put(val);
+    tx.oncomplete = () => res();
+    tx.onerror = () => rej(tx.error);
+  });
+}
+async function idbDelete(store, key) {
+  const db = await openDB();
+  return new Promise((res, rej) => {
+    const tx = db.transaction(store, 'readwrite');
+    tx.objectStore(store).delete(key);
+    tx.oncomplete = () => res();
+    tx.onerror = () => rej(tx.error);
+  });
+}
+
+function todayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+function addDays(dateStr, n) {
+  const d = new Date(dateStr + 'T00:00:00');
+  d.setDate(d.getDate() + n);
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function renderPickLists() {
+  $('#pickWords').innerHTML = allWords.map(w =>
+    `<label><input type="checkbox" value="${esc(w.word)}"> ${esc(w.word)} <span style="color:var(--muted)">(${esc(w.meaning || '')})</span></label>`).join('');
+  $('#pickIdioms').innerHTML = allIdioms.map(i =>
+    `<label><input type="checkbox" value="${esc(i.idiom)}"> ${esc(i.idiom)}</label>`).join('');
+}
+document.querySelectorAll('.mini-btn').forEach(btn => {
+  btn.onclick = () => {
+    const list = btn.dataset.sel === 'en' ? '#pickWords' : '#pickIdioms';
+    document.querySelectorAll(list + ' input').forEach(c => c.checked = btn.dataset.clear ? false : true);
+  };
+});
+
+function buildPlan(name, startDate, days, selWords, selIdioms) {
+  const entries = [];
+  for (let d = 0; d < days; d++) entries.push({ date: addDays(startDate, d), words: [], idioms: [] });
+  // 隨機分配、不重複：打亂後輪流放入每一天
+  shuffle(selWords).forEach((wd, i) => entries[i % days].words.push({ word: wd, done: false }));
+  shuffle(selIdioms).forEach((idm, i) => entries[i % days].idioms.push({ idiom: idm, done: false }));
+  return {
+    id: 'plan_' + Date.now() + '_' + Math.floor(Math.random() * 1e6),
+    name, startDate, days,
+    createdAt: new Date().toISOString(),
+    entries
+  };
+}
+
+$('#btnCreatePlan').onclick = async () => {
+  const name = $('#planName').value.trim() || '學習計畫';
+  const start = $('#planStart').value || todayStr();
+  const days = Math.min(90, Math.max(1, parseInt($('#planDays').value) || 30));
+  const selWords = [...document.querySelectorAll('#pickWords input:checked')].map(c => c.value);
+  const selIdioms = [...document.querySelectorAll('#pickIdioms input:checked')].map(c => c.value);
+  if (!selWords.length && !selIdioms.length) {
+    $('#createMsg').textContent = '⚠️ 請至少勾選一個單字或成語';
+    return;
+  }
+  const plan = buildPlan(name, start, days, selWords, selIdioms);
+  await idbPut('plans', plan);
+  $('#createMsg').textContent = `✅ 已建立「${name}」：${days} 天，單字 ${selWords.length} 個、成語 ${selIdioms.length} 則（隨機分配・不重複）`;
+  loadPlans();
+};
+
+async function loadPlans() {
+  const plans = (await idbGetAll('plans')).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  const el = $('#plansList');
+  if (!plans.length) {
+    el.innerHTML = '<div class="plan-empty">還沒有學習計畫～ 上方建立一個吧！</div>';
+    return;
+  }
+  el.innerHTML = plans.map(plan => {
+    const total = plan.entries.reduce((n, e) => n + e.words.length + e.idioms.length, 0);
+    const done = plan.entries.reduce((n, e) => n + e.words.filter(w => w.done).length + e.idioms.filter(i => i.done).length, 0);
+    const pct = total ? Math.round(done / total * 100) : 0;
+    const rows = plan.entries.map(e => {
+      const items = [
+        ...e.words.map(w => ({ key: 'w|' + e.date + '|' + w.word, label: w.word, done: w.done })),
+        ...e.idioms.map(i => ({ key: 'i|' + e.date + '|' + i.idiom, label: i.idiom, done: i.done }))
+      ];
+      if (!items.length) return '';
+      return `<div class="day-row">
+        <span class="day-date">${e.date}</span>
+        <span class="day-items">${items.map(it => `
+          <label class="day-item ${it.done ? 'done' : ''}" data-key="${esc(it.key)}">
+            <input type="checkbox" ${it.done ? 'checked' : ''} data-key="${esc(it.key)}"> ${esc(it.label)}
+          </label>`).join('')}</span>
+      </div>`;
+    }).join('');
+    return `<div class="card plan-card" data-plan="${esc(plan.id)}">
+      <div class="plan-head">
+        <div>
+          <span class="plan-name">${esc(plan.name)}</span>
+          <span class="plan-meta">　${esc(plan.startDate)} 起 ${plan.days} 天 ｜ 完成 ${done}/${total}（${pct}%）</span>
+        </div>
+        <div class="plan-ctrl">
+          <button class="ghost-btn" data-exp="${esc(plan.id)}">${plan._open ? '收合' : '展開'}每日進度</button>
+          <button class="ghost-btn" data-export="${esc(plan.id)}">⬇️ 匯出 CSV</button>
+          <button class="danger-btn" data-del="${esc(plan.id)}">🗑 刪除</button>
+        </div>
+      </div>
+      <div class="progress"><div style="width:${pct}%"></div></div>
+      <div class="plan-days" style="${plan._open ? '' : 'display:none'}">${rows}</div>
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('[data-exp]').forEach(b => b.onclick = async () => {
+    const p = (await idbGetAll('plans')).find(x => x.id === b.dataset.exp);
+    p._open = !p._open;
+    await idbPut('plans', p);
+    loadPlans();
+  });
+  el.querySelectorAll('[data-export]').forEach(b => b.onclick = () => exportPlanCsv(b.dataset.export));
+  el.querySelectorAll('[data-del]').forEach(b => b.onclick = async () => {
+    if (!confirm('確定刪除這個學習計畫？')) return;
+    await idbDelete('plans', b.dataset.del);
+    loadPlans();
+  });
+  el.querySelectorAll('.day-item input').forEach(cb => cb.onchange = async () => {
+    const key = cb.dataset.key; // w|date|word 或 i|date|idiom
+    const [type, date, item] = [key.slice(0, 1), key.slice(2).split('|')[0], key.slice(2).split('|').slice(1).join('|')];
+    const planId = cb.closest('.plan-card').dataset.plan;
+    const plans = await idbGetAll('plans');
+    const plan = plans.find(x => x.id === planId);
+    const en = plan.entries.find(e => e.date === date);
+    if (type === 'w') { const it = en.words.find(w => w.word === item); if (it) it.done = cb.checked; }
+    else { const it = en.idioms.find(i => i.idiom === item); if (it) it.done = cb.checked; }
+    await idbPut('plans', plan);
+    loadPlans();
+  });
+}
+
+/* ================= CSV 匯出 / 匯入 ================= */
+function csvEscape(v) {
+  v = String(v == null ? '' : v);
+  return /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+}
+function downloadCsv(filename, text) {
+  const blob = new Blob(['\uFEFF' + text], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+async function exportPlanCsv(planId) {
+  const plans = await idbGetAll('plans');
+  const plan = plans.find(x => x.id === planId);
+  if (!plan) return;
+  const rows = [['計畫名稱', '日期', '類型', '項目', '完成']];
+  plan.entries.forEach(e => {
+    e.words.forEach(w => rows.push([plan.name, e.date, '單字', w.word, w.done ? '是' : '否']));
+    e.idioms.forEach(i => rows.push([plan.name, e.date, '成語', i.idiom, i.done ? '是' : '否']));
+  });
+  downloadCsv('學習計畫_' + plan.name + '.csv', rows.map(r => r.map(csvEscape).join(',')).join('\r\n'));
+}
+
+function parseCsv(text) {
+  const rows = []; let row = [], cur = '', inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQ) {
+      if (ch === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else inQ = false; }
+      else cur += ch;
+    } else if (ch === '"') inQ = true;
+    else if (ch === ',') { row.push(cur); cur = ''; }
+    else if (ch === '\n') { row.push(cur); rows.push(row); row = []; cur = ''; }
+    else if (ch !== '\r') cur += ch;
+  }
+  if (cur.length || row.length) { row.push(cur); rows.push(row); }
+  return rows;
+}
+
+$('#btnImportCsv').onclick = () => $('#csvFile').click();
+$('#csvFile').onchange = async e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const text = await file.text();
+  try {
+    const rows = parseCsv(text).filter(r => r.length >= 4 && r[0].trim() && r[0].trim() !== '計畫名稱');
+    if (!rows.length) throw new Error('CSV 內容為空或格式不符');
+    const byName = {};
+    rows.forEach(r => {
+      const name = r[0].trim(), date = (r[1] || '').trim(), type = (r[2] || '').trim(), item = (r[3] || '').trim();
+      const done = (r[4] || '').trim() === '是';
+      (byName[name] = byName[name] || []).push({ date, type, item, done });
+    });
+    let count = 0;
+    for (const [name, list] of Object.entries(byName)) {
+      const dates = [...new Set(list.map(r => r.date))].sort();
+      const entries = dates.map(d => ({ date: d, words: [], idioms: [] }));
+      list.forEach(r => {
+        const en = entries.find(x => x.date === r.date);
+        if (r.type === '單字') en.words.push({ word: r.item, done: r.done });
+        else en.idioms.push({ idiom: r.item, done: r.done });
+      });
+      await idbPut('plans', {
+        id: 'plan_' + Date.now() + '_' + count,
+        name, startDate: dates[0] || todayStr(), days: dates.length,
+        createdAt: new Date().toISOString(), entries
+      });
+      count++;
+    }
+    $('#importMsg').textContent = `✅ 已匯入 ${count} 個學習計畫`;
+    loadPlans();
+  } catch (err) {
+    $('#importMsg').textContent = '❌ 匯入失敗：' + err.message;
+  }
+  e.target.value = '';
+};
+
+/* ================= 工具 ================= */
 function esc(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+$('#planStart').value = todayStr();
 loadAll();
 </script>
 </body>
