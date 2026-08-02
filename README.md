@@ -5,7 +5,7 @@
 👉 **線上瀏覽**：https://<你的帳號>.github.io/daily-learning/
 
 ## 功能
-- 🇺🇸 **英文分頁**：單字（詞性、中文意思、劍橋發音連結）+ 對應句子（中文翻譯、Google 翻譯發音連結）
+- 🇺🇸 **英文分頁**：單字（詞性、中文意思、Google 翻譯發音連結）+ 對應句子（中文翻譯、Google 翻譯發音連結）
 - 🀄 **國語分頁**：成語（解釋、造句範例）
 - ☀️ **白天模式**：藍白配色 ／ 🌙 **黑夜模式**：桃紅 + 黑（自動記憶）
 - 💾 **JSON 儲存**：`data/words.json`、`data/idioms.json`，純靜態網頁，GitHub Pages 直接託管
@@ -25,8 +25,8 @@ daily-learning/
 ## 新增資料（本地執行）
 
 ```bash
-# 新增單字（自動檢查重複）
-python add.py word celebrate --pos "v." --meaning "慶祝" --cambridge "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/celebrate"
+# 新增單字（自動檢查重複；發音連結自動生成 Google 翻譯）
+python add.py word celebrate --pos "v." --meaning "慶祝"
 
 # 新增句子
 python add.py sentence celebrate --en "We celebrate my grandma's birthday every year." --zh "我們每年都慶祝奶奶的生日。" --gtranslate "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20celebrate%20my%20grandma%E2%80%99s%20birthday%20every%20year.&op=translate"

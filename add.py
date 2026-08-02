@@ -11,6 +11,7 @@
 """
 import json, os, sys, argparse, unicodedata
 from datetime import date
+from urllib.parse import quote
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 WORDS_FILE = os.path.join(DATA_DIR, "words.json")
@@ -70,9 +71,11 @@ def add_word(word, pos, meaning, cambridge_url):
     if word_exists(word):
         return False, f"單字「{word}」已存在，跳過儲存"
     words = load(WORDS_FILE)
+    # 發音連結：Google 翻譯（若未提供劍橋連結，自動生成）
+    gurl = "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text={}&op=translate".format(quote(word))
     words.insert(0, {
         "id": next_id(words), "word": word, "pos": pos or "", "meaning": meaning or "",
-        "cambridge_url": cambridge_url or "", "created_at": date.today().isoformat(), "sentences": [],
+        "gtranslate_url": gurl, "created_at": date.today().isoformat(), "sentences": [],
     })
     save(WORDS_FILE, words)
     return True, f"已儲存單字「{word}」"

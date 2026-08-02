@@ -166,7 +166,7 @@ function renderWords(words) {
         <span class="word">${esc(w.word)}</span>
         ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
         <span class="meaning">${esc(w.meaning || '')}</span>
-        ${w.cambridge_url ? `<a class="link-btn" href="${esc(w.cambridge_url)}" target="_blank">🔊 劍橋發音</a>` : ''}
+        ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
       </div>
       ${(w.sentences || []).map(s => `
         <div class="sentence">

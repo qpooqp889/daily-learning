@@ -4,7 +4,6 @@
     "word": "careful",
     "pos": "adj.",
     "meaning": "小心的",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/careful",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -15,14 +14,14 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Be%20careful%20when%20you%20cross%20the%20street%2E&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=careful&op=translate"
   },
   {
     "id": 7,
     "word": "invite",
     "pos": "v.",
     "meaning": "邀請",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/invite",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -33,14 +32,14 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20want%20to%20invite%20my%20best%20friend%20to%20my%20party%2E&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=invite&op=translate"
   },
   {
     "id": 6,
     "word": "famous",
     "pos": "adj.",
     "meaning": "有名的",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/famous",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -51,14 +50,14 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Taipei%20101%20is%20a%20famous%20building%2E&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=famous&op=translate"
   },
   {
     "id": 5,
     "word": "delicious",
     "pos": "adj.",
     "meaning": "美味的",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/delicious",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -69,14 +68,14 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=This%20cake%20is%20really%20delicious%21&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=delicious&op=translate"
   },
   {
     "id": 4,
     "word": "collect",
     "pos": "v.",
     "meaning": "收集",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/collect",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -87,14 +86,14 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20brother%20likes%20to%20collect%20stamps%2E&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=collect&op=translate"
   },
   {
     "id": 3,
     "word": "environment",
     "pos": "n.",
     "meaning": "環境",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/environment",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -105,14 +104,14 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20should%20protect%20our%20environment%2E&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=environment&op=translate"
   },
   {
     "id": 2,
     "word": "celebrate",
     "pos": "v.",
     "meaning": "慶祝",
-    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/celebrate",
     "created_at": "2026-08-02",
     "sentences": [
       {
@@ -123,6 +122,7 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20celebrate%20my%20grandma%E2%80%99s%20birthday%20every%20year%2E&op=translate",
         "created_at": "2026-08-02"
       }
-    ]
+    ],
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=celebrate&op=translate"
   }
 ]
