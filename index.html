@@ -156,6 +156,46 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
   background: none; border: none; color: var(--primary); cursor: pointer;
   font-size: 13px; padding: 2px 4px;
 }
+/* ---------- 養成遊戲 ---------- */
+.pet-choose { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; padding: 12px 0 6px; }
+.pet-choice-btn {
+  padding: 18px 24px; border-radius: 16px; border: 2px solid var(--border);
+  background: var(--card); color: var(--text); cursor: pointer; font-size: 15px; font-weight: 600;
+  transition: all .2s;
+}
+.pet-choice-btn:hover { border-color: var(--primary); transform: translateY(-3px); }
+.pet-choice-btn .emoji { display: block; font-size: 46px; margin-bottom: 6px; }
+.pet-head { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.pet-stage { font-size: 74px; animation: bounce 1.4s infinite ease-in-out; line-height: 1; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.pet-info { flex: 1; min-width: 200px; }
+.pet-name { font-size: 20px; font-weight: 700; color: var(--primary); }
+.pet-level { font-size: 14px; color: var(--muted); margin: 4px 0; }
+.pet-xp-text { font-size: 12px; color: var(--muted); }
+.pet-actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+.pet-msg { margin-top: 10px; font-size: 14px; color: var(--muted); min-height: 20px; }
+.chip-btn {
+  padding: 6px 16px; border-radius: 16px; border: 1px solid var(--border);
+  background: var(--card); color: var(--muted); cursor: pointer; font-size: 14px; transition: all .2s;
+}
+.chip-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+.quiz-progress { height: 6px; background: var(--chip); border-radius: 3px; overflow: hidden; margin: 4px 0 8px; }
+.quiz-progress > div { height: 100%; background: var(--primary); border-radius: 3px; transition: width .3s; }
+.quiz-prompt { font-size: 20px; font-weight: 700; margin: 10px 0 14px; line-height: 1.5; }
+.option-btn {
+  display: block; width: 100%; text-align: left; padding: 10px 14px;
+  border-radius: 10px; border: 1px solid var(--border); background: var(--card);
+  color: var(--text); font-size: 15px; cursor: pointer; margin: 6px 0; line-height: 1.5;
+  transition: all .15s;
+}
+.option-btn:hover:not(:disabled) { border-color: var(--primary); }
+.option-btn:disabled { cursor: default; }
+.option-btn.correct { background: #d4edda; border-color: #28a745; color: #155724; font-weight: 600; }
+[data-theme="dark"] .option-btn.correct { background: #1e3a2a; color: #7ee2a8; border-color: #28a745; }
+.option-btn.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+[data-theme="dark"] .option-btn.wrong { background: #3a1e1e; color: #ff9b9b; border-color: #dc3545; }
+.result-card { text-align: center; padding: 16px 0; }
+
 @media (max-width: 600px) {
   header { flex-wrap: wrap; gap: 8px; }
   header .stats { width: 100%; margin-left: 0; }
@@ -174,6 +214,7 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
       <button class="tab-btn active" data-tab="en">🇺🇸 英文</button>
       <button class="tab-btn" data-tab="cn">🀄 國語</button>
       <button class="tab-btn" data-tab="plan">📅 學習計畫</button>
+      <button class="tab-btn" data-tab="pet">🎮 養成遊戲</button>
     </div>
     <button id="themeToggle">🌙 黑夜模式</button>
   </div>
@@ -234,6 +275,12 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 
     <div id="plansList"></div>
   </section>
+
+  <section id="page-pet" class="page">
+    <div class="section-title">🎮 養成遊戲</div>
+    <div id="petCard"></div>
+    <div id="petQuiz"></div>
+  </section>
 </main>
 
 <script>
@@ -260,6 +307,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     $('#page-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'plan') loadPlans();
+    if (btn.dataset.tab === 'pet') renderPet();
   };
 });
 
@@ -294,6 +342,7 @@ async function loadAll() {
     const nSent = words.reduce((n, w) => n + (w.sentences || []).length, 0);
     statsEl.textContent = `單字 ${words.length} · 句子 ${nSent} · 成語 ${idioms.length}`;
     loadPlans();
+    renderPet();
   } catch (e) {
     wordsList.innerHTML = `<div class="empty">載入失敗：${esc(e.message)}</div>`;
   }
@@ -340,7 +389,7 @@ function renderIdioms(idioms) {
 }
 
 /* ================= 學習計畫（IndexedDB） ================= */
-const DB_NAME = 'daily-learning', DB_VER = 1;
+const DB_NAME = 'daily-learning', DB_VER = 2;
 function openDB() {
   return new Promise((res, rej) => {
     const req = indexedDB.open(DB_NAME, DB_VER);
@@ -348,6 +397,8 @@ function openDB() {
       const db = e.target.result;
       if (!db.objectStoreNames.contains('plans'))
         db.createObjectStore('plans', { keyPath: 'id' });
+      if (!db.objectStoreNames.contains('pet'))
+        db.createObjectStore('pet');
     };
     req.onsuccess = () => res(req.result);
     req.onerror = () => rej(req.error);
@@ -508,6 +559,227 @@ async function loadPlans() {
     await idbPut('plans', plan);
     loadPlans();
   });
+}
+
+/* ================= 養成遊戲（電子雞/狗/猫） ================= */
+const PET_TYPES = {
+  chicken: { name: '電子雞', emoji: ['🥚', '🐣', '🐔', '🎉'], maxLv: 10, hungerDecay: 8, funDecay: 10 },
+  dog:     { name: '電子狗', emoji: ['🐶', '🐕', '🦮'], maxLv: 10, hungerDecay: 6, funDecay: 8 },
+  cat:     { name: '電子猫', emoji: ['🐱', '🐈', '🐈⬛'], maxLv: 10, hungerDecay: 5, funDecay: 7 }
+};
+const PET_STORE = 'pet';
+
+function defaultPet() {
+  return { type: 'chicken', name: '小雞', lv: 1, xp: 0, hunger: 100, fun: 100, fed: 0, played: 0, correct: 0, wrong: 0, createdAt: Date.now() };
+}
+
+function stageEmoji(p) {
+  const t = PET_TYPES[p.type];
+  if (p.lv >= 10) return t.emoji[t.emoji.length - 1];
+  if (p.lv >= 5) return t.emoji[Math.min(1, t.emoji.length - 2)];
+  return t.emoji[0];
+}
+
+async function getPet() {
+  const db = await openDB();
+  return new Promise((res, rej) => {
+    const tx = db.transaction(PET_STORE, 'readonly');
+    const rq = tx.objectStore(PET_STORE).get('pet');
+    rq.onsuccess = () => res(rq.result || defaultPet());
+    rq.onerror = () => rej(rq.error);
+  });
+}
+
+async function renderPet() {
+  const pet = await getPet();
+  const root = $('#petCard');
+  // 首次：尚未選擇寵物
+  if (!pet.created) {
+    root.innerHTML = `
+      <div class="card">
+        <div style="font-size:18px;font-weight:700;text-align:center;margin-bottom:4px;">🐣 選擇你的寵物夥伴！</div>
+        <div style="font-size:13px;color:var(--muted);text-align:center;margin-bottom:8px;">答題得分可以讓牠成長茁壯～</div>
+        <div class="pet-choose">
+          <button class="pet-choice-btn" data-pick="chicken"><span class="emoji">🐔</span>電子雞</button>
+          <button class="pet-choice-btn" data-pick="dog"><span class="emoji">🐶</span>電子狗</button>
+          <button class="pet-choice-btn" data-pick="cat"><span class="emoji">🐱</span>電子猫</button>
+        </div>
+      </div>`;
+    $('#petQuiz').innerHTML = '';
+    const names = { chicken: '小雞', dog: '小狗', cat: '小貓' };
+    root.querySelectorAll('[data-pick]').forEach(btn => btn.onclick = async () => {
+      const type = btn.dataset.pick;
+      const p = defaultPet();
+      p.type = type; p.name = names[type]; p.created = true;
+      await idbPut(PET_STORE, p);
+      renderPet();
+    });
+    return;
+  }
+  const t = PET_TYPES[pet.type];
+  const xpNeed = pet.lv * 50;
+  root.innerHTML = `
+    <div class="card">
+      <div class="pet-head">
+        <div class="pet-stage" title="Lv.${pet.lv}">${stageEmoji(pet)}</div>
+        <div class="pet-info">
+          <div class="pet-name">${esc(pet.name)} <span style="font-size:13px;color:var(--muted)">(${t.name})</span></div>
+          <div class="pet-level">Lv.${pet.lv} / ${t.maxLv}　${pet.lv >= t.maxLv ? '🌟 已滿等！' : ''}</div>
+          <div class="pet-xp-text">經驗值 ${pet.xp} / ${xpNeed}（答對一題 +10）</div>
+          <div class="progress"><div style="width:${Math.min(100, pet.xp / xpNeed * 100)}%"></div></div>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px;">
+            🍗 飽食度 ${pet.hunger}%　🎾 心情 ${pet.fun}%　|　答對 ${pet.correct} / 答錯 ${pet.wrong}
+          </div>
+          <div class="pet-actions">
+            <button class="chip-btn" data-feed>🍗 餵食 +15</button>
+            <button class="chip-btn" data-play>🎾 玩 +15</button>
+            <button class="chip-btn" data-name>✏️ 改名</button>
+          </div>
+          <div class="pet-msg" id="petMsg"></div>
+        </div>
+      </div>
+    </div>`;
+
+  root.querySelector('[data-feed]').onclick = async () => {
+    const p = await getPet();
+    p.hunger = Math.min(100, p.hunger + 15); p.fed++;
+    await idbPut(PET_STORE, p);
+    renderPet();
+  };
+  root.querySelector('[data-play]').onclick = async () => {
+    const p = await getPet();
+    p.fun = Math.min(100, p.fun + 15); p.played++;
+    await idbPut(PET_STORE, p);
+    renderPet();
+  };
+  root.querySelector('[data-name]').onclick = async () => {
+    const p = await getPet();
+    const nn = prompt('幫寵物取新名字：', p.name);
+    if (nn && nn.trim()) { p.name = nn.trim(); await idbPut(PET_STORE, p); renderPet(); }
+  };
+  renderQuizPanel();
+}
+
+function renderQuizPanel() {
+  $('#petQuiz').innerHTML = `
+    <div class="card">
+      <div style="font-size:16px;font-weight:700;margin-bottom:10px;">❓ 四選一答題</div>
+      <div class="plan-form-row">
+        <label>題庫
+          <select id="quizType" style="padding:7px 10px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:14px;">
+            <option value="word">🇺🇸 英文單字（英文→中文）</option>
+            <option value="sentence">🇺🇸 英文句子（中文→英文）</option>
+            <option value="idiom">🀄 國語成語（解釋→成語）</option>
+          </select>
+        </label>
+        <label>題數
+          <input type="number" id="quizCount" min="1" max="50" value="5" style="width:70px;padding:7px 10px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:14px;">
+        </label>
+        <button class="primary-btn" id="btnStartQuiz">🎯 開始答題</button>
+      </div>
+      <div id="quizArea"></div>
+    </div>`;
+  $('#btnStartQuiz').onclick = startQuiz;
+}
+
+function buildQuiz(seed) {
+  const type = $('#quizType').value;
+  const count = Math.min(50, Math.max(1, parseInt($('#quizCount').value) || 5));
+  const qs = [];
+  if (type === 'word') {
+    const pool = shuffle(seed.words);
+    for (let i = 0; i < count; i++) {
+      const w = pool[i % pool.length];
+      const others = shuffle(seed.words.filter(x => x.word !== w.word)).slice(0, 3);
+      if (others.length < 3) continue;
+      const opts = shuffle([w, ...others]).map(x => x.meaning || x.word);
+      qs.push({ q: w.word, opts, ans: w.meaning || w.word, tag: '單字' });
+    }
+  } else if (type === 'sentence') {
+    const sents = [];
+    seed.words.forEach(w => (w.sentences || []).forEach(s => sents.push({ s, w })));
+    const pool = shuffle(sents);
+    for (let i = 0; i < count; i++) {
+      const it = pool[i % pool.length];
+      const others = shuffle(sents.filter(x => x !== it)).slice(0, 3);
+      if (others.length < 3) continue;
+      const opts = shuffle([it, ...others]).map(x => x.s.sentence);
+      qs.push({ q: it.s.translation, opts, ans: it.s.sentence, tag: '句子' });
+    }
+  } else {
+    const pool = shuffle(seed.idioms);
+    for (let i = 0; i < count; i++) {
+      const idm = pool[i % pool.length];
+      const others = shuffle(seed.idioms.filter(x => x.idiom !== idm.idiom)).slice(0, 3);
+      if (others.length < 3) continue;
+      const opts = shuffle([idm, ...others]).map(x => x.idiom);
+      qs.push({ q: idm.explanation, opts, ans: idm.idiom, tag: '成語' });
+    }
+  }
+  return qs;
+}
+
+function showQuiz(qs) {
+  let idx = 0, score = 0;
+  const area = $('#quizArea');
+  function renderQ() {
+    if (idx >= qs.length) return showResult(score, qs.length);
+    const q = qs[idx];
+    area.innerHTML = `
+      <div class="quiz-progress"><div style="width:${idx / qs.length * 100}%"></div></div>
+      <div style="font-size:13px;color:var(--muted);">第 ${idx + 1} / ${qs.length} 題（${q.tag}）</div>
+      <div class="quiz-prompt">${esc(q.q)}</div>
+      ${q.opts.map((o, oi) => `<button class="option-btn" data-oi="${oi}">${esc(o)}</button>`).join('')}`;
+    area.querySelectorAll('.option-btn').forEach(btn => btn.onclick = async () => {
+      const chosen = q.opts[+btn.dataset.oi];
+      const ok = chosen === q.ans;
+      area.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+      area.querySelectorAll('.option-btn').forEach(b => {
+        if (q.opts[+b.dataset.oi] === q.ans) b.classList.add('correct');
+        else if (+b.dataset.oi === +btn.dataset.oi) b.classList.add('wrong');
+      });
+      if (ok) { score++; await addXp(10); }
+      else { await addWrong(); }
+      setTimeout(() => { idx++; renderQ(); }, 900);
+    });
+  }
+  renderQ();
+}
+
+async function addXp(n) {
+  const p = await getPet();
+  p.xp += n; p.correct++;
+  const t = PET_TYPES[p.type];
+  while (p.xp >= p.lv * 50 && p.lv < t.maxLv) { p.xp -= p.lv * 50; p.lv++; }
+  if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 50);
+  await idbPut(PET_STORE, p);
+}
+
+async function addWrong() {
+  const p = await getPet();
+  p.wrong++;
+  await idbPut(PET_STORE, p);
+}
+
+async function showResult(score, total) {
+  const p = await getPet();
+  const t = PET_TYPES[p.type];
+  const perfect = score === total && total > 0;
+  $('#quizArea').innerHTML = `
+    <div class="result-card">
+      <div style="font-size:52px;">${perfect ? '🏆' : score >= total * 0.6 ? '🎉' : '💪'}</div>
+      <div style="font-size:22px;font-weight:700;margin:8px 0;">${score} / ${total} 題答對</div>
+      <div style="font-size:14px;color:var(--muted);margin-bottom:12px;">${perfect ? '太完美了！全對！' : score >= total * 0.6 ? '很棒！繼續加油！' : '別灰心，再試一次！'}</div>
+      <button class="primary-btn" id="btnAgain">🔁 再玩一次</button>
+    </div>`;
+  $('#btnAgain').onclick = startQuiz;
+  renderPet();
+}
+
+function startQuiz() {
+  const qs = buildQuiz({ words: allWords, idioms: allIdioms });
+  if (!qs.length) { $('#quizArea').innerHTML = '<div class="empty">題庫不足（至少需要 4 個單字/句子/成語才能出四選一）</div>'; return; }
+  showQuiz(qs);
 }
 
 /* ================= CSV 匯出 / 匯入 ================= */
