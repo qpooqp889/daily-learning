@@ -413,11 +413,12 @@ async function idbGetAll(store) {
     rq.onerror = () => rej(rq.error);
   });
 }
-async function idbPut(store, val) {
+async function idbPut(store, val, key) {
   const db = await openDB();
   return new Promise((res, rej) => {
     const tx = db.transaction(store, 'readwrite');
-    tx.objectStore(store).put(val);
+    if (key !== undefined) tx.objectStore(store).put(val, key);
+    else tx.objectStore(store).put(val);
     tx.oncomplete = () => res();
     tx.onerror = () => rej(tx.error);
   });
@@ -611,7 +612,7 @@ async function renderPet() {
       const type = btn.dataset.pick;
       const p = defaultPet();
       p.type = type; p.name = names[type]; p.created = true;
-      await idbPut(PET_STORE, p);
+      await idbPut(PET_STORE, p, 'pet');
       renderPet();
     });
     return;
@@ -643,19 +644,19 @@ async function renderPet() {
   root.querySelector('[data-feed]').onclick = async () => {
     const p = await getPet();
     p.hunger = Math.min(100, p.hunger + 15); p.fed++;
-    await idbPut(PET_STORE, p);
+    await idbPut(PET_STORE, p, 'pet');
     renderPet();
   };
   root.querySelector('[data-play]').onclick = async () => {
     const p = await getPet();
     p.fun = Math.min(100, p.fun + 15); p.played++;
-    await idbPut(PET_STORE, p);
+    await idbPut(PET_STORE, p, 'pet');
     renderPet();
   };
   root.querySelector('[data-name]').onclick = async () => {
     const p = await getPet();
     const nn = prompt('幫寵物取新名字：', p.name);
-    if (nn && nn.trim()) { p.name = nn.trim(); await idbPut(PET_STORE, p); renderPet(); }
+    if (nn && nn.trim()) { p.name = nn.trim(); await idbPut(PET_STORE, p, 'pet'); renderPet(); }
   };
   renderQuizPanel();
 }
@@ -752,13 +753,13 @@ async function addXp(n) {
   const t = PET_TYPES[p.type];
   while (p.xp >= p.lv * 50 && p.lv < t.maxLv) { p.xp -= p.lv * 50; p.lv++; }
   if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 50);
-  await idbPut(PET_STORE, p);
+  await idbPut(PET_STORE, p, 'pet');
 }
 
 async function addWrong() {
   const p = await getPet();
   p.wrong++;
-  await idbPut(PET_STORE, p);
+  await idbPut(PET_STORE, p, 'pet');
 }
 
 async function showResult(score, total) {
