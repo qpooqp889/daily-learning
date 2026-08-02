@@ -1,0 +1,128 @@
+[
+  {
+    "id": 8,
+    "word": "careful",
+    "pos": "adj.",
+    "meaning": "小心的",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/careful",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 9,
+        "word_id": 8,
+        "sentence": "Be careful when you cross the street.",
+        "translation": "過馬路時要小心。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Be%20careful%20when%20you%20cross%20the%20street%2E&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "invite",
+    "pos": "v.",
+    "meaning": "邀請",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/invite",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 8,
+        "word_id": 7,
+        "sentence": "I want to invite my best friend to my party.",
+        "translation": "我想邀請我最好的朋友來參加我的派對。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20want%20to%20invite%20my%20best%20friend%20to%20my%20party%2E&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "famous",
+    "pos": "adj.",
+    "meaning": "有名的",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/famous",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 7,
+        "word_id": 6,
+        "sentence": "Taipei 101 is a famous building.",
+        "translation": "台北101是一座有名的建築。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Taipei%20101%20is%20a%20famous%20building%2E&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "delicious",
+    "pos": "adj.",
+    "meaning": "美味的",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/delicious",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 6,
+        "word_id": 5,
+        "sentence": "This cake is really delicious!",
+        "translation": "這個蛋糕真好吃！",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=This%20cake%20is%20really%20delicious%21&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "collect",
+    "pos": "v.",
+    "meaning": "收集",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/collect",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 5,
+        "word_id": 4,
+        "sentence": "My brother likes to collect stamps.",
+        "translation": "我哥哥喜歡收集郵票。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20brother%20likes%20to%20collect%20stamps%2E&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "environment",
+    "pos": "n.",
+    "meaning": "環境",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/environment",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 4,
+        "word_id": 3,
+        "sentence": "We should protect our environment.",
+        "translation": "我們應該保護我們的環境。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20should%20protect%20our%20environment%2E&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "celebrate",
+    "pos": "v.",
+    "meaning": "慶祝",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/celebrate",
+    "created_at": "2026-08-02",
+    "sentences": [
+      {
+        "id": 3,
+        "word_id": 2,
+        "sentence": "We celebrate my grandma's birthday every year.",
+        "translation": "我們每年都慶祝奶奶的生日。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20celebrate%20my%20grandma%E2%80%99s%20birthday%20every%20year%2E&op=translate",
+        "created_at": "2026-08-02"
+      }
+    ]
+  }
+]
