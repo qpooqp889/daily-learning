@@ -382,7 +382,7 @@ function renderTopicBar() {
   $('#topicChips').innerHTML = Object.keys(counts).map(t =>
     `<button class="topic-chip ${topicFilter === t ? 'active' : ''}" data-topic="${esc(t)}">${esc(t)} ${counts[t]}</button>`
   ).join('');
-  $('#topicChips').querySelectorAll('.topic-chip').forEach(b => b.onclick = () => {
+  $('#topicBar').querySelectorAll('.topic-chip').forEach(b => b.onclick = () => {
     topicFilter = b.dataset.topic;
     document.querySelectorAll('#topicBar .topic-chip').forEach(c => c.classList.toggle('active', c.dataset.topic === topicFilter));
     renderWords(allWords);
@@ -399,7 +399,7 @@ function renderCatBar() {
   $('#catChips').innerHTML = Object.keys(counts).map(c =>
     `<button class="cat-chip ${catFilter === c ? 'active' : ''}" data-cat="${esc(c)}">${esc(c)} ${counts[c]}</button>`
   ).join('');
-  $('#catChips').querySelectorAll('.cat-chip').forEach(b => b.onclick = () => {
+  $('#catBar').querySelectorAll('.cat-chip').forEach(b => b.onclick = () => {
     catFilter = b.dataset.cat;
     document.querySelectorAll('#catBar .cat-chip').forEach(c => c.classList.toggle('active', c.dataset.cat === catFilter));
     renderIdioms(allIdioms);
