@@ -660,9 +660,9 @@ async function loadPlans() {
 
 /* ================= 養成遊戲（電子雞/狗/猫） ================= */
 const PET_TYPES = {
-  chicken: { name: '電子雞', emoji: ['🥚', '🐣', '🐔', '🎉'], maxLv: 10, hungerDecay: 8, funDecay: 10 },
-  dog:     { name: '電子狗', emoji: ['🐶', '🐕', '🦮'], maxLv: 10, hungerDecay: 6, funDecay: 8 },
-  cat:     { name: '電子猫', emoji: ['🐱', '🐈', '🐈⬛'], maxLv: 10, hungerDecay: 5, funDecay: 7 }
+  chicken: { name: '電子雞', emoji: ['🥚', '🐣', '🐔', '🎉'], maxLv: 30, hungerDecay: 8, funDecay: 10 },
+  dog:     { name: '電子狗', emoji: ['🐶', '🐕', '🦮'], maxLv: 30, hungerDecay: 6, funDecay: 8 },
+  cat:     { name: '電子貓', emoji: ['🐱', '🐈', '🐈⬛'], maxLv: 30, hungerDecay: 5, funDecay: 7 }
 };
 const PET_STORE = 'pet';
 
@@ -675,6 +675,11 @@ function stageEmoji(p) {
   if (p.lv >= 10) return t.emoji[t.emoji.length - 1];
   if (p.lv >= 5) return t.emoji[Math.min(1, t.emoji.length - 2)];
   return t.emoji[0];
+}
+
+function xpMultiplier(p) {
+  // 等級加權：Lv2 = 1.1 倍、Lv3 = 1.2 倍 ... 每升一等 +0.1
+  return 1 + (Math.max(1, p.lv) - 1) * 0.1;
 }
 
 async function getPet() {
@@ -699,7 +704,7 @@ async function renderPet() {
         <div class="pet-choose">
           <button class="pet-choice-btn" data-pick="chicken"><span class="emoji">🐔</span>電子雞</button>
           <button class="pet-choice-btn" data-pick="dog"><span class="emoji">🐶</span>電子狗</button>
-          <button class="pet-choice-btn" data-pick="cat"><span class="emoji">🐱</span>電子猫</button>
+          <button class="pet-choice-btn" data-pick="cat"><span class="emoji">🐱</span>電子貓</button>
         </div>
       </div>`;
     $('#petQuiz').innerHTML = '';
@@ -714,7 +719,7 @@ async function renderPet() {
     return;
   }
   const t = PET_TYPES[pet.type];
-  const xpNeed = pet.lv * 50;
+  const xpNeed = pet.lv * 10;
   root.innerHTML = `
     <div class="card">
       <div class="pet-head">
@@ -722,7 +727,7 @@ async function renderPet() {
         <div class="pet-info">
           <div class="pet-name">${esc(pet.name)} <span style="font-size:13px;color:var(--muted)">(${t.name})</span></div>
           <div class="pet-level">Lv.${pet.lv} / ${t.maxLv}　${pet.lv >= t.maxLv ? '🌟 已滿等！' : ''}</div>
-          <div class="pet-xp-text">經驗值 ${pet.xp} / ${xpNeed}（答對一題 +10）</div>
+          <div class="pet-xp-text">經驗值 ${pet.xp.toFixed(1)} / ${xpNeed}（答對 +${xpMultiplier(pet).toFixed(1)} EXP，隨等級加權）</div>
           <div class="progress"><div style="width:${Math.min(100, pet.xp / xpNeed * 100)}%"></div></div>
           <div style="font-size:13px;color:var(--muted);margin-top:6px;">
             🍗 飽食度 ${pet.hunger}%　🎾 心情 ${pet.fun}%　|　答對 ${pet.correct} / 答錯 ${pet.wrong}
@@ -731,6 +736,7 @@ async function renderPet() {
             <button class="chip-btn" data-feed>🍗 餵食 +15</button>
             <button class="chip-btn" data-play>🎾 玩 +15</button>
             <button class="chip-btn" data-name>✏️ 改名</button>
+            <button class="chip-btn" data-retrain style="border-color:var(--danger);color:var(--danger);">🔄 重新選擇</button>
           </div>
           <div class="pet-msg" id="petMsg"></div>
         </div>
@@ -753,6 +759,12 @@ async function renderPet() {
     const p = await getPet();
     const nn = prompt('幫寵物取新名字：', p.name);
     if (nn && nn.trim()) { p.name = nn.trim(); await idbPut(PET_STORE, p, 'pet'); renderPet(); }
+  };
+  const retrainBtn = root.querySelector('[data-retrain]');
+  if (retrainBtn) retrainBtn.onclick = async () => {
+    if (!confirm('確定要重新選擇寵物嗎？目前的進度（等級/經驗/飽食/心情）將全部重置！')) return;
+    await idbDelete(PET_STORE, 'pet');
+    renderPet();
   };
   renderQuizPanel();
 }
@@ -835,7 +847,7 @@ function showQuiz(qs) {
         if (q.opts[+b.dataset.oi] === q.ans) b.classList.add('correct');
         else if (+b.dataset.oi === +btn.dataset.oi) b.classList.add('wrong');
       });
-      if (ok) { score++; await addXp(10); }
+      if (ok) { score++; await addXp(1); }
       else { await addWrong(); }
       setTimeout(() => { idx++; renderQ(); }, 900);
     });
@@ -845,10 +857,11 @@ function showQuiz(qs) {
 
 async function addXp(n) {
   const p = await getPet();
-  p.xp += n; p.correct++;
+  const gain = n * xpMultiplier(p);   // 加權：Lv2=1.1x、Lv3=1.2x...
+  p.xp += gain; p.correct++;
   const t = PET_TYPES[p.type];
-  while (p.xp >= p.lv * 50 && p.lv < t.maxLv) { p.xp -= p.lv * 50; p.lv++; }
-  if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 50);
+  while (p.xp >= p.lv * 10 && p.lv < t.maxLv) { p.xp -= p.lv * 10; p.lv++; }
+  if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 10);
   await idbPut(PET_STORE, p, 'pet');
 }
 
