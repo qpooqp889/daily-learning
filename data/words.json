@@ -1,5 +1,124 @@
 [
   {
+    "id": 108,
+    "word": "volunteer",
+    "pos": "名詞",
+    "meaning": "志願者",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=volunteer&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The volunteers helped clean up the park.",
+        "translation": "志願者們幫忙清掃公園。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20volunteers%20helped%20clean%20up%20the%20park.&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "word": "schedule",
+    "pos": "名詞",
+    "meaning": "時間表",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=schedule&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We have a busy schedule on Saturday.",
+        "translation": "我們星期六的行程很滿。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20have%20a%20busy%20schedule%20on%20Saturday.&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "word": "describe",
+    "pos": "動詞",
+    "meaning": "描述",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=describe&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Can you describe your favorite animal?",
+        "translation": "你可以描述你最喜歡的動物嗎？",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Can%20you%20describe%20your%20favorite%20animal%3F&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "word": "dangerous",
+    "pos": "形容詞",
+    "meaning": "危險的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=dangerous&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "It is dangerous to swim in the river alone.",
+        "translation": "獨自一人在河裡游泳很危險。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=It%20is%20dangerous%20to%20swim%20in%20the%20river%20alone.&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "word": "curious",
+    "pos": "形容詞",
+    "meaning": "好奇的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=curious&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The little boy is curious about everything in nature.",
+        "translation": "小男孩對大自然的一切都感到好奇。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20little%20boy%20is%20curious%20about%20everything%20in%20nature.&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "word": "athlete",
+    "pos": "名詞",
+    "meaning": "運動員",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=athlete&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The athlete runs five kilometers every morning.",
+        "translation": "那位運動員每天早上跑五公里。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20athlete%20runs%20five%20kilometers%20every%20morning.&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "word": "adventure",
+    "pos": "名詞",
+    "meaning": "冒險",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=adventure&op=translate",
+    "created_at": "2026-08-03",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "My summer trip to the mountains was a big adventure.",
+        "translation": "我的夏日山區之旅是一場大冒險。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20summer%20trip%20to%20the%20mountains%20was%20a%20big%20adventure.&op=translate",
+        "created_at": "2026-08-03"
+      }
+    ]
+  },
+  {
     "id": 101,
     "word": "zero",
     "pos": "n.",
