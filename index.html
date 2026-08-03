@@ -92,6 +92,27 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 15px; }
 .hit { background: rgba(255, 200, 0, .35); border-radius: 3px; padding: 0 2px; }
 
+/* ---------- A-Z 快查 / 主題分類篩選 ---------- */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.filter-label { font-size: 13px; color: var(--muted); margin-right: 4px; }
+.alpha-btn {
+  width: 34px; height: 34px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); cursor: pointer; font-size: 14px; font-weight: 600;
+  transition: all .15s;
+}
+.alpha-btn:hover { border-color: var(--primary); color: var(--primary); }
+.alpha-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.topic-chip, .cat-chip {
+  padding: 5px 14px; border-radius: 16px; border: 1px solid var(--border);
+  background: var(--card); color: var(--muted); cursor: pointer; font-size: 13px; transition: all .2s;
+}
+.topic-chip.active, .cat-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+.topic-badge, .cat-badge {
+  display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px;
+  background: var(--chip); color: var(--primary); margin-left: 8px; vertical-align: 2px;
+}
+.filter-count { font-size: 12px; color: var(--muted); }
+
 /* ---------- 學習計畫 ---------- */
 .plan-form-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
 .plan-form-row label { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
@@ -227,11 +248,22 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 <main>
   <section id="page-en" class="page active">
     <div class="section-title">🔤 英文單字 & 句子</div>
+    <div class="filter-bar" id="alphaBar"></div>
+    <div class="filter-bar" id="topicBar">
+      <span class="filter-label">📑 句子主題：</span>
+      <button class="topic-chip active" data-topic="">全部</button>
+      <span id="topicChips"></span>
+    </div>
     <div id="wordsList"></div>
   </section>
 
   <section id="page-cn" class="page">
     <div class="section-title">🀄 國語成語</div>
+    <div class="filter-bar" id="catBar">
+      <span class="filter-label">🗂 成語分類：</span>
+      <button class="cat-chip active" data-cat="">全部</button>
+      <span id="catChips"></span>
+    </div>
     <div id="idiomsList"></div>
   </section>
 
@@ -311,13 +343,68 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   };
 });
 
-/* ================= 搜尋（模糊） ================= */
+/* ================= 搜尋（模糊）+ A-Z / 主題 / 分類篩選 ================= */
 let searchQ = '';
+let alphaFilter = '';   // A-Z 字母篩選
+let topicFilter = '';   // 句子主題篩選
+let catFilter = '';     // 成語分類篩選
+
 $('#searchInput').addEventListener('input', e => {
   searchQ = e.target.value.trim().toLowerCase();
   renderWords(allWords);
   renderIdioms(allIdioms);
 });
+
+/* A-Z 快查列 */
+function renderAlphaBar() {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const available = new Set(allWords.map(w => w.word[0].toUpperCase()));
+  $('#alphaBar').innerHTML =
+    `<span class="filter-label">🔠 字母快查：</span>
+     <button class="alpha-btn ${!alphaFilter ? 'active' : ''}" data-a="">全</button>` +
+    letters.map(l =>
+      `<button class="alpha-btn ${alphaFilter === l ? 'active' : ''}" data-a="${l}" ${available.has(l) ? '' : 'style="opacity:.35"'}>${l}</button>`
+    ).join('');
+  $('#alphaBar').querySelectorAll('.alpha-btn').forEach(b => b.onclick = () => {
+    alphaFilter = b.dataset.a;
+    renderAlphaBar();
+    renderWords(allWords);
+  });
+}
+
+/* 句子主題 chips */
+function renderTopicBar() {
+  const counts = {};
+  allWords.forEach(w => (w.sentences || []).forEach(s => {
+    const t = s.topic || '未分類';
+    counts[t] = (counts[t] || 0) + 1;
+  }));
+  $('#topicChips').innerHTML = Object.keys(counts).map(t =>
+    `<button class="topic-chip ${topicFilter === t ? 'active' : ''}" data-topic="${esc(t)}">${esc(t)} ${counts[t]}</button>`
+  ).join('');
+  $('#topicChips').querySelectorAll('.topic-chip').forEach(b => b.onclick = () => {
+    topicFilter = b.dataset.topic;
+    document.querySelectorAll('#topicBar .topic-chip').forEach(c => c.classList.toggle('active', c.dataset.topic === topicFilter));
+    renderWords(allWords);
+  });
+}
+
+/* 成語分類 chips */
+function renderCatBar() {
+  const counts = {};
+  allIdioms.forEach(i => {
+    const c = i.category || '未分類';
+    counts[c] = (counts[c] || 0) + 1;
+  });
+  $('#catChips').innerHTML = Object.keys(counts).map(c =>
+    `<button class="cat-chip ${catFilter === c ? 'active' : ''}" data-cat="${esc(c)}">${esc(c)} ${counts[c]}</button>`
+  ).join('');
+  $('#catChips').querySelectorAll('.cat-chip').forEach(b => b.onclick = () => {
+    catFilter = b.dataset.cat;
+    document.querySelectorAll('#catBar .cat-chip').forEach(c => c.classList.toggle('active', c.dataset.cat === catFilter));
+    renderIdioms(allIdioms);
+  });
+}
 
 function matchFields(q, ...fields) {
   return fields.some(f => (f || '').toLowerCase().includes(q));
@@ -338,6 +425,7 @@ async function loadAll() {
       fetch('data/idioms.json').then(r => r.json())
     ]);
     allWords = words; allIdioms = idioms;
+    renderAlphaBar(); renderTopicBar(); renderCatBar();
     renderWords(words); renderIdioms(idioms); renderPickLists();
     const nSent = words.reduce((n, w) => n + (w.sentences || []).length, 0);
     statsEl.textContent = `單字 ${words.length} · 句子 ${nSent} · 成語 ${idioms.length}`;
@@ -350,15 +438,21 @@ async function loadAll() {
 
 function renderWords(words) {
   const q = searchQ;
-  const filtered = q ? words.filter(w =>
+  let filtered = words;
+  // 搜尋
+  if (q) filtered = filtered.filter(w =>
     matchFields(q, w.word, w.pos, w.meaning) ||
     (w.sentences || []).some(s => matchFields(q, s.sentence, s.translation))
-  ) : words;
+  );
+  // A-Z 字母篩選
+  if (alphaFilter) filtered = filtered.filter(w => w.word[0].toUpperCase() === alphaFilter);
+  // 句子主題篩選
+  if (topicFilter) filtered = filtered.filter(w => (w.sentences || []).some(s => (s.topic || '未分類') === topicFilter));
   if (!filtered.length) { wordsList.innerHTML = '<div class="empty">沒有符合的單字～</div>'; return; }
   wordsList.innerHTML = filtered.map(w => {
     const sents = (w.sentences || []).map(s => `
       <div class="sentence">
-        <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}</div>
+        <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
         <div class="zh">${highlight(s.translation, q)}</div>
       </div>`).join('');
     return `
@@ -376,13 +470,15 @@ function renderWords(words) {
 
 function renderIdioms(idioms) {
   const q = searchQ;
-  const filtered = q ? idioms.filter(i =>
-    matchFields(q, i.idiom, i.explanation, i.example)
-  ) : idioms;
+  let filtered = idioms;
+  // 搜尋
+  if (q) filtered = filtered.filter(i => matchFields(q, i.idiom, i.explanation, i.example));
+  // 分類篩選
+  if (catFilter) filtered = filtered.filter(i => (i.category || '未分類') === catFilter);
   if (!filtered.length) { idiomsList.innerHTML = '<div class="empty">沒有符合的成語～</div>'; return; }
   idiomsList.innerHTML = filtered.map(i => `
     <div class="card">
-      <div class="idiom-head"><span class="idiom">${highlight(i.idiom, q)}</span></div>
+      <div class="idiom-head"><span class="idiom">${highlight(i.idiom, q)}</span>${i.category ? `<span class="cat-badge">${esc(i.category)}</span>` : ''}</div>
       <div class="explanation">📖 ${highlight(i.explanation, q)}</div>
       ${i.example ? `<div class="example">${highlight(i.example, q)}</div>` : ''}
     </div>`).join('');
