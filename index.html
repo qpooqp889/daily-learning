@@ -420,9 +420,10 @@ function highlight(text, q) {
 /* ================= 資料載入 ================= */
 async function loadAll() {
   try {
+    const ts = '?t=' + Date.now();   // cache-busting：避免 CDN/瀏覽器快取舊版資料
     const [words, idioms] = await Promise.all([
-      fetch('data/words.json').then(r => r.json()),
-      fetch('data/idioms.json').then(r => r.json())
+      fetch('data/words.json' + ts).then(r => r.json()),
+      fetch('data/idioms.json' + ts).then(r => r.json())
     ]);
     allWords = words; allIdioms = idioms;
     renderAlphaBar(); renderTopicBar(); renderCatBar();
