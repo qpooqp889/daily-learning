@@ -838,38 +838,62 @@ function renderPlanTopicChips() {
 
 let planTopicFilter = '';
 
-/* ================= 單字詳情 Modal（計畫/收藏共用的檢視泡泡） ================= */
-function showWordModal(word, fromPlan) {
+/* ================= 詳情 Modal（單字 + 成語通用） ================= */
+function showDetailModal(type, key, fromPlan) {
   const m = document.getElementById('wordModal');
   const mc = document.getElementById('wordModalCard');
-  const w = allWords.find(x => x.word === word);
-  if (!w) return;
-  const sents = (w.sentences || []).map(s => `
-    <div class="sentence">
-      <div class="en">
-        ${esc(s.sentence)}
-        ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}
-        ${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}
+  let html = '';
+
+  if (type === 'word') {
+    const w = allWords.find(x => x.word === key);
+    if (!w) return;
+    const sents = (w.sentences || []).map(s => `
+      <div class="sentence">
+        <div class="en">
+          ${esc(s.sentence)}
+          ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}
+          ${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}
+        </div>
+        <div class="zh">${esc(s.translation)}</div>
+      </div>`).join('') || '<div class="empty">尚無例句</div>';
+    html = `
+      <div class="modal-word-head">
+        <span class="word" style="font-size:24px;font-weight:700;">${esc(w.word)}</span>
+        ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
+        <span class="meaning" style="font-size:16px;">${esc(w.meaning)}</span>
+        ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
       </div>
-      <div class="zh">${esc(s.translation)}</div>
-    </div>`).join('') || '<div class="empty">尚無例句</div>';
-  mc.innerHTML = `
-    <div class="modal-word-head">
-      <span class="word" style="font-size:24px;font-weight:700;">${esc(w.word)}</span>
-      ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
-      <span class="meaning" style="font-size:16px;">${esc(w.meaning)}</span>
-      ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
-    </div>
-    <div class="modal-sentences">${sents}</div>
-    ${fromPlan ? `<div style="text-align:center;margin-top:14px;">
+      <div class="modal-sentences">${sents}</div>`;
+  } else if (type === 'idiom') {
+    const i = allIdioms.find(x => x.idiom === key);
+    if (!i) return;
+    html = `
+      <div class="modal-word-head">
+        <span class="word" style="font-size:24px;font-weight:700;">${esc(i.idiom)}</span>
+        <span class="meaning" style="font-size:16px;">${esc(i.meaning)}</span>
+      </div>
+      ${i.example ? `<div class="modal-sentences">
+        <div class="sentence">
+          <div class="en">${esc(i.example)}${i.example_url ? `<a class="link-btn" href="${esc(i.example_url)}" target="_blank">🔊</a>` : ''}</div>
+          <div class="zh">${esc(i.translation)}</div>
+        </div>
+      </div>` : ''}`;
+  }
+
+  if (fromPlan) {
+    html += `<div style="text-align:center;margin-top:14px;">
       <button class="primary-btn" id="modalDoneBtn">✅ 完成學習</button>
-    </div>` : ''}
-  `;
+    </div>`;
+  }
+
+  mc.innerHTML = html;
+
   if (fromPlan) {
     document.getElementById('modalDoneBtn').onclick = () => {
-      // 在所有 entries 裡把同日期同字的 done 設 true，向上廣播
       document.getElementById('wordModal').classList.remove('open');
-      document.dispatchEvent(new CustomEvent('plan-word-done', { detail: { word }, bubbles: true }));
+      document.dispatchEvent(new CustomEvent('plan-done', {
+        detail: { type, key }, bubbles: true
+      }));
     };
   }
   m.classList.add('open');
@@ -881,9 +905,9 @@ document.addEventListener('click', e => {
   if (e.target === m) m.classList.remove('open');
 });
 
-/* 從計畫點擊單字 → 開啟 Modal */
-function jumpToWord(word) {
-  showWordModal(word, true);
+// 從計畫點擊 → 開啟詳情 Modal
+function jumpToDetail(type, key) {
+  showDetailModal(type, key, true);
 }
 
 function buildPlan(name, startDate, days, wordsPerDay, sentPerDay, idiomPerDay, topicFilter) {
@@ -966,15 +990,18 @@ async function loadPlans() {
           <label class="day-item ${w.done ? 'done' : ''}" data-type="w" data-date="${esc(e.date)}" data-word="${esc(w.word)}">
             <input type="checkbox" ${w.done ? 'checked' : ''} data-type="w" data-date="${esc(e.date)}" data-word="${esc(w.word)}">
           </label>
-          <span class="day-word-link" onclick="jumpToWord('${esc(w.word)}')">${esc(w.word)}</span>
+          <span class="day-word-link" onclick="jumpToDetail('word','${esc(w.word)}')">${esc(w.word)}</span>
         </span>`);
       });
-      // 成語
+      // 成語（點名稱開 Modal）
       (e.idioms||[]).forEach(i => {
         htmlParts.push(`
-        <label class="day-item ${i.done ? 'done' : ''}" data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}">
-          <input type="checkbox" ${i.done ? 'checked' : ''} data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}"> ${esc(i.idiom)}
-        </label>`);
+        <span class="day-item-group">
+          <label class="day-item ${i.done ? 'done' : ''}" data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}">
+            <input type="checkbox" ${i.done ? 'checked' : ''} data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}">
+          </label>
+          <span class="day-word-link" onclick="jumpToDetail('idiom','${esc(i.idiom)}')">${esc(i.idiom)}</span>
+        </span>`);
       });
       if (!htmlParts.length) return '';
       return `<div class="day-row">
@@ -1034,22 +1061,26 @@ async function loadPlans() {
     await idbPut('plans', plan);
     loadPlans();
   });
-  // 監聽 Modal 裡的「完成學習」按鈕廣播事件
-  document.getElementById('plansList').querySelectorAll('.plan-card').forEach(card => {
-    const planId = card.dataset.plan;
-    const handleDone = async (e) => {
-      const { word } = e.detail;
-      const plans = await idbGetAll('plans');
-      const plan = plans.find(x => x.id === planId);
-      if (!plan) return;
-      let changed = false;
-      plan.entries.forEach(en => {
-        const wi = (en.words||[]).find(w => w.word === word);
+  // 監聽 Modal 裡的「完成學習」廣播（單字 + 成語，事件代理，僅綁一次）
+  document.getElementById('plansList').addEventListener('plan-done', async (e) => {
+    const { type, key } = e.detail;
+    const planId = $('#plansList').querySelector('.plan-card') ? (await idbGetAll('plans'))[0]?.id : null;
+    // 廣播事件不含 planId，改用目前展開的第一張卡片（用 find 找有 _open 的那張）
+    const plans = await idbGetAll('plans');
+    const plan = plans.find(p => p._open) || plans[0];
+    if (!plan) return;
+    let changed = false;
+    plan.entries.forEach(en => {
+      if (type === 'word') {
+        const wi = (en.words||[]).find(w => w.word === key);
         if (wi) { wi.done = true; changed = true; }
-      });
-      if (changed) { await idbPut('plans', plan); loadPlans(); }
-    };
-    card.addEventListener('plan-word-done', handleDone);
+      } else if (type === 'idiom') {
+        const ii = (en.idioms||[]).find(o => o.idiom === key);
+        if (ii) { ii.done = true; changed = true; }
+      }
+    });
+    if (changed) { await idbPut('plans', plan); loadPlans(); }
+  }, true);
   });
 }
 
