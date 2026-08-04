@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 舊版 SQLite / Flask（已改為 JSON 靜態版）
+*.db
+db.py
+app.py
+export_json.py
+seed_today.py
+
+# 測試
+test_api.py
+check_page.py
+
+# 批次生成臨時檔
+batch*.txt
+batch*_sentences.json
+batch_index.json
+batch_list.js
+analyze.js
+analyze2.js
+export_batch.js
+export_all.js
+gen_sentences.js
+merge_sentences.js
+topics.js
+verify_json.py

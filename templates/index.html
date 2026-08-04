@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 每日學習</title>
+<style>
+:root {
+  --bg: #f0f6ff;              /* 白天：淺藍背景 */
+  --card: #ffffff;
+  --text: #1a2b4a;
+  --muted: #5a7399;
+  --primary: #1e6fd9;         /* 藍 */
+  --primary-dark: #155bb5;
+  --border: #cfe0f7;
+  --chip: #e3efff;
+  --danger: #d93025;
+  --shadow: 0 2px 10px rgba(30, 111, 217, 0.08);
+}
+[data-theme="dark"] {
+  --bg: #120b0e;              /* 黑夜：黑底 */
+  --card: #1e1419;
+  --text: #ffd9ec;            /* 桃紅系文字 */
+  --muted: #c98aa9;
+  --primary: #ff3d8b;         /* 桃紅 */
+  --primary-dark: #e02475;
+  --border: #4a2438;
+  --chip: #331a28;
+  --danger: #ff6b6b;
+  --shadow: 0 2px 12px rgba(255, 61, 139, 0.15);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
+  background: var(--bg); color: var(--text);
+  transition: background .3s, color .3s;
+  min-height: 100vh;
+}
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; background: var(--card);
+  border-bottom: 1px solid var(--border); box-shadow: var(--shadow);
+  position: sticky; top: 0; z-index: 10;
+}
+header h1 { font-size: 22px; }
+header .stats { font-size: 14px; color: var(--muted); margin-left: 16px; }
+.header-right { display: flex; align-items: center; gap: 12px; }
+.tabs { display: flex; gap: 8px; }
+.tab-btn {
+  padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border);
+  background: var(--card); color: var(--muted); cursor: pointer; font-size: 15px;
+  transition: all .2s;
+}
+.tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+#themeToggle {
+  padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); cursor: pointer; font-size: 14px;
+}
+#themeToggle:hover { border-color: var(--primary); }
+main { max-width: 900px; margin: 24px auto; padding: 0 20px; }
+.page { display: none; }
+.page.active { display: block; }
+.section-title { font-size: 18px; margin: 20px 0 12px; display: flex; align-items: center; gap: 8px; }
+.card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 16px 18px; margin-bottom: 14px; box-shadow: var(--shadow);
+}
+.word-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.word { font-size: 20px; font-weight: 700; color: var(--primary); }
+.pos { font-size: 13px; color: var(--muted); background: var(--chip); padding: 2px 8px; border-radius: 10px; }
+.meaning { font-size: 15px; }
+.link-btn {
+  display: inline-block; font-size: 12px; text-decoration: none; color: var(--primary);
+  border: 1px solid var(--primary); border-radius: 10px; padding: 2px 8px; margin-left: 6px;
+  transition: all .2s;
+}
+.link-btn:hover { background: var(--primary); color: #fff; }
+.sentence { margin: 10px 0 6px 8px; padding-left: 12px; border-left: 3px solid var(--primary); }
+.sentence .en { font-size: 15px; }
+.sentence .zh { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.idiom-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.idiom { font-size: 20px; font-weight: 700; color: var(--primary); }
+.explanation { font-size: 14px; margin-top: 6px; line-height: 1.6; }
+.example { font-size: 14px; margin-top: 8px; color: var(--muted); line-height: 1.6; }
+.example::before { content: "✏️ 造句："; color: var(--primary); font-weight: 600; }
+.empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 15px; }
+#toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--card); color: var(--text); border: 1px solid var(--primary);
+  padding: 10px 22px; border-radius: 24px; box-shadow: var(--shadow);
+  opacity: 0; pointer-events: none; transition: opacity .3s; z-index: 99; font-size: 14px;
+}
+#toast.show { opacity: 1; }
+@media (max-width: 600px) {
+  header { flex-wrap: wrap; gap: 8px; }
+  header .stats { width: 100%; margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <h1>📚 每日學習</h1>
+    <span class="stats" id="stats"></span>
+  </div>
+  <div class="header-right">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="en">🇺🇸 英文</button>
+      <button class="tab-btn" data-tab="cn">🀄 國語</button>
+    </div>
+    <button id="themeToggle">🌙 黑夜模式</button>
+  </div>
+</header>
+
+<main>
+  <section id="page-en" class="page active">
+    <div class="section-title">🔤 英文單字 & 句子</div>
+    <div id="wordsList"></div>
+  </section>
+  <section id="page-cn" class="page">
+    <div class="section-title">🀄 國語成語</div>
+    <div id="idiomsList"></div>
+  </section>
+</main>
+
+<div id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const statsEl = $('#stats'), wordsList = $('#wordsList'), idiomsList = $('#idiomsList');
+const toastEl = $('#toast');
+
+// ---------- 主題（白天：藍白 / 黑夜：桃紅+黑） ----------
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.dataset.theme = savedTheme;
+$('#themeToggle').textContent = savedTheme === 'dark' ? '☀️ 白天模式' : '🌙 黑夜模式';
+$('#themeToggle').onclick = () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('theme', next);
+  $('#themeToggle').textContent = next === 'dark' ? '☀️ 白天模式' : '🌙 黑夜模式';
+};
+
+// ---------- 分頁 ----------
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    $('#page-' + btn.dataset.tab).classList.add('active');
+  };
+});
+
+// ---------- Toast ----------
+let toastTimer;
+function toast(msg) {
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
+}
+
+// ---------- 資料載入 ----------
+async function loadAll() {
+  try {
+    const [words, idioms, stats] = await Promise.all([
+      fetch('/api/words').then(r => r.json()),
+      fetch('/api/idioms').then(r => r.json()),
+      fetch('/api/stats').then(r => r.json())
+    ]);
+    renderWords(words);
+    renderIdioms(idioms);
+    statsEl.textContent = `單字 ${stats.words} · 句子 ${stats.sentences} · 成語 ${stats.idioms}`;
+  } catch (e) {
+    toast('載入失敗：' + e.message);
+  }
+}
+
+function renderWords(words) {
+  if (!words.length) { wordsList.innerHTML = '<div class="empty">還沒有單字資料～</div>'; return; }
+  wordsList.innerHTML = words.map(w => `
+    <div class="card">
+      <div class="word-head">
+        <span class="word">${esc(w.word)}</span>
+        ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
+        <span class="meaning">${esc(w.meaning || '')}</span>
+        ${w.cambridge_url ? `<a class="link-btn" href="${esc(w.cambridge_url)}" target="_blank">🔊 劍橋發音</a>` : ''}
+      </div>
+      ${(w.sentences || []).map(s => `
+        <div class="sentence">
+          <div class="en">${esc(s.sentence)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}</div>
+          <div class="zh">${esc(s.translation || '')}</div>
+        </div>`).join('')}
+    </div>`).join('');
+}
+
+function renderIdioms(idioms) {
+  if (!idioms.length) { idiomsList.innerHTML = '<div class="empty">還沒有成語資料～</div>'; return; }
+  idiomsList.innerHTML = idioms.map(i => `
+    <div class="card">
+      <div class="idiom-head"><span class="idiom">${esc(i.idiom)}</span></div>
+      <div class="explanation">📖 ${esc(i.explanation || '')}</div>
+      ${i.example ? `<div class="example">${esc(i.example)}</div>` : ''}
+    </div>`).join('');
+}
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+loadAll();
+</script>
+</body>
+</html>
