@@ -485,6 +485,16 @@ function applyTheme(next) {
   const tm = document.getElementById('themeToggleMobile');
   if (tm) tm.textContent = label;
 }
+// 頁面載入時還原上次主題
+(function() {
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.dataset.theme = saved;
+  const label = saved === 'dark' ? '☀️ 白天模式' : '🌙 黑夜模式';
+  const te = document.getElementById('themeToggle');
+  if (te) te.textContent = label;
+  const tm = document.getElementById('themeToggleMobile');
+  if (tm) tm.textContent = label;
+})();
 document.getElementById('themeToggle').onclick = () => {
   applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
 };
@@ -941,45 +951,38 @@ async function loadPlans() {
     const total = plan.entries.reduce((n, e) => n + (e.words||[]).length + (e.idioms||[]).length, 0);
     const done = plan.entries.reduce((n, e) => n + (e.words||[]).filter(w=>w.done).length + (e.idioms||[]).filter(i=>i.done).length, 0);
     const pct = total ? Math.round(done / total * 100) : 0;
-    // 建立 {word, sentences:[...], done} 結構（以 word 為主體，綁定其句子）
-    const sentByWord = {};
-    (e.sentences||[]).forEach(s => {
-      if (!sentByWord[s.word]) sentByWord[s.word] = [];
-      sentByWord[s.word].push(s);
-    });
-    const wordItems = (e.words||[]).map(w => ({
-      word: w.word,
-      sentences: sentByWord[w.word] || [],
-      done: w.done
-    }));
 
-    const htmlParts = [];
-
-    // 單字（點名稱開 Modal）
-    wordItems.forEach(wi => {
-      htmlParts.push(`
-      <span class="day-item-group">
-        <label class="day-item ${wi.done ? 'done' : ''}" data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
-          <input type="checkbox" ${wi.done ? 'checked' : ''} data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
-        </label>
-        <span class="day-word-link" onclick="jumpToWord('${esc(wi.word)}')">${esc(wi.word)}</span>
-      </span>`);
-    });
-
-    // 成語（不變）
-    (e.idioms||[]).forEach(i => {
-      htmlParts.push(`
-      <label class="day-item ${i.done ? 'done' : ''}" data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}">
-        <input type="checkbox" ${i.done ? 'checked' : ''} data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}"> ${esc(i.idiom)}
-      </label>`);
-    });
-
-    if (!htmlParts.length) return '';
-    return `<div class="day-row">
-      <span class="day-date">${e.date}</span>
-      <span class="day-items">${htmlParts.join('')}</span>
-    </div>`;
+    const rows = plan.entries.map(e => {
+      const sentByWord = {};
+      (e.sentences||[]).forEach(s => {
+        if (!sentByWord[s.word]) sentByWord[s.word] = [];
+        sentByWord[s.word].push(s);
+      });
+      const htmlParts = [];
+      // 單字（點名稱開 Modal）
+      (e.words||[]).forEach(w => {
+        htmlParts.push(`
+        <span class="day-item-group">
+          <label class="day-item ${w.done ? 'done' : ''}" data-type="w" data-date="${esc(e.date)}" data-word="${esc(w.word)}">
+            <input type="checkbox" ${w.done ? 'checked' : ''} data-type="w" data-date="${esc(e.date)}" data-word="${esc(w.word)}">
+          </label>
+          <span class="day-word-link" onclick="jumpToWord('${esc(w.word)}')">${esc(w.word)}</span>
+        </span>`);
+      });
+      // 成語
+      (e.idioms||[]).forEach(i => {
+        htmlParts.push(`
+        <label class="day-item ${i.done ? 'done' : ''}" data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}">
+          <input type="checkbox" ${i.done ? 'checked' : ''} data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}"> ${esc(i.idiom)}
+        </label>`);
+      });
+      if (!htmlParts.length) return '';
+      return `<div class="day-row">
+        <span class="day-date">${e.date}</span>
+        <span class="day-items">${htmlParts.join('')}</span>
+      </div>`;
     }).join('');
+
     return `<div class="card plan-card" data-plan="${esc(plan.id)}">
       <div class="plan-head">
         <div>
