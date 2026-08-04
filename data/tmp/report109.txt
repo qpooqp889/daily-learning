@@ -1,0 +1,8 @@
+id=109 word='å\x96®å\xad\x97' codepoints=['0xe5', '0x96', '0xae', '0xe5', '0xad', '0x97']
+   pos='è©\x9eæ\x80§' meaning='è§£é\x87\x8b'
+id=110 word='a' codepoints=['0x61']
+   pos='å\x86\xa0è©\x9e' meaning='ä¸\x80ï¼\x88å\x80\x8bï¼\x89'
+id=111 word='A.M.' codepoints=['0x41', '0x2e', '0x4d', '0x2e']
+   pos='å\x90\x8dè©\x9e' meaning='ä¸\x8aå\x8d\x88'
+id=112 word='ability' codepoints=['0x61', '0x62', '0x69', '0x6c', '0x69', '0x74', '0x79']
+   pos='å\x90\x8dè©\x9e' meaning='è\x83½å\x8a\x9b'

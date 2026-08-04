@@ -1,0 +1,3476 @@
+[
+ {
+  "num": 1,
+  "idiom": "皓首穷经",
+  "explanation": "皓首，白头，钻研经典到老。",
+  "example": ""
+ },
+ {
+  "num": 2,
+  "idiom": "厚积薄发",
+  "explanation": "长期积累，突然暴发。",
+  "example": ""
+ },
+ {
+  "num": 3,
+  "idiom": "积重难返",
+  "explanation": "指长期形成的不良风俗、习惯不易改变。",
+  "example": ""
+ },
+ {
+  "num": 4,
+  "idiom": "集腋成裘",
+  "explanation": "狐狸腋下的皮虽然很少，但是聚集起来就能缝成一件皮袍。比喻积少成多。",
+  "example": ""
+ },
+ {
+  "num": 5,
+  "idiom": "开卷有益",
+  "explanation": "读书就有收获。开卷，打开书本，借指读书。",
+  "example": ""
+ },
+ {
+  "num": 6,
+  "idiom": "恪遵功令",
+  "explanation": "严谨地遵守条令制度。",
+  "example": ""
+ },
+ {
+  "num": 7,
+  "idiom": "空穴来风",
+  "explanation": "有了洞穴才有风进来，比喻消息和传说不是完全没有原因的。",
+  "example": ""
+ },
+ {
+  "num": 8,
+  "idiom": "苦心孤诣",
+  "explanation": "费尽心思钻研或经营。孤诣，别人所达不到的。（中性）",
+  "example": ""
+ },
+ {
+  "num": 9,
+  "idiom": "狼奔豕突",
+  "explanation": "狼和猪东奔西跑。比喻成群的坏人乱窜乱撞。（贬）",
+  "example": ""
+ },
+ {
+  "num": 10,
+  "idiom": "黔驴技穷",
+  "explanation": "比喻仅有的一点伎俩也用完了（贬）",
+  "example": ""
+ },
+ {
+  "num": 11,
+  "idiom": "罄竹难书",
+  "explanation": "把竹子用完了都写不完。比喻事实（罪恶）很多，难以说完。",
+  "example": ""
+ },
+ {
+  "num": 12,
+  "idiom": "求全责备",
+  "explanation": "苛责别人，要求完美：无缺。",
+  "example": ""
+ },
+ {
+  "num": 13,
+  "idiom": "曲突徙薪",
+  "explanation": "比喻事先采取措施，防止危险发生。",
+  "example": ""
+ },
+ {
+  "num": 14,
+  "idiom": "人心不古",
+  "explanation": "今人的心地不如古人淳厚。多用以感叹世风浅薄。",
+  "example": ""
+ },
+ {
+  "num": 15,
+  "idiom": "忍俊不禁",
+  "explanation": "忍不住笑了出来。",
+  "example": ""
+ },
+ {
+  "num": 16,
+  "idiom": "如汤沃雪",
+  "explanation": "像热水浇在雪上，比喻事情极容易解决。",
+  "example": ""
+ },
+ {
+  "num": 17,
+  "idiom": "如坐春风",
+  "explanation": "如同沐浴在和煦的春风里，比喻受到教育和感：化。",
+  "example": ""
+ },
+ {
+  "num": 18,
+  "idiom": "洞若观火",
+  "explanation": "形容看得清楚明白。",
+  "example": ""
+ },
+ {
+  "num": 19,
+  "idiom": "良莠不齐",
+  "explanation": "一群人中有好有坏，侧重于品质。不用于水平、成绩等。",
+  "example": ""
+ },
+ {
+  "num": 20,
+  "idiom": "临渊羡鱼",
+  "explanation": "比喻只有愿望，不去实干，就无济于事。",
+  "example": ""
+ },
+ {
+  "num": 21,
+  "idiom": "令人发指",
+  "explanation": "发指，头发竖起来，形容非常愤怒。",
+  "example": ""
+ },
+ {
+  "num": 22,
+  "idiom": "另眼相看",
+  "explanation": "用另一种眼光看待，多指看待某个人（或某种人）不同于一般。",
+  "example": ""
+ },
+ {
+  "num": 23,
+  "idiom": "计日程功",
+  "explanation": "可以数着日子计算进度，形容数着日子算进度，形容在较短期间就可以成功。",
+  "example": ""
+ },
+ {
+  "num": 24,
+  "idiom": "济济一堂",
+  "explanation": "形容许多有才能的人聚在一起。",
+  "example": ""
+ },
+ {
+  "num": 25,
+  "idiom": "间不容发",
+  "explanation": "中间容不下一根头发，比喻与灾祸相距极近，情势极其危急。",
+  "example": ""
+ },
+ {
+  "num": 26,
+  "idiom": "见仁见智",
+  "explanation": "对同一问题，各人从不同角度持不同的看法。",
+  "example": ""
+ },
+ {
+  "num": 27,
+  "idiom": "见贤思齐",
+  "explanation": "见到好的，优秀的，就向其学习，向其看齐。",
+  "example": ""
+ },
+ {
+  "num": 28,
+  "idiom": "矫揉造作",
+  "explanation": "形容过分做作，极不自然。",
+  "example": ""
+ },
+ {
+  "num": 29,
+  "idiom": "矫枉过正",
+  "explanation": "纠正偏差做得过了头。",
+  "example": ""
+ },
+ {
+  "num": 30,
+  "idiom": "金科玉律",
+  "explanation": "比喻不能变更的信条或法律条文。",
+  "example": ""
+ },
+ {
+  "num": 31,
+  "idiom": "噤若寒蝉",
+  "explanation": "形容不敢作声。",
+  "example": ""
+ },
+ {
+  "num": 32,
+  "idiom": "敬谢不敏",
+  "explanation": "谢，推辞；不敏，无能。表示推辞做某事的婉辞。错用于拒绝别人的要求。",
+  "example": ""
+ },
+ {
+  "num": 33,
+  "idiom": "久假不归",
+  "explanation": "长期借去，不归还。",
+  "example": ""
+ },
+ {
+  "num": 34,
+  "idiom": "门可罗雀",
+  "explanation": "大门前面可以张网捕雀，形容宾客稀少，十分冷落。",
+  "example": ""
+ },
+ {
+  "num": 35,
+  "idiom": "门庭若市",
+  "explanation": "形容交际来往的人很多。",
+  "example": ""
+ },
+ {
+  "num": 36,
+  "idiom": "对簿公堂",
+  "explanation": "在公堂受审。",
+  "example": ""
+ },
+ {
+  "num": 37,
+  "idiom": "方兴未艾",
+  "explanation": "事物正在发展，一时不会终止。",
+  "example": ""
+ },
+ {
+  "num": 38,
+  "idiom": "沸反盈天",
+  "explanation": "形容喧哗吵闹，乱成一团。",
+  "example": ""
+ },
+ {
+  "num": 39,
+  "idiom": "焚膏继晷",
+  "explanation": "形容夜以继日地用功读书或努工作。",
+  "example": ""
+ },
+ {
+  "num": 40,
+  "idiom": "粉墨登场",
+  "explanation": "化装上台演戏。今多比喻登上政治舞台。（含讥讽意）",
+  "example": ""
+ },
+ {
+  "num": 41,
+  "idiom": "风驰电掣",
+  "explanation": "形容像刮风和闪电那样迅速。",
+  "example": ""
+ },
+ {
+  "num": 42,
+  "idiom": "浮光掠影",
+  "explanation": "比喻印象不深刻，好像水面的光和掠过的影子一样，一晃就消失了。",
+  "example": ""
+ },
+ {
+  "num": 43,
+  "idiom": "高谈阔论",
+  "explanation": "大发议论，多含贬义。",
+  "example": ""
+ },
+ {
+  "num": 44,
+  "idiom": "隔靴搔痒",
+  "explanation": "比喻说话作文等不中肯，没有抓住问题的关键。",
+  "example": ""
+ },
+ {
+  "num": 45,
+  "idiom": "各行其是",
+  "explanation": "各自按照自己以为对的去做。",
+  "example": ""
+ },
+ {
+  "num": 46,
+  "idiom": "耿耿于怀",
+  "explanation": "对某些事总记在心里，形容心存怨恨。（一般指自己对某些事不满）",
+  "example": ""
+ },
+ {
+  "num": 47,
+  "idiom": "功败垂成",
+  "explanation": "在快要成功的时候遭到失败。（多含惋惜意）",
+  "example": ""
+ },
+ {
+  "num": 48,
+  "idiom": "狗尾续貂",
+  "explanation": "泛指以坏续好，前后不相称，多指文艺作品。",
+  "example": ""
+ },
+ {
+  "num": 49,
+  "idiom": "耳濡目染",
+  "explanation": "形容见得多听得多之后，无形之中受到影响。",
+  "example": ""
+ },
+ {
+  "num": 50,
+  "idiom": "目无全牛",
+  "explanation": "用来形容技艺已达十分纯熟的地步。（褒义词）",
+  "example": ""
+ },
+ {
+  "num": 51,
+  "idiom": "沐猴而冠",
+  "explanation": "沐猴戴帽子，装成人的样子。比喻装扮得像个人物，而实际并不像。",
+  "example": ""
+ },
+ {
+  "num": 52,
+  "idiom": "暮鼓晨钟",
+  "explanation": "比喻可以使人警觉醒悟的话。",
+  "example": ""
+ },
+ {
+  "num": 53,
+  "idiom": "南辕北辙",
+  "explanation": "心里想往南去，车子却往北走。比喻行动和目的相反。",
+  "example": ""
+ },
+ {
+  "num": 54,
+  "idiom": "泥沙俱下",
+  "explanation": "比喻好坏不同的人或事物混杂在一起",
+  "example": ""
+ },
+ {
+  "num": 55,
+  "idiom": "蓬荜生辉",
+  "explanation": "谦辞，表示由于别人自己家来或张挂别人给自己题赠的字画等而使自己十分光荣。",
+  "example": ""
+ },
+ {
+  "num": 56,
+  "idiom": "披肝沥胆",
+  "explanation": "比喻开诚相见，也比喻极尽忠诚。",
+  "example": ""
+ },
+ {
+  "num": 57,
+  "idiom": "披沙拣金",
+  "explanation": "比喻从大量的事物中选择精华。",
+  "example": ""
+ },
+ {
+  "num": 58,
+  "idiom": "萍水相逢",
+  "explanation": "比喻向来不认识的人偶然相遇。",
+  "example": ""
+ },
+ {
+  "num": 59,
+  "idiom": "期期艾艾",
+  "explanation": "口吃、不理解为懦弱犹豫等。",
+  "example": ""
+ },
+ {
+  "num": 60,
+  "idiom": "杞人忧天",
+  "explanation": "比喻不必要的忧虑。",
+  "example": ""
+ },
+ {
+  "num": 62,
+  "idiom": "耳熟能详",
+  "explanation": "听得次数多了，熟悉得能详尽地说出来。",
+  "example": ""
+ },
+ {
+  "num": 63,
+  "idiom": "罚不当罪",
+  "explanation": "处罚和所犯的罪行不相当，多指处罚过重。",
+  "example": ""
+ },
+ {
+  "num": 64,
+  "idiom": "翻云覆雨",
+  "explanation": "比喻反复无常或玩弄手段。",
+  "example": ""
+ },
+ {
+  "num": 65,
+  "idiom": "繁文缛节",
+  "explanation": "比喻其他烦琐多余的事项，也说繁文缛礼。比喻疑神疑鬼，妄自惊慌。",
+  "example": ""
+ },
+ {
+  "num": 66,
+  "idiom": "方枘圆凿",
+  "explanation": "形容格格不入。",
+  "example": ""
+ },
+ {
+  "num": 67,
+  "idiom": "孤注一掷",
+  "explanation": "把所有的钱一下子投做赌注，企图最后得胜。比喻在危急时把全部力量拿出来冒一次险。",
+  "example": ""
+ },
+ {
+  "num": 68,
+  "idiom": "瓜田李下",
+  "explanation": "经过瓜田，不弯下身来提鞋，免得人家怀疑摘瓜；走过李树下面，不举起手来整理帽子，免得人家怀疑摘李子。比喻容易引起嫌疑的地方。",
+  "example": ""
+ },
+ {
+  "num": 69,
+  "idiom": "刮目相看",
+  "explanation": "用新的眼光来看待。",
+  "example": ""
+ },
+ {
+  "num": 70,
+  "idiom": "挂一漏万",
+  "explanation": "形容列举不全，遗漏很多。",
+  "example": ""
+ },
+ {
+  "num": 71,
+  "idiom": "管窥蠡测",
+  "explanation": "从竹管里看天，用瓢来量海水，比喻眼光狭窄，见识短浅。",
+  "example": ""
+ },
+ {
+  "num": 72,
+  "idiom": "要言不烦",
+  "explanation": "文章言论等简明扼要。要：简要。",
+  "example": ""
+ },
+ {
+  "num": 73,
+  "idiom": "一蹴而就",
+  "explanation": "形容事情很容易办成，不要误解为“一气呵成”。",
+  "example": ""
+ },
+ {
+  "num": 74,
+  "idiom": "因人成事",
+  "explanation": "依靠别人把事情办好。只能表贬义或自谦。",
+  "example": ""
+ },
+ {
+  "num": 75,
+  "idiom": "一傅众咻",
+  "explanation": "一个人教，众多的人干扰，形容环境对人影响极大。",
+  "example": ""
+ },
+ {
+  "num": 76,
+  "idiom": "一鳞半爪",
+  "explanation": "比喻零星片段的事物。",
+  "example": ""
+ },
+ {
+  "num": 77,
+  "idiom": "一文不名",
+  "explanation": "连一文钱也没有。形容极为贫困。（正：占有；误：值）",
+  "example": ""
+ },
+ {
+  "num": 78,
+  "idiom": "一言九鼎",
+  "explanation": "说话有份量。不能表示守信用，也不能用于自己。",
+  "example": ""
+ },
+ {
+  "num": 79,
+  "idiom": "一衣带水",
+  "explanation": "原形容像衣带那样狭窄的水，后比喻仅隔一水。极其邻近。",
+  "example": ""
+ },
+ {
+  "num": 80,
+  "idiom": "一枕黄粱",
+  "explanation": "不是指一枕头黄粱（小米），而是比喻想实现的好事落得一场空。",
+  "example": ""
+ },
+ {
+  "num": 81,
+  "idiom": "衣冠枭獍",
+  "explanation": "枭：传说是母的恶鸟；獍：传说是吃父的恶兽。穿衣服戴帽子的禽兽。比喻忘恩负义、品德极坏的人。",
+  "example": ""
+ },
+ {
+  "num": 82,
+  "idiom": "怡情悦性",
+  "explanation": "使心情舒畅愉快。",
+  "example": ""
+ },
+ {
+  "num": 83,
+  "idiom": "贻笑大方",
+  "explanation": "让有见识的内行笑话。贻，遗留。",
+  "example": ""
+ },
+ {
+  "num": 84,
+  "idiom": "移天易日",
+  "explanation": "比喻用欺骗的手段窃取国家的大权。",
+  "example": ""
+ },
+ {
+  "num": 85,
+  "idiom": "颐指气使",
+  "explanation": "不说话而用面部表情来示意。指有极势的人傲慢的神气。",
+  "example": ""
+ },
+ {
+  "num": 86,
+  "idiom": "以耳代目",
+  "explanation": "把听来的当成亲见的。形容不亲自调查研究，专门听信别人的话。",
+  "example": ""
+ },
+ {
+  "num": 87,
+  "idiom": "倚马可待",
+  "explanation": "原形容文思敏捷，很快就能写好文章。现泛指很快就能完成。",
+  "example": ""
+ },
+ {
+  "num": 88,
+  "idiom": "倚门倚闾",
+  "explanation": "闾：里巷的门。形容父母盼望子女归来的殷切心情。",
+  "example": ""
+ },
+ {
+  "num": 89,
+  "idiom": "义无反顾",
+  "explanation": "为正义而勇往直前。常被用于毫不犹豫的干坏事，错。",
+  "example": ""
+ },
+ {
+  "num": 90,
+  "idiom": "义形于色",
+  "explanation": "伸张正义的情绪从脸色上表露出来。",
+  "example": ""
+ },
+ {
+  "num": 91,
+  "idiom": "亦步亦趋",
+  "explanation": "原意是说。别人慢走跟着慢走，别人快走跟着快走。比喻缺乏主见，或为了讨好，事事模仿或追随别人。贬义。",
+  "example": ""
+ },
+ {
+  "num": 92,
+  "idiom": "抑扬顿挫",
+  "explanation": "形容诗文或音乐声响高低停折，和谐而有节奏掷地作金石声：比喻文辞优美，声调铿锵。",
+  "example": ""
+ },
+ {
+  "num": 93,
+  "idiom": "意气用事",
+  "explanation": "凭感情办事。缺乏理智，不表示“讲义气重感情”。",
+  "example": ""
+ },
+ {
+  "num": 94,
+  "idiom": "意兴阑珊",
+  "explanation": "形容兴致将尽。",
+  "example": ""
+ },
+ {
+  "num": 95,
+  "idiom": "溢美之词",
+  "explanation": "过分赞美的言词。常误用于褒义场合。",
+  "example": ""
+ },
+ {
+  "num": 96,
+  "idiom": "溢于言表",
+  "explanation": "指思想感情从语言中充分显露出来（溢：水满外流，引申为充。",
+  "example": ""
+ },
+ {
+  "num": 97,
+  "idiom": "因难见巧",
+  "explanation": "因：由于；巧：巧妙。由于难度大而显出技艺巧妙。",
+  "example": ""
+ },
+ {
+  "num": 98,
+  "idiom": "音容宛在",
+  "explanation": "声音和容貌如在眼前。多用于对死者的怀念，吊唁。",
+  "example": ""
+ },
+ {
+  "num": 99,
+  "idiom": "引人入胜",
+  "explanation": "引导人进入佳境。多形容风景、名胜或文艺作品特别吸引人。",
+  "example": ""
+ },
+ {
+  "num": 100,
+  "idiom": "蝇营狗苟",
+  "explanation": "比喻追求名利，不顾廉耻。营：蝇飞之声。苟：指不顾羞耻。",
+  "example": ""
+ },
+ {
+  "num": 101,
+  "idiom": "影影绰绰",
+  "explanation": "模模糊糊，不真切。",
+  "example": ""
+ },
+ {
+  "num": 102,
+  "idiom": "游刃有余",
+  "explanation": "游刃，运转刀锋，即用刀来操作。形容技艺熟练，有实际经验，解决问题毫不费事。不能用来指生活轻松而又丰富多彩。",
+  "example": ""
+ },
+ {
+  "num": 103,
+  "idiom": "余能可贾",
+  "explanation": "还有力量没有用完。贾，卖。",
+  "example": ""
+ },
+ {
+  "num": 104,
+  "idiom": "怨声载道",
+  "explanation": "怨恨的声音充满道路。形容人民群众普遍的强烈的不满和怨恨。",
+  "example": ""
+ },
+ {
+  "num": 105,
+  "idiom": "芸芸众生",
+  "explanation": "原为佛教语。指一切有生命的东西。后用以指众多的普通百姓",
+  "example": ""
+ },
+ {
+  "num": 106,
+  "idiom": "运斤成风",
+  "explanation": "斤，斧头。挥动斧头，风声呼呼，比喻手法熟练，技术神妙。不是有力气的意思。",
+  "example": ""
+ },
+ {
+  "num": 107,
+  "idiom": "在劫难逃",
+  "explanation": "指不可避免的一定会发生的灾难，不能与“将”搭配。",
+  "example": ""
+ },
+ {
+  "num": 108,
+  "idiom": "糟糠之妻",
+  "explanation": "不是指长得丑陋的妻子，而是指共患难的妻子。",
+  "example": ""
+ },
+ {
+  "num": 109,
+  "idiom": "责无旁贷",
+  "explanation": "责，责任。贷，推卸。自身负有的责任，不能推卸给别人。",
+  "example": ""
+ },
+ {
+  "num": 110,
+  "idiom": "曾几何时",
+  "explanation": "时间没有过去多久。",
+  "example": ""
+ },
+ {
+  "num": 111,
+  "idiom": "曾经沧桑",
+  "explanation": "比喻曾经见过大世面，不把平常事放在眼里。",
+  "example": ""
+ },
+ {
+  "num": 112,
+  "idiom": "折冲樽俎",
+  "explanation": "指不用武力而在宴席上战胜敌人。泛指进行外交谈判。",
+  "example": ""
+ },
+ {
+  "num": 113,
+  "idiom": "真知灼见",
+  "explanation": "灼，明白透彻。指正确透辟的认识和见解。",
+  "example": ""
+ },
+ {
+  "num": 114,
+  "idiom": "振聋发聩",
+  "explanation": "比喻言论惊人，影响深远。",
+  "example": ""
+ },
+ {
+  "num": 115,
+  "idiom": "振振有词",
+  "explanation": "贬义，形容自以为理由很充分。说个没完。",
+  "example": ""
+ },
+ {
+  "num": 116,
+  "idiom": "震耳欲聋",
+  "explanation": "几乎要震聋耳朵，形容声音极大。",
+  "example": ""
+ },
+ {
+  "num": 117,
+  "idiom": "震天动地",
+  "explanation": "震动了天地。形容意义重大，声势浩大，也形容声音巨大。",
+  "example": ""
+ },
+ {
+  "num": 118,
+  "idiom": "疲惫不堪",
+  "explanation": "形容非常疲乏。",
+  "example": ""
+ },
+ {
+  "num": 119,
+  "idiom": "突如其来",
+  "explanation": "出乎意料地发生，出现。",
+  "example": ""
+ },
+ {
+  "num": 120,
+  "idiom": "五湖四海",
+  "explanation": "指全国各地，有时也指世界各地。现有时也比喻广泛的团结。迫不及待：急迫得不能等待。形容心情急切。",
+  "example": ""
+ },
+ {
+  "num": 121,
+  "idiom": "人迹罕及",
+  "explanation": "人很少到的地方。指偏僻荒凉的地方很少有人来过。",
+  "example": ""
+ },
+ {
+  "num": 122,
+  "idiom": "庞然大物",
+  "explanation": "指高大笨重的东西。现也用来形容表面上很强大但实际上很虚弱的事物。小心翼翼：形容谨慎小心，一点不敢疏忽。",
+  "example": ""
+ },
+ {
+  "num": 123,
+  "idiom": "鱼贯而入",
+  "explanation": "象游鱼一样一个跟着一个地接连着走。形容一个接一个地依次序进入。愚不可及：愚蠢得别人比不上。形容极其愚笨。",
+  "example": ""
+ },
+ {
+  "num": 124,
+  "idiom": "呼风唤雨",
+  "explanation": "比喻人具有支配自然的伟大力量。也可形容反动势力猖獗。",
+  "example": ""
+ },
+ {
+  "num": 125,
+  "idiom": "德高望重",
+  "explanation": "道德高尚，名望很大。",
+  "example": ""
+ },
+ {
+  "num": 126,
+  "idiom": "十指连心",
+  "explanation": "十个指头连着心。表示身体的每个小部分都跟心有不可分的关系。比喻亲人跟自身休戚相关。",
+  "example": ""
+ },
+ {
+  "num": 127,
+  "idiom": "奉头鼠窜",
+  "explanation": "奉：捧。抱着头，象老鼠那样惊慌逃跑。形容受到打击后狼狈逃跑。",
+  "example": ""
+ },
+ {
+  "num": 128,
+  "idiom": "胆小如鼠",
+  "explanation": "胆子小得象老鼠。形容非常胆小。",
+  "example": ""
+ },
+ {
+  "num": 129,
+  "idiom": "以狸致鼠",
+  "explanation": "狸：猫。捉老鼠用猫作诱饵。比喻事情不能成功。",
+  "example": ""
+ },
+ {
+  "num": 130,
+  "idiom": "鸢堕腐鼠",
+  "explanation": "鸢：老鹰。老鹰扔下腐烂的老鼠。比喻骄傲的人必然失败。",
+  "example": ""
+ },
+ {
+  "num": 131,
+  "idiom": "掘室求鼠",
+  "explanation": "挖坏房子捉老鼠。比喻因小失大。",
+  "example": ""
+ },
+ {
+  "num": 132,
+  "idiom": "虎头鼠尾",
+  "explanation": "头大如虎，尾细如老鼠。比喻做事起始时声势很大，后来劲头很小，有始无终。",
+  "example": ""
+ },
+ {
+  "num": 133,
+  "idiom": "蚁膻鼠腐",
+  "explanation": "蚂蚁喜欢吃腥膻的食物，老鼠喜欢吃腐败的食物。比喻趣味低下。",
+  "example": ""
+ },
+ {
+  "num": 134,
+  "idiom": "狐奔鼠窜",
+  "explanation": "像狐狸和老鼠那样东逃西窜。形容狼狈逃窜的样子。",
+  "example": ""
+ },
+ {
+  "num": 135,
+  "idiom": "穷鼠啮狸",
+  "explanation": "啮：咬；狸：狸猫。无路可逃的老鼠也会咬猫。比喻受人欺压，虽然敌不过，也会拼死抵抗。",
+  "example": ""
+ },
+ {
+  "num": 136,
+  "idiom": "投鼠忌器",
+  "explanation": "投：用东西去掷；忌：怕，有所顾虑。想用东西打老鼠，又怕打坏了近旁的器物。比喻做事有顾忌，不敢放手干。",
+  "example": ""
+ },
+ {
+  "num": 137,
+  "idiom": "驱骥捕鼠",
+  "explanation": "驱使千里马去追捕老鼠。比喻任用有才能的人承担他所不能胜任的工作。",
+  "example": ""
+ },
+ {
+  "num": 138,
+  "idiom": "作作索索",
+  "explanation": "象声词。描写老鼠活动的声音。",
+  "example": ""
+ },
+ {
+  "num": 139,
+  "idiom": "窃啮斗暴",
+  "explanation": "啮：咬。老鼠偷食啃东西，互相争斗。",
+  "example": ""
+ },
+ {
+  "num": 140,
+  "idiom": "鼠首偾事",
+  "explanation": "坏了事情。比喻人办事没决断，就象胆小的老鼠，在出洞时头在洞口伸伸缩缩一样。",
+  "example": ""
+ },
+ {
+  "num": 141,
+  "idiom": "以鼠为璞",
+  "explanation": "璞：未经雕琢的玉。把死老鼠当成是未经雕琢的玉。比喻以假充真，名不符实的人或事物。",
+  "example": ""
+ },
+ {
+  "num": 142,
+  "idiom": "十鼠争穴",
+  "explanation": "穴：洞。十只老鼠争夺洞穴。比喻坏人聚在一起互相争斗。",
+  "example": ""
+ },
+ {
+  "num": 143,
+  "idiom": "孤雏腐鼠",
+  "explanation": "孤独的鸟雏，腐烂的老鼠。比喻微贱而不值得一说的人或事物。",
+  "example": ""
+ },
+ {
+  "num": 144,
+  "idiom": "獐头鼠目",
+  "explanation": "脑袋像獐子那样又小又尖，眼睛像老鼠那样又小又圆。形容人相貌丑陋，神情狡滑。",
+  "example": ""
+ },
+ {
+  "num": 145,
+  "idiom": "罗掘一空",
+  "explanation": "罗：用网捕鸟；掘：指挖掘老鼠洞找粮食。用尽一切办法，搜括财物殚尽。",
+  "example": ""
+ },
+ {
+  "num": 146,
+  "idiom": "庙垣之鼠",
+  "explanation": "庙：王宫的前殿；垣：矮墙。宫墙里的老鼠。比喻帝王身边得势的小人。",
+  "example": ""
+ },
+ {
+  "num": 147,
+  "idiom": "城狐社鼠",
+  "explanation": "社：土地庙。城墙上的狐狸，社庙里的老鼠。比喻依仗权势作恶，一时难以驱除的小人。",
+  "example": ""
+ },
+ {
+  "num": 148,
+  "idiom": "狐潜鼠伏",
+  "explanation": "像狐狸和老鼠一样潜伏、藏匿。形容胆怯躲藏的样子。",
+  "example": ""
+ },
+ {
+  "num": 149,
+  "idiom": "鸮鸣鼠暴",
+  "explanation": "鸮鸟鸣叫，老鼠肆暴。比喻恶人气焰嚣张。",
+  "example": ""
+ },
+ {
+  "num": 150,
+  "idiom": "捧头鼠窜",
+  "explanation": "抱着脑袋，象老鼠似地逃窜。形容仓皇逃跑的狼狈相。",
+  "example": ""
+ },
+ {
+  "num": 151,
+  "idiom": "窃时肆暴",
+  "explanation": "老鼠放肆地偷吃东西。比喻得势时胡作非为，横行霸道。",
+  "example": ""
+ },
+ {
+  "num": 152,
+  "idiom": "鼠目寸光",
+  "explanation": "老鼠的眼睛只能看到一米远。形容目光短浅，没有远见。",
+  "example": ""
+ },
+ {
+  "num": 153,
+  "idiom": "响彻云霄",
+  "explanation": "形容声音响亮，好像可以穿过云层，直达高空。",
+  "example": ""
+ },
+ {
+  "num": 154,
+  "idiom": "受益匪浅",
+  "explanation": "指收获不小，有很大的收获，",
+  "example": ""
+ },
+ {
+  "num": 155,
+  "idiom": "引吭大叫",
+  "explanation": "高声大叫。",
+  "example": ""
+ },
+ {
+  "num": 156,
+  "idiom": "大喜过望",
+  "explanation": "结果比原来希望的还好，因而感到特别高兴。",
+  "example": ""
+ },
+ {
+  "num": 157,
+  "idiom": "颇负盛名",
+  "explanation": "有很大的名望。",
+  "example": ""
+ },
+ {
+  "num": 158,
+  "idiom": "引人注目",
+  "explanation": "形容人或事物很具特色，能引起人们的注意。",
+  "example": ""
+ },
+ {
+  "num": 159,
+  "idiom": "风欺雪压",
+  "explanation": "遭受风的摧残，雪的压迫。形容遭受的困难多，处境坎坷。",
+  "example": ""
+ },
+ {
+  "num": 160,
+  "idiom": "恍然大悟",
+  "explanation": "可以形容人对某事一下子明白过来。",
+  "example": ""
+ },
+ {
+  "num": 161,
+  "idiom": "轻而易举",
+  "explanation": "形容事情容易做，不费力气。",
+  "example": ""
+ },
+ {
+  "num": 162,
+  "idiom": "无影无踪",
+  "explanation": "没有一点踪影。形容完全消失，不知去向。",
+  "example": ""
+ },
+ {
+  "num": 163,
+  "idiom": "相提并论",
+  "explanation": "把不同的人或不同的事放在一起谈论或看待。",
+  "example": ""
+ },
+ {
+  "num": 164,
+  "idiom": "牙牙学语",
+  "explanation": "形容婴儿咿咿呀呀地学大人说话的神情。",
+  "example": ""
+ },
+ {
+  "num": 165,
+  "idiom": "人烟稀少",
+  "explanation": "人家、住户非常少；人均居住面积较大；形容地方无人居住，十分荒凉。提心吊胆：形容十分担心或害怕。",
+  "example": ""
+ },
+ {
+  "num": 166,
+  "idiom": "不容置疑",
+  "explanation": "不允许怀疑。表示论证严密，无可怀疑。",
+  "example": ""
+ },
+ {
+  "num": 167,
+  "idiom": "枯枝败叶",
+  "explanation": "干枯的树枝，衰败的花叶。形容荒凉、破坏的样子。",
+  "example": ""
+ },
+ {
+  "num": 168,
+  "idiom": "年过花甲",
+  "explanation": "年龄超过六十岁。",
+  "example": ""
+ },
+ {
+  "num": 169,
+  "idiom": "荒无人烟",
+  "explanation": "形容地方偏僻荒凉，见不到人家。",
+  "example": ""
+ },
+ {
+  "num": 170,
+  "idiom": "不动声色",
+  "explanation": "在紧急情况下，说话、神态仍跟平时一样没有变化。形容非常镇静。一如既往：指态度没有变化，完全象从前一样。",
+  "example": ""
+ },
+ {
+  "num": 171,
+  "idiom": "行色匆匆",
+  "explanation": "行走或出发前后的神态举止急急忙忙的样子。",
+  "example": ""
+ },
+ {
+  "num": 172,
+  "idiom": "不可思议",
+  "explanation": "原有神秘奥妙的意思。现多指无法想象，难以理解。",
+  "example": ""
+ },
+ {
+  "num": 173,
+  "idiom": "恩将仇报",
+  "explanation": "拿仇恨回报所受的恩惠。",
+  "example": ""
+ },
+ {
+  "num": 174,
+  "idiom": "心安理得",
+  "explanation": "自以为做的事情合乎道理，心里很坦然。",
+  "example": ""
+ },
+ {
+  "num": 175,
+  "idiom": "重见天日",
+  "explanation": "比喻脱离黑暗，重见光明。",
+  "example": ""
+ },
+ {
+  "num": 176,
+  "idiom": "趁其不备",
+  "explanation": "利用别人没有防备的时机，去侵害对方。",
+  "example": ""
+ },
+ {
+  "num": 177,
+  "idiom": "鸦雀无声",
+  "explanation": "连乌鸦麻雀的声音都没有。形容非常静。",
+  "example": ""
+ },
+ {
+  "num": 178,
+  "idiom": "人声鼎沸",
+  "explanation": "形容人群的声音吵吵嚷嚷，就象煮开了锅一样。",
+  "example": ""
+ },
+ {
+  "num": 179,
+  "idiom": "拔地而起",
+  "explanation": "形容从地面上突兀而起，非常陡峭。",
+  "example": ""
+ },
+ {
+  "num": 180,
+  "idiom": "一命呜呼",
+  "explanation": "以此为死亡的代称。指人死亡。",
+  "example": ""
+ },
+ {
+  "num": 181,
+  "idiom": "狼吞虎咽",
+  "explanation": "形容吃东西又猛又急的样子。",
+  "example": ""
+ },
+ {
+  "num": 182,
+  "idiom": "局促不安",
+  "explanation": "形容举止拘束，心中不安。",
+  "example": ""
+ },
+ {
+  "num": 183,
+  "idiom": "改天换地",
+  "explanation": "彻底改变原来的面貌。指改造社会，改造自然。",
+  "example": ""
+ },
+ {
+  "num": 184,
+  "idiom": "举世无双",
+  "explanation": "全世界找不到第二个。",
+  "example": ""
+ },
+ {
+  "num": 185,
+  "idiom": "和颜悦色",
+  "explanation": "脸色和蔼喜悦。形容和善可亲。",
+  "example": ""
+ },
+ {
+  "num": 186,
+  "idiom": "苟延残喘",
+  "explanation": "勉强延续临死前的喘息。比喻暂时勉强维持生存。",
+  "example": ""
+ },
+ {
+  "num": 187,
+  "idiom": "情不自禁",
+  "explanation": "感情激动得不能控制。强调完全被某种感情所支配。左顾右盼：向左看看；向右望望。形容得意或警戒的神态。",
+  "example": ""
+ },
+ {
+  "num": 188,
+  "idiom": "大显神威",
+  "explanation": "充分显示出本领和才能。",
+  "example": ""
+ },
+ {
+  "num": 189,
+  "idiom": "所向披靡",
+  "explanation": "比喻力量所达到的地方，一切障碍全被扫除。",
+  "example": ""
+ },
+ {
+  "num": 190,
+  "idiom": "名不虚传",
+  "explanation": "传出的名声与实际相符合，不是虚假的。",
+  "example": ""
+ },
+ {
+  "num": 191,
+  "idiom": "莫名其妙",
+  "explanation": "说不出其中的奥妙。指事情很奇怪，说不出道理来。",
+  "example": ""
+ },
+ {
+  "num": 192,
+  "idiom": "聊胜于无",
+  "explanation": "比没有要好一点。",
+  "example": ""
+ },
+ {
+  "num": 193,
+  "idiom": "不屈不挠",
+  "explanation": "屈：屈服；挠：弯曲。比喻在压力和困难面前不屈服，表现十分顽强。",
+  "example": ""
+ },
+ {
+  "num": 194,
+  "idiom": "大义凛然",
+  "explanation": "大义：正义；凛然：严肃、或敬畏的样子。由于胸怀正义而神态庄严，令人敬畏。",
+  "example": ""
+ },
+ {
+  "num": 195,
+  "idiom": "坚贞不屈",
+  "explanation": "坚：坚定；贞：有节操；屈：屈服、低头。意志坚定，决不屈服。",
+  "example": ""
+ },
+ {
+  "num": 196,
+  "idiom": "趾高气扬",
+  "explanation": "趾高：走路时脚抬得很高；气扬：意气扬扬。走路时脚抬得很高，神气十足。形容骄傲自满，得意忘形的样子。",
+  "example": ""
+ },
+ {
+  "num": 197,
+  "idiom": "不可一世",
+  "explanation": "一世：一时。认为当代的人都不行。形容目空一切、狂妄自大到了极点。",
+  "example": ""
+ },
+ {
+  "num": 198,
+  "idiom": "简傲绝俗",
+  "explanation": "指高傲而超越世俗。",
+  "example": ""
+ },
+ {
+  "num": 199,
+  "idiom": "傲慢不逊",
+  "explanation": "逊：谦逊。态度高傲自大，对人不讲谦让。",
+  "example": ""
+ },
+ {
+  "num": 200,
+  "idiom": "高视阔步",
+  "explanation": "眼睛向上看，迈大步走路。形容气慨不凡或态度傲慢。",
+  "example": ""
+ },
+ {
+  "num": 201,
+  "idiom": "颐指气使",
+  "explanation": "颐指：动下巴示意，指挥别人；气使：用神情气色支使人。不说话而用面部表示表情示意。形容有权势的人指挥别人的傲慢态度。",
+  "example": ""
+ },
+ {
+  "num": 202,
+  "idiom": "目中无人",
+  "explanation": "眼里没有别人。形容骄傲自大，看不起人。",
+  "example": ""
+ },
+ {
+  "num": 203,
+  "idiom": "呼幺喝六",
+  "explanation": "幺、六：骰子的点了。掷骰子时的喊声。泛指赌博。也形容吆喝。",
+  "example": ""
+ },
+ {
+  "num": 204,
+  "idiom": "傍若无人",
+  "explanation": "好像旁边没有人在。形容神情态度高傲自如。",
+  "example": ""
+ },
+ {
+  "num": 205,
+  "idiom": "八面威风",
+  "explanation": "威风：令人敬畏的气势。各个方面都很威风。形容神气足，声势盛。",
+  "example": ""
+ },
+ {
+  "num": 206,
+  "idiom": "狷介之士",
+  "explanation": "狷介：孤僻高傲，洁身自好。指孤僻高傲，不肯同流合污之人。",
+  "example": ""
+ },
+ {
+  "num": 207,
+  "idiom": "目空一切",
+  "explanation": "什么都不放在眼里。形容极端骄傲自大。",
+  "example": ""
+ },
+ {
+  "num": 208,
+  "idiom": "睥睨一切",
+  "explanation": "形容非常高傲，看不起任何人。",
+  "example": ""
+ },
+ {
+  "num": 209,
+  "idiom": "宁折不弯",
+  "explanation": "本指白杨木受到外力作用，只会断折，不会弯曲变形。后用来比喻宁可死也绝不屈服妥协。",
+  "example": ""
+ },
+ {
+  "num": 210,
+  "idiom": "傲世轻物",
+  "explanation": "傲世：傲视当世；物：他人或环境。鄙弃世俗，看不起别人。也指高傲自大。",
+  "example": ""
+ },
+ {
+  "num": 211,
+  "idiom": "盛气凌人",
+  "explanation": "盛气：骄横的气焰；凌：欺凌。以骄横的气势压人。形容傲慢自大，气势逼人。",
+  "example": ""
+ },
+ {
+  "num": 212,
+  "idiom": "得意忘形",
+  "explanation": "形：形态。形容高兴得失去了常态。",
+  "example": ""
+ },
+ {
+  "num": 213,
+  "idiom": "骄傲自满",
+  "explanation": "看不起别人，满足于自己已有的成绩。",
+  "example": ""
+ },
+ {
+  "num": 214,
+  "idiom": "坚强不屈",
+  "explanation": "屈：屈服。坚韧、刚毅，毫不屈服。",
+  "example": ""
+ },
+ {
+  "num": 215,
+  "idiom": "沾沾自喜",
+  "explanation": "形容自以为不错而得意的样子。",
+  "example": ""
+ },
+ {
+  "num": 216,
+  "idiom": "趾高气昂",
+  "explanation": "形容人高傲、骄傲自满、得意忘形",
+  "example": ""
+ },
+ {
+  "num": 217,
+  "idiom": "心比天高",
+  "explanation": "形容心地高傲或所想超过现实。",
+  "example": ""
+ },
+ {
+  "num": 218,
+  "idiom": "不屑一顾",
+  "explanation": "不屑：不值得，不愿意；顾：看。认为不值得一看。形容极端轻视。",
+  "example": ""
+ },
+ {
+  "num": 219,
+  "idiom": "高人一等",
+  "explanation": "比别人高出一个等级。指高过一般人。",
+  "example": ""
+ },
+ {
+  "num": 220,
+  "idiom": "昂首挺胸",
+  "explanation": "抬起头，挺起胸膛。形容斗志高，士气旺。",
+  "example": ""
+ },
+ {
+  "num": 221,
+  "idiom": "刚直不阿",
+  "explanation": "阿：迎合，偏袒。刚强正直，不逢迎，无偏私。",
+  "example": ""
+ },
+ {
+  "num": 222,
+  "idiom": "洋洋自得",
+  "explanation": "犹言洋洋得意。形容得意时神气十足的姿态。",
+  "example": ""
+ },
+ {
+  "num": 223,
+  "idiom": "耀武扬威",
+  "explanation": "耀：显扬。炫耀武力，显示他的威风。",
+  "example": ""
+ },
+ {
+  "num": 224,
+  "idiom": "长揖不拜",
+  "explanation": "揖、拜：旧时的拱手、磕头礼。对长者或尊者只弯腰行拱手礼，不跪拜磕头。旧时指相见时态度不恭，为人高傲。",
+  "example": ""
+ },
+ {
+  "num": 225,
+  "idiom": "刚愎自用",
+  "explanation": "愎：任性；刚愎：强硬回执；自用：自以为是。十分固执自信，不考虑别人的意见。",
+  "example": ""
+ },
+ {
+  "num": 226,
+  "idiom": "神气活现",
+  "explanation": "自以为了不起而显示出来的得意和傲慢的样子。",
+  "example": ""
+ },
+ {
+  "num": 227,
+  "idiom": "妄自尊大",
+  "explanation": "过高地看待自己。形容狂妄自大，不把别人放眼里。",
+  "example": ""
+ },
+ {
+  "num": 228,
+  "idiom": "龙行虎步",
+  "explanation": "原形容帝王的仪态不同一般。后也形容将军的英武姿态。",
+  "example": ""
+ },
+ {
+  "num": 229,
+  "idiom": "花枝招展",
+  "explanation": "比喻姿态优美。招展：迎风摆动。常用来形容妇女打扮得十分艳丽。",
+  "example": ""
+ },
+ {
+  "num": 230,
+  "idiom": "故弄玄虚",
+  "explanation": "本意是故意玩弄使人迷惑的欺骗手段。",
+  "example": ""
+ },
+ {
+  "num": 231,
+  "idiom": "同心同德",
+  "explanation": "“同心同德”是指为同一个心愿，同一目的而努力。多用于褒义。",
+  "example": ""
+ },
+ {
+  "num": 232,
+  "idiom": "清闲自在",
+  "explanation": "清静空闲，无拘无束。形容生活安闲舒适。",
+  "example": ""
+ },
+ {
+  "num": 233,
+  "idiom": "哭丧着脸",
+  "explanation": "心里不愉快，脸上显出不高兴的样子。",
+  "example": ""
+ },
+ {
+  "num": 234,
+  "idiom": "衣冠沐猴",
+  "explanation": "沐猴：猕猴。穿衣戴帽的猕猴。比喻人虚有其表而人品低下。",
+  "example": ""
+ },
+ {
+  "num": 235,
+  "idiom": "醋海翻波",
+  "explanation": "比喻男女间因爱情而引起的纠葛。",
+  "example": ""
+ },
+ {
+  "num": 236,
+  "idiom": "岸然道貌",
+  "explanation": "指严肃的神态。",
+  "example": ""
+ },
+ {
+  "num": 237,
+  "idiom": "一锤定音",
+  "explanation": "比喻某个人的一句话做最后决定。",
+  "example": ""
+ },
+ {
+  "num": 238,
+  "idiom": "天荒地老",
+  "explanation": "天荒地老，天荒秽，地衰老。指经历的时间极久远。常用于人们的爱情宣言。",
+  "example": ""
+ },
+ {
+  "num": 239,
+  "idiom": "卓尔不群",
+  "explanation": "高高挺立，超出一般，形容道德、学问的成就都超乎寻常，与众不同。",
+  "example": ""
+ },
+ {
+  "num": 240,
+  "idiom": "人莫予毒",
+  "explanation": "莫：没有；予：我；毒：分割，危害。再也没有人怨恨我、伤害我了。形容劲敌被消灭后高兴的心情。",
+  "example": ""
+ },
+ {
+  "num": 241,
+  "idiom": "拂袖而去",
+  "explanation": "拂袖：甩袖子，表示生气。形容生了气，一甩袖子就走了。",
+  "example": ""
+ },
+ {
+  "num": 242,
+  "idiom": "画龙点睛",
+  "explanation": "原形容梁代画家张僧繇作画的神妙。后多比喻写文章或讲话时，在关键处用几句话点明实质，使内容生动有力。",
+  "example": ""
+ },
+ {
+  "num": 243,
+  "idiom": "师心自用",
+  "explanation": "固执己见，自以为是。",
+  "example": ""
+ },
+ {
+  "num": 244,
+  "idiom": "突然袭击",
+  "explanation": "指军事上出其不意地攻击。",
+  "example": ""
+ },
+ {
+  "num": 245,
+  "idiom": "慨然应允",
+  "explanation": "慨然：慷慨、爽快。形容豪不犹豫地答应下来。",
+  "example": ""
+ },
+ {
+  "num": 246,
+  "idiom": "不磷不缁",
+  "explanation": "磨不薄，染不黑。比方坚贞高洁的品质，不因外界影响而有所转变。",
+  "example": ""
+ },
+ {
+  "num": 247,
+  "idiom": "心花怒放",
+  "explanation": "怒放：盛开。心里高兴得象花儿盛开一样。形容极其高兴。",
+  "example": ""
+ },
+ {
+  "num": 248,
+  "idiom": "龙潭虎穴",
+  "explanation": "龙潜居的深水坑，老虎藏身的巢穴。比喻极险恶的地方。",
+  "example": ""
+ },
+ {
+  "num": 249,
+  "idiom": "正气凛然",
+  "explanation": "正气：刚正之气。凛然：可敬畏的样子。形容正气威严不可侵犯。",
+  "example": ""
+ },
+ {
+  "num": 250,
+  "idiom": "花好月圆",
+  "explanation": "比喻生活美好圆满，用于祝贺人新婚或乔迁之喜。雕刻品、民乐、电影、音乐等也常选用“花好月圆”为题材来创作。有些楼盘也选用此名。",
+  "example": ""
+ },
+ {
+  "num": 251,
+  "idiom": "安闲自得",
+  "explanation": "自得：自己感到舒适。安静清闲，感到非常舒适。",
+  "example": ""
+ },
+ {
+  "num": 252,
+  "idiom": "半死半生",
+  "explanation": "①未全死。②比喻无意义、无生气的苟且的生活。",
+  "example": ""
+ },
+ {
+  "num": 253,
+  "idiom": "浑金璞玉",
+  "explanation": "比方自然美质，未加修饰。多用来形容人的品质淳朴和善。",
+  "example": ""
+ },
+ {
+  "num": 254,
+  "idiom": "车水马龙",
+  "explanation": "车象流水，马象游龙。形容来往车马很多，连续不断的热闹情景。",
+  "example": ""
+ },
+ {
+  "num": 255,
+  "idiom": "桃花流水",
+  "explanation": "形容春日美景。也比喻男女爱情。",
+  "example": ""
+ },
+ {
+  "num": 256,
+  "idiom": "寂然无声",
+  "explanation": "寂静没有声音。",
+  "example": ""
+ },
+ {
+  "num": 257,
+  "idiom": "眉飞眼笑",
+  "explanation": "形容非常高兴。",
+  "example": ""
+ },
+ {
+  "num": 258,
+  "idiom": "积善成德",
+  "explanation": "善：善行，好事；德：高尚的品德。长期行善，就会形成一种高尚的品德。",
+  "example": ""
+ },
+ {
+  "num": 259,
+  "idiom": "艴然不悦",
+  "explanation": "非常生气。艴fú然，也作怫然，生气时表现一付脸色难看的样子。典自《孟子公孙丑上》（孟子）曰：“然则吾子与管仲孰贤？”曾西艴然不悦，曰：“尔何曾比予于管仲！",
+  "example": ""
+ },
+ {
+  "num": 260,
+  "idiom": "奉为圭臬",
+  "explanation": "把某些言论或事物当作准则。",
+  "example": ""
+ },
+ {
+  "num": 261,
+  "idiom": "才高七步",
+  "explanation": "形容才思敏捷。",
+  "example": ""
+ },
+ {
+  "num": 262,
+  "idiom": "白龙微服",
+  "explanation": "比喻贵人微服出行，恐有估计不到的灾祸。",
+  "example": ""
+ },
+ {
+  "num": 263,
+  "idiom": "含英咀华",
+  "explanation": "比喻琢磨和领会诗文的要点和精神。",
+  "example": ""
+ },
+ {
+  "num": 264,
+  "idiom": "怡然自得",
+  "explanation": "怡然：安适愉快的样子。形容高兴而满足的样子。",
+  "example": ""
+ },
+ {
+  "num": 265,
+  "idiom": "新人新事",
+  "explanation": "具有新的道德品质的人和表达新的高尚社会风气的事。",
+  "example": ""
+ },
+ {
+  "num": 266,
+  "idiom": "穷乡僻壤",
+  "explanation": "壤：地。荒远偏僻的地方。",
+  "example": ""
+ },
+ {
+  "num": 267,
+  "idiom": "才贯二酉",
+  "explanation": "二酉：指大酉山、小酉山。因以之形容读书甚多、学识渊博。",
+  "example": ""
+ },
+ {
+  "num": 268,
+  "idiom": "计然之术",
+  "explanation": "泛指生财致富之道。同“计然之策”。",
+  "example": ""
+ },
+ {
+  "num": 269,
+  "idiom": "愤愤不平",
+  "explanation": "愤愤：很生气的样子。心中不服，感到气愤。",
+  "example": ""
+ },
+ {
+  "num": 270,
+  "idiom": "跃然纸上",
+  "explanation": "活跃地呈现在纸上。形容文学作品叙述描写真实生动。",
+  "example": ""
+ },
+ {
+  "num": 271,
+  "idiom": "才疏学浅",
+  "explanation": "疏：浅薄。才学不高，学识不深（多用作自谦的话）。",
+  "example": ""
+ },
+ {
+  "num": 272,
+  "idiom": "为虎作伥",
+  "explanation": "伥：伥鬼，古时传说被老虎吃掉的人，死后变成伥鬼，专门引诱人来给老虎吃。替老虎做伥鬼。比喻充当恶人的帮凶。",
+  "example": ""
+ },
+ {
+  "num": 273,
+  "idiom": "伏虎降龙",
+  "explanation": "伏：屈服；降：用用威力使屈服。用威力使猛虎和恶龙屈服。形容力量强大，能战胜一切敌人和困难。",
+  "example": ""
+ },
+ {
+  "num": 274,
+  "idiom": "张冠李戴",
+  "explanation": "把姓张的帽子给姓李的戴上，比喻弄错了对象或事实。",
+  "example": ""
+ },
+ {
+  "num": 275,
+  "idiom": "盘龙卧虎",
+  "explanation": "盘：盘旋，弯曲。盘曲的龙，卧居的虎。比喻隐藏的人才。",
+  "example": ""
+ },
+ {
+  "num": 276,
+  "idiom": "截然不同",
+  "explanation": "截然：很分明地、断然分开的样子。形容两件事物毫无共同之处。",
+  "example": ""
+ },
+ {
+  "num": 277,
+  "idiom": "材德兼备",
+  "explanation": "材：通“才”。既有工作的才能和力量，又有好的思想品质。",
+  "example": ""
+ },
+ {
+  "num": 278,
+  "idiom": "马如游龙",
+  "explanation": "形容人马熙熙攘攘的景象。",
+  "example": ""
+ },
+ {
+  "num": 279,
+  "idiom": "狡兔三窟",
+  "explanation": "狡猾的兔子准备好几个藏身的窝。比喻隐蔽的地方或方法多。",
+  "example": ""
+ },
+ {
+  "num": 280,
+  "idiom": "燋金烁石",
+  "explanation": "使金石销熔，形容天很酷热。",
+  "example": ""
+ },
+ {
+  "num": 281,
+  "idiom": "宰鸡教猴",
+  "explanation": "用杀鸡来警告猴子。比喻以严惩一个来警告大家。",
+  "example": ""
+ },
+ {
+  "num": 282,
+  "idiom": "千军万马",
+  "explanation": "形容兵马众多。也形容声势浩大。",
+  "example": ""
+ },
+ {
+  "num": 283,
+  "idiom": "蔼然仁者",
+  "explanation": "对人和善的有仁德的人。",
+  "example": ""
+ },
+ {
+  "num": 284,
+  "idiom": "小心翼翼",
+  "explanation": "形容恭敬严肃的样子，后来形容举动十分谨慎，一点也不敢疏忽。",
+  "example": ""
+ },
+ {
+  "num": 285,
+  "idiom": "尺二秀才",
+  "explanation": "旧时用以讥讽写俗字的书生。“尺二”即指当时“盡”字的俗体“尽”字。",
+  "example": ""
+ },
+ {
+  "num": 286,
+  "idiom": "溘然长往",
+  "explanation": "溘：忽然。指人突然死亡，常作悼念死者用词。",
+  "example": ""
+ },
+ {
+  "num": 287,
+  "idiom": "泥牛入海",
+  "explanation": "泥塑的牛掉到海里。比喻一去不再回来。",
+  "example": ""
+ },
+ {
+  "num": 288,
+  "idiom": "鸡犬升天",
+  "explanation": "比喻一个人做了大官；和他有关的人也跟着得势。",
+  "example": ""
+ },
+ {
+  "num": 289,
+  "idiom": "宜嗔宜喜",
+  "explanation": "意思是不论生气，还是高兴，总是很美的。",
+  "example": ""
+ },
+ {
+  "num": 290,
+  "idiom": "毛发耸然",
+  "explanation": "毛发竖起。极言惊骇、恐惧。同“毛发悚然”。",
+  "example": ""
+ },
+ {
+  "num": 291,
+  "idiom": "豁然开悟",
+  "explanation": "形容彻底晓悟。同“豁然大悟”。",
+  "example": ""
+ },
+ {
+  "num": 292,
+  "idiom": "世道人情",
+  "explanation": "泛指社会的道德风尚和人们的思想情感等。同“世道人心”。",
+  "example": ""
+ },
+ {
+  "num": 293,
+  "idiom": "浑然一体",
+  "explanation": "浑然：混同在一起的样子。融合成一个整体，不可分割。也形容文章绘画，布置匀整，结构谨严。",
+  "example": ""
+ },
+ {
+  "num": 294,
+  "idiom": "虎踞龙盘",
+  "explanation": "形容地势雄伟险要。",
+  "example": ""
+ },
+ {
+  "num": 295,
+  "idiom": "岿然独存",
+  "explanation": "岿然：高峻独立的样子。形容经过变乱而惟一幸存的事物。",
+  "example": ""
+ },
+ {
+  "num": 296,
+  "idiom": "眉花眼笑",
+  "explanation": "形容非常高兴、兴奋的样子。",
+  "example": ""
+ },
+ {
+  "num": 297,
+  "idiom": "尸位素餐",
+  "explanation": "空占着职位，不做事而白吃饭。",
+  "example": ""
+ },
+ {
+  "num": 298,
+  "idiom": "喜出望外",
+  "explanation": "望：希望，意料。由于没有想到的好事而非常高兴。",
+  "example": ""
+ },
+ {
+  "num": 299,
+  "idiom": "超然远引",
+  "explanation": "为超脱世事，远由而去。",
+  "example": ""
+ },
+ {
+  "num": 300,
+  "idiom": "怡然自若",
+  "explanation": "喜悦而无拘无束。",
+  "example": ""
+ },
+ {
+  "num": 301,
+  "idiom": "眉欢眼笑",
+  "explanation": "形容非常兴奋、高兴。",
+  "example": ""
+ },
+ {
+  "num": 302,
+  "idiom": "求道于盲",
+  "explanation": "盲：盲人。向盲人问路。比喻向毫无所知的人请教。",
+  "example": ""
+ },
+ {
+  "num": 303,
+  "idiom": "道听途说",
+  "explanation": "道、途：路。路上听来的、路上传播的话。泛指没有根据的传闻。",
+  "example": ""
+ },
+ {
+  "num": 304,
+  "idiom": "才子佳人",
+  "explanation": "泛指有才貌的男女。",
+  "example": ""
+ },
+ {
+  "num": 305,
+  "idiom": "才大如海",
+  "explanation": "多用来称誉对方的才学渊博。",
+  "example": ""
+ },
+ {
+  "num": 306,
+  "idiom": "虎视眈眈",
+  "explanation": "形容贪婪而凶狠地注视。",
+  "example": ""
+ },
+ {
+  "num": 307,
+  "idiom": "井底之蛙",
+  "explanation": "井底的蛙只能看到井口那么大的一块天。比喻见识狭窄的人。",
+  "example": ""
+ },
+ {
+  "num": 308,
+  "idiom": "一嚬一笑",
+  "explanation": "谓不高兴或喜悦的表情。嚬，皱眉。",
+  "example": ""
+ },
+ {
+  "num": 309,
+  "idiom": "世道人心",
+  "explanation": "社会的风气，人们的思想。",
+  "example": ""
+ },
+ {
+  "num": 310,
+  "idiom": "黯然伤神",
+  "explanation": "沮丧的样子。情绪低沉，心神忧伤。",
+  "example": ""
+ },
+ {
+  "num": 311,
+  "idiom": "指鹿为马",
+  "explanation": "比喻颠倒黑白，混淆是非。",
+  "example": ""
+ },
+ {
+  "num": 312,
+  "idiom": "惊喜交集",
+  "explanation": "交集：交错在一起。又吃惊，又高兴。",
+  "example": ""
+ },
+ {
+  "num": 313,
+  "idiom": "骥子龙文",
+  "explanation": "骥子：千里马；龙文：骏马名，旧时多指神童。原为佳子弟的代称。后多比喻英才。",
+  "example": ""
+ },
+ {
+  "num": 314,
+  "idiom": "皆大欢喜",
+  "explanation": "人人都高兴满意。",
+  "example": ""
+ },
+ {
+  "num": 315,
+  "idiom": "死样活气",
+  "explanation": "形容没有生气。",
+  "example": ""
+ },
+ {
+  "num": 316,
+  "idiom": "称德度功",
+  "explanation": "称：衡量；度：估量。对被任用的人既要考虑到他的品德，也要考虑到他的功绩。",
+  "example": ""
+ },
+ {
+  "num": 317,
+  "idiom": "鸡毛蒜皮",
+  "explanation": "比喻无关紧要的小事或毫无价值的东西。",
+  "example": ""
+ },
+ {
+  "num": 318,
+  "idiom": "一倡三叹",
+  "explanation": "后多形容诗人婉转优美，感人至深。",
+  "example": ""
+ },
+ {
+  "num": 319,
+  "idiom": "聪慧正直",
+  "explanation": "头脑聪慧，行为正直无私。形容词人的品质优秀。",
+  "example": ""
+ },
+ {
+  "num": 320,
+  "idiom": "杀鸡骇猴",
+  "explanation": "骇：惊扰。杀鸡给猴子看。比喻惩罚一人以恐吓或警戒其他人。",
+  "example": ""
+ },
+ {
+  "num": 321,
+  "idiom": "金鸡独立",
+  "explanation": "中国武术的一种姿式。像公鸡似的用一足站立的一种武术姿式。也泛指用一只脚站立。",
+  "example": ""
+ },
+ {
+  "num": 322,
+  "idiom": "才识过人",
+  "explanation": "才能和见识超过一般人。",
+  "example": ""
+ },
+ {
+  "num": 323,
+  "idiom": "荡然无存",
+  "explanation": "荡然：完全空无。形容东西完全失去，一点没有留下。",
+  "example": ""
+ },
+ {
+  "num": 324,
+  "idiom": "自然而然",
+  "explanation": "自由发展，必然这样。指非人力干预而自然如此。",
+  "example": ""
+ },
+ {
+  "num": 325,
+  "idiom": "妄自菲薄",
+  "explanation": "过份地轻视自己，不知自重。",
+  "example": ""
+ },
+ {
+  "num": 326,
+  "idiom": "流汗浃背",
+  "explanation": "形容出汗多，湿透了背上的衣服。",
+  "example": ""
+ },
+ {
+  "num": 327,
+  "idiom": "相见恨晚",
+  "explanation": "只恨相见得太晚。形容一见如故，意气极其相投",
+  "example": ""
+ },
+ {
+  "num": 328,
+  "idiom": "超然象外",
+  "explanation": "以：用法等同“于”。超脱于物象以外。指诗文的意境雄浑、超脱。也比喻置身世外，脱离现实的空想。",
+  "example": ""
+ },
+ {
+  "num": 329,
+  "idiom": "一见钟情",
+  "explanation": "男女之间一见面就产生了爱情。还指一见面就喜欢上它了。",
+  "example": ""
+ },
+ {
+  "num": 330,
+  "idiom": "斩钉截铁",
+  "explanation": "形容说话或行动坚决果断，毫不犹豫。",
+  "example": ""
+ },
+ {
+  "num": 331,
+  "idiom": "豁然贯通",
+  "explanation": "豁然：通达的样子；贯通：前后贯穿通晓。指一下了弄通了某个道理。",
+  "example": ""
+ },
+ {
+  "num": 332,
+  "idiom": "海枯石烂",
+  "explanation": "通过用海水干涸、石头腐烂来形容历时久远，比喻坚定的意志永远不变。",
+  "example": ""
+ },
+ {
+  "num": 333,
+  "idiom": "崇山峻岭",
+  "explanation": "崇：高；峻：山高而陡。高大险峻的山岭。",
+  "example": ""
+ },
+ {
+  "num": 334,
+  "idiom": "藏龙卧虎",
+  "explanation": "指隐藏着未被发现的人才，也指隐藏不露的人才。",
+  "example": ""
+ },
+ {
+  "num": 335,
+  "idiom": "欢天喜地",
+  "explanation": "形容非常高兴。",
+  "example": ""
+ },
+ {
+  "num": 336,
+  "idiom": "形槁心灰",
+  "explanation": "枯干。形容身体消瘦不堪，心境极为冷漠，毫无生气。",
+  "example": ""
+ },
+ {
+  "num": 337,
+  "idiom": "茫然不解",
+  "explanation": "茫然：无所知的样子。一无所知，不理解。",
+  "example": ""
+ },
+ {
+  "num": 338,
+  "idiom": "怡情悦性",
+  "explanation": "怡：和悦愉快；悦：高兴，愉快。使心情舒畅愉快。",
+  "example": ""
+ },
+ {
+  "num": 339,
+  "idiom": "乐嗟苦咄",
+  "explanation": "高兴时招唤，不高兴时责骂。形容对人态度恶劣。",
+  "example": ""
+ },
+ {
+  "num": 340,
+  "idiom": "浓眉大眼",
+  "explanation": "形容眉目端庄，富有生气。多指男子。",
+  "example": ""
+ },
+ {
+  "num": 341,
+  "idiom": "然糠照薪",
+  "explanation": "烧糠照明。比喻勤奋学习。同“然糠自照”。",
+  "example": ""
+ },
+ {
+  "num": 342,
+  "idiom": "石破天惊",
+  "explanation": "比喻文章议论新奇惊人。",
+  "example": ""
+ },
+ {
+  "num": 343,
+  "idiom": "受宠若惊",
+  "explanation": "宠：宠爱。因为得到宠爱或赏识而又高兴，又不安。",
+  "example": ""
+ },
+ {
+  "num": 344,
+  "idiom": "乘龙佳婿",
+  "explanation": "乘龙：女子乘坐于龙上得道成仙。佳婿：称意的女婿。旧时指才貌双全的女婿。也用作誉称别人的女婿。",
+  "example": ""
+ },
+ {
+  "num": 345,
+  "idiom": "生龙活虎",
+  "explanation": "形容活泼矫健，富有生气。",
+  "example": ""
+ },
+ {
+  "num": 346,
+  "idiom": "龙蛇混杂",
+  "explanation": "比喻好人和坏人混在一起。",
+  "example": ""
+ },
+ {
+  "num": 347,
+  "idiom": "喜怒无常",
+  "explanation": "一会儿高兴，一会儿生气。形容态度多变。",
+  "example": ""
+ },
+ {
+  "num": 348,
+  "idiom": "昂然自得",
+  "explanation": "自得：自己感到舒适。指大模大样，满不在乎的样子。",
+  "example": ""
+ },
+ {
+  "num": 349,
+  "idiom": "师道尊严",
+  "explanation": "本指老师受到尊敬，他所传授的道理、知识、技能才能得到尊重。后多指为师之道尊贵、庄严。",
+  "example": ""
+ },
+ {
+  "num": 350,
+  "idiom": "蔼然可亲",
+  "explanation": "蔼然：对人和善的样子。形容态度和气，使人愿意接近。",
+  "example": ""
+ },
+ {
+  "num": 351,
+  "idiom": "毛骨悚然",
+  "explanation": "悚然：害怕的样子。汗毛竖起，脊梁骨发冷。形容十分恐惧。",
+  "example": ""
+ },
+ {
+  "num": 352,
+  "idiom": "爽然自失",
+  "explanation": "形容茫无主见，无所适从。",
+  "example": ""
+ },
+ {
+  "num": 353,
+  "idiom": "举重若轻",
+  "explanation": "举起沉重的东西像是在摆弄轻的东西。比喻能力强，能够轻松地胜任繁重的工作或处理困难的问题。",
+  "example": ""
+ },
+ {
+  "num": 354,
+  "idiom": "闲情逸致",
+  "explanation": "逸：安闲；致：情趣。指悠闲的心情和安逸的兴致。",
+  "example": ""
+ },
+ {
+  "num": 355,
+  "idiom": "一时之选",
+  "explanation": "指某一时期的优秀人才。",
+  "example": ""
+ },
+ {
+  "num": 356,
+  "idiom": "旭日初升",
+  "explanation": "早晨的太阳刚刚从东方升起。比喻充满活力、生气勃勃的景象。",
+  "example": ""
+ },
+ {
+  "num": 357,
+  "idiom": "司空见惯",
+  "explanation": "看惯了就不觉得奇怪。",
+  "example": ""
+ },
+ {
+  "num": 358,
+  "idiom": "翻然悔悟",
+  "explanation": "悔：悔恨；悟：觉悟。很快地醒悟过来。形容转变得很快。指思想完全转变，彻底醒悟。",
+  "example": ""
+ },
+ {
+  "num": 359,
+  "idiom": "楚才晋用",
+  "explanation": "比喻用才不当。",
+  "example": ""
+ },
+ {
+  "num": 360,
+  "idiom": "心平气和",
+  "explanation": "心情平静，态度温和。指不急躁，不生气。",
+  "example": ""
+ },
+ {
+  "num": 361,
+  "idiom": "超世之才",
+  "explanation": "有超越世人的才能。",
+  "example": ""
+ },
+ {
+  "num": 362,
+  "idiom": "安然无事",
+  "explanation": "犹言平安无事。",
+  "example": ""
+ },
+ {
+  "num": 363,
+  "idiom": "才疏计拙",
+  "explanation": "指才识疏浅，不善谋算。",
+  "example": ""
+ },
+ {
+  "num": 364,
+  "idiom": "抛砖引玉",
+  "explanation": "自谦之辞，不能用于对方或第三方。",
+  "example": ""
+ },
+ {
+  "num": 365,
+  "idiom": "气势磅礴",
+  "explanation": "磅礴：广大无边的样子。形容气势雄伟壮大。",
+  "example": ""
+ },
+ {
+  "num": 366,
+  "idiom": "自私自利",
+  "explanation": "私心很重，只为个人利益打算。",
+  "example": ""
+ },
+ {
+  "num": 367,
+  "idiom": "势不两立",
+  "explanation": "两立：双方并立。指敌对的双方不能同时存在。比喻矛盾不可调和。",
+  "example": ""
+ },
+ {
+  "num": 368,
+  "idiom": "长才短驭",
+  "explanation": "犹言大才小用。",
+  "example": ""
+ },
+ {
+  "num": 369,
+  "idiom": "废然而返",
+  "explanation": "本指怒气消失，恢复常态，现在形容失望回来。",
+  "example": ""
+ },
+ {
+  "num": 370,
+  "idiom": "心悦诚服",
+  "explanation": "悦：愉快，高兴；诚：硬实。由衷地高兴，真心地服气。指真心地服气或服从。",
+  "example": ""
+ },
+ {
+  "num": 371,
+  "idiom": "道长争短",
+  "explanation": "指评论好坏是非。",
+  "example": ""
+ },
+ {
+  "num": 372,
+  "idiom": "才高八斗",
+  "explanation": "比喻人极有才华。",
+  "example": ""
+ },
+ {
+  "num": 373,
+  "idiom": "才望高雅",
+  "explanation": "形容人富有才学，享有很高的声望，不同流俗。",
+  "example": ""
+ },
+ {
+  "num": 374,
+  "idiom": "五马六猴",
+  "explanation": "形容不守规矩、不受管束的人。",
+  "example": ""
+ },
+ {
+  "num": 375,
+  "idiom": "聪明才智",
+  "explanation": "指人的智慧和才能。",
+  "example": ""
+ },
+ {
+  "num": 376,
+  "idiom": "顶天立地",
+  "explanation": "形容形象非常高大，气概豪迈。",
+  "example": ""
+ },
+ {
+  "num": 377,
+  "idiom": "凯旋而归",
+  "explanation": "战争获胜，军队奏着得胜乐曲归来。亦泛指获胜归来。",
+  "example": ""
+ },
+ {
+  "num": 378,
+  "idiom": "才华超众",
+  "explanation": "才华：表现于外的才能。才能远远超出一般人。",
+  "example": ""
+ },
+ {
+  "num": 379,
+  "idiom": "依然如故",
+  "explanation": "依然：仍旧；故：过去，从前。指人没有什么长进，还是从前的老样子。",
+  "example": ""
+ },
+ {
+  "num": 380,
+  "idiom": "坦然自若",
+  "explanation": "态度安详，一如常态。",
+  "example": ""
+ },
+ {
+  "num": 381,
+  "idiom": "冰天雪地",
+  "explanation": "形容冰雪漫天盖地。",
+  "example": ""
+ },
+ {
+  "num": 382,
+  "idiom": "人中龙虎",
+  "explanation": "比喻人中豪杰。",
+  "example": ""
+ },
+ {
+  "num": 383,
+  "idiom": "故我依然",
+  "explanation": "故我：旧日的我。仍旧是过去的我。指自己的境况和从前一样，没有变化。",
+  "example": ""
+ },
+ {
+  "num": 384,
+  "idiom": "振振有词",
+  "explanation": "贬义，形容自以为理由很充分、说个没完。",
+  "example": ""
+ },
+ {
+  "num": 385,
+  "idiom": "杯弓蛇影",
+  "explanation": "形容疑神疑鬼，自相惊扰。",
+  "example": ""
+ },
+ {
+  "num": 386,
+  "idiom": "出口入耳",
+  "explanation": "指品德、才能超出同类之上。",
+  "example": ""
+ },
+ {
+  "num": 387,
+  "idiom": "昂然直入",
+  "explanation": "昂首挺胸地径直走进去。形容傲然威武的样子。",
+  "example": ""
+ },
+ {
+  "num": 388,
+  "idiom": "狼狈为奸",
+  "explanation": "据说，狼和狈两种野兽常合伙伤害牲畜。因用“狼狈为奸”比喻相互色结，一起干坏事。",
+  "example": ""
+ },
+ {
+  "num": 389,
+  "idiom": "酒酣耳热",
+  "explanation": "形容饮酒到高兴的时候。",
+  "example": ""
+ },
+ {
+  "num": 390,
+  "idiom": "忍辱负重",
+  "explanation": "形容为了完成艰巨的任务而忍受耻辱，承担重任。",
+  "example": ""
+ },
+ {
+  "num": 391,
+  "idiom": "光天化日",
+  "explanation": "比喻大家看得很清楚的地方。",
+  "example": ""
+ },
+ {
+  "num": 392,
+  "idiom": "安然无恙",
+  "explanation": "恙：病。原指人平安没有疾病。现泛指事物平安未遭损害。",
+  "example": ""
+ },
+ {
+  "num": 393,
+  "idiom": "三足鼎立",
+  "explanation": "比喻三方面的势力对峙。",
+  "example": ""
+ },
+ {
+  "num": 394,
+  "idiom": "金玉其质",
+  "explanation": "质：本质，品质。指人的品质高洁。",
+  "example": ""
+ },
+ {
+  "num": 395,
+  "idiom": "回嗔作喜",
+  "explanation": "嗔：生气。由生气转为喜欢。",
+  "example": ""
+ },
+ {
+  "num": 396,
+  "idiom": "茹毛饮血",
+  "explanation": "原始人不会用火，连毛带血地生吃禽兽。",
+  "example": ""
+ },
+ {
+  "num": 397,
+  "idiom": "勃然大怒",
+  "explanation": "勃然：突然。突然变脸大发脾气。",
+  "example": ""
+ },
+ {
+  "num": 398,
+  "idiom": "至死不渝",
+  "explanation": "到死都不改变，大多是对爱情的坚守，对爱情的信念，一起走过的日子。",
+  "example": ""
+ },
+ {
+  "num": 399,
+  "idiom": "夙兴夜寐",
+  "explanation": "起得早，睡得晚，形容勤奋不懈。",
+  "example": ""
+ },
+ {
+  "num": 400,
+  "idiom": "毅然决然",
+  "explanation": "毅然：顽强地；决然：坚决地。意志坚决，毫不犹豫。",
+  "example": ""
+ },
+ {
+  "num": 401,
+  "idiom": "嫁鸡逐鸡",
+  "explanation": "比喻女子出嫁后只能顺从丈夫。",
+  "example": ""
+ },
+ {
+  "num": 402,
+  "idiom": "肝胆欲碎",
+  "explanation": "欲：将要。肝和胆将要破碎了。形容极度悲痛或非常生气。",
+  "example": ""
+ },
+ {
+  "num": 403,
+  "idiom": "混然天成",
+  "explanation": "自然形成的整体，没有斧凿的痕迹。",
+  "example": ""
+ },
+ {
+  "num": 404,
+  "idiom": "谈笑风生",
+  "explanation": "有说有笑，兴致高。形容谈话谈得高兴而有风趣。",
+  "example": ""
+ },
+ {
+  "num": 405,
+  "idiom": "惊弓之鸟",
+  "explanation": "被弓箭吓怕了的鸟不容易安定。比喻经过惊吓的人碰到一点动静就非常害怕。",
+  "example": ""
+ },
+ {
+  "num": 406,
+  "idiom": "暴腮龙门",
+  "explanation": "象鱼仰望龙门而不得上一样。科举时代比喻应进士试不第，后也比喻生活遭遇挫折，处境窘迫。",
+  "example": ""
+ },
+ {
+  "num": 407,
+  "idiom": "龙飞凤舞",
+  "explanation": "原形容山势的蜿蜒雄壮，后也形容书法笔势有力，灵活舒展。",
+  "example": ""
+ },
+ {
+  "num": 408,
+  "idiom": "狐假虎威",
+  "explanation": "假：凭借。比喻倚仗别人的威势吓唬、欺压人。",
+  "example": ""
+ },
+ {
+  "num": 409,
+  "idiom": "气象万千",
+  "explanation": "气象：情景。形容景象或事物壮丽而多变化。",
+  "example": ""
+ },
+ {
+  "num": 410,
+  "idiom": "珠联璧合",
+  "explanation": "珍珠联成串，美玉合成双。比喻杰出的人才或美好的事物结合在一起。",
+  "example": ""
+ },
+ {
+  "num": 411,
+  "idiom": "岿然不动",
+  "explanation": "岿然：高峻独立的样子。象高山一样挺立着一动不动。形容高大坚固，不能动摇。",
+  "example": ""
+ },
+ {
+  "num": 412,
+  "idiom": "靡然成风",
+  "explanation": "指群起效尤而成风气。",
+  "example": ""
+ },
+ {
+  "num": 413,
+  "idiom": "白驹过隙",
+  "explanation": "白驹：白色骏马，比喻太阳；隙：缝隙。象小白马在细小的缝隙前跑过一样。形容时间过得极快。",
+  "example": ""
+ },
+ {
+  "num": 414,
+  "idiom": "果然如此",
+  "explanation": "果真是这样。指不出所料。",
+  "example": ""
+ },
+ {
+  "num": 415,
+  "idiom": "近悦远来",
+  "explanation": "使近处的人受到好处而高兴，远方的人闻风就会前来投奔。旧指当权者给人恩惠，以便笼络人心。",
+  "example": ""
+ },
+ {
+  "num": 416,
+  "idiom": "意气用事",
+  "explanation": "凭感情办事、缺乏理智，不表示“讲义气重感情”。",
+  "example": ""
+ },
+ {
+  "num": 417,
+  "idiom": "弄鬼掉猴",
+  "explanation": "弄：戏耍；掉：摆弄。捣鬼，耍花样。",
+  "example": ""
+ },
+ {
+  "num": 418,
+  "idiom": "硕大无朋",
+  "explanation": "形容无比的大。",
+  "example": ""
+ },
+ {
+  "num": 419,
+  "idiom": "理之当然",
+  "explanation": "理所当然，理应如此。",
+  "example": ""
+ },
+ {
+  "num": 420,
+  "idiom": "死不瞑目",
+  "explanation": "瞑目：闭上眼睛。人死了也不闭眼睛。原指人死的时候心里还有放不下的事。现多用来形容没有达到目的死也不甘心。",
+  "example": ""
+ },
+ {
+  "num": 421,
+  "idiom": "然糠自照",
+  "explanation": "然：同“燃”，烧；糠：谷壳。烧糠照明。比喻勤奋好学。",
+  "example": ""
+ },
+ {
+  "num": 422,
+  "idiom": "鸡毛蒜皮",
+  "explanation": "比喻细小的、不重要的事情。",
+  "example": ""
+ },
+ {
+  "num": 423,
+  "idiom": "才气无双",
+  "explanation": "英勇的气慨，天下没有第二个人。",
+  "example": ""
+ },
+ {
+  "num": 424,
+  "idiom": "情窦初开",
+  "explanation": "情意的发生或男女爱情萌动。指刚刚懂得爱情（多指少女）",
+  "example": ""
+ },
+ {
+  "num": 425,
+  "idiom": "舒舒服服",
+  "explanation": "身心感到轻松愉快舒适。",
+  "example": ""
+ },
+ {
+  "num": 426,
+  "idiom": "悠然自得",
+  "explanation": "悠然：闲适的样子；自得：内心得意舒适。形容悠闲而舒适。",
+  "example": ""
+ },
+ {
+  "num": 427,
+  "idiom": "鸡飞狗叫",
+  "explanation": "把鸡吓得飞起来，把狗吓得直叫唤。形容乱成一团。",
+  "example": ""
+ },
+ {
+  "num": 428,
+  "idiom": "才疏意广",
+  "explanation": "疏：粗疏；广：广大。才干有限而抱负很大。",
+  "example": ""
+ },
+ {
+  "num": 429,
+  "idiom": "一败如水",
+  "explanation": "形容军队打了大败仗，象水泼到地上那样不可收拾。",
+  "example": ""
+ },
+ {
+  "num": 430,
+  "idiom": "才高运蹇",
+  "explanation": "蹇：不顺利。才学很高，但命运不好，无法施展才华。含怀才不遇之意。",
+  "example": ""
+ },
+ {
+  "num": 431,
+  "idiom": "数典忘祖",
+  "explanation": "忘掉自己本来的情况或事物的本源。",
+  "example": ""
+ },
+ {
+  "num": 432,
+  "idiom": "昂然自若",
+  "explanation": "形容气宇轩昂满不在乎的样子。",
+  "example": ""
+ },
+ {
+  "num": 433,
+  "idiom": "沐猴而冠",
+  "explanation": "沐猴：猕猴。猴子穿衣戴帽装扮成人样。比喻虚有其表而无真本领。用来讽刺投靠权势窃据权位的人。",
+  "example": ""
+ },
+ {
+  "num": 434,
+  "idiom": "雕虫小技",
+  "explanation": "比喻小技或微不足道的技能。",
+  "example": ""
+ },
+ {
+  "num": 435,
+  "idiom": "樽前月下",
+  "explanation": "酒樽之前，月亮之下。指对酒赏月的悠闲情境。",
+  "example": ""
+ },
+ {
+  "num": 436,
+  "idiom": "德才兼备",
+  "explanation": "德：品德；才：才能；备：具备。既有好的思想品质，又有工作的才能和力量。",
+  "example": ""
+ },
+ {
+  "num": 437,
+  "idiom": "叹为观止",
+  "explanation": "赞美看到的事物美到极点。",
+  "example": ""
+ },
+ {
+  "num": 438,
+  "idiom": "了然于胸",
+  "explanation": "了然：了解、明白。心里非常明白。",
+  "example": ""
+ },
+ {
+  "num": 439,
+  "idiom": "鸡飞蛋打",
+  "explanation": "鸡飞走了；蛋也打碎了。比喻两头都没顾上；造成双重损失。",
+  "example": ""
+ },
+ {
+  "num": 440,
+  "idiom": "弱不禁风",
+  "explanation": "形容娇弱的连风都经受不起的病态。",
+  "example": ""
+ },
+ {
+  "num": 441,
+  "idiom": "千钧一发",
+  "explanation": "形容情况十分危急。",
+  "example": ""
+ },
+ {
+  "num": 442,
+  "idiom": "蛟龙得水",
+  "explanation": "传说蛟龙得水后就能兴云作雨飞腾升天。比喻有才能的人获得施展的机会。也比喻摆脱困境。",
+  "example": ""
+ },
+ {
+  "num": 443,
+  "idiom": "鸡零狗碎",
+  "explanation": "形容事物零零碎碎；不成系统。",
+  "example": ""
+ },
+ {
+  "num": 444,
+  "idiom": "时乖运蹇",
+  "explanation": "指时运不好。",
+  "example": ""
+ },
+ {
+  "num": 445,
+  "idiom": "抚掌大笑",
+  "explanation": "抚：拍。拍手大笑。形容非常高兴。",
+  "example": ""
+ },
+ {
+  "num": 446,
+  "idiom": "起死回生",
+  "explanation": "把快要死的人救活。形容医术高明。也比喻把已经没有希望的事物挽救过来。",
+  "example": ""
+ },
+ {
+  "num": 447,
+  "idiom": "硕果仅存",
+  "explanation": "比喻经过淘汰，留存下的稀少可贵的人或物。",
+  "example": ""
+ },
+ {
+  "num": 448,
+  "idiom": "自作自受",
+  "explanation": "形容自己做错了事，自己承受恶果。",
+  "example": ""
+ },
+ {
+  "num": 449,
+  "idiom": "老态龙钟",
+  "explanation": "形容年老体衰，行动不灵便。",
+  "example": ""
+ },
+ {
+  "num": 450,
+  "idiom": "骑虎难下",
+  "explanation": "骑在老虎背上不能下来。比喻做一件事情进行下去有困难，但情况又不允许中途停止，陷于进退两难的境地。",
+  "example": ""
+ },
+ {
+  "num": 451,
+  "idiom": "不死不活",
+  "explanation": "形容事物没有生气。",
+  "example": ""
+ },
+ {
+  "num": 452,
+  "idiom": "狗急跳墙",
+  "explanation": "比喻走投无路时不顾一切的采取极端行动。",
+  "example": ""
+ },
+ {
+  "num": 453,
+  "idiom": "患得患失",
+  "explanation": "患：忧患，担心。担心得不到，得到了又担心失掉。形容对个人得失看得很重。",
+  "example": ""
+ },
+ {
+  "num": 454,
+  "idiom": "猴年马月",
+  "explanation": "猴、马：十二生肖之一。泛指未来的岁月。",
+  "example": ""
+ },
+ {
+  "num": 455,
+  "idiom": "寒灰更然",
+  "explanation": "比喻重获生机。然，同“燃”。",
+  "example": ""
+ },
+ {
+  "num": 456,
+  "idiom": "惊喜欲狂",
+  "explanation": "既惊又喜，高兴得都要发疯了。形容喜出望外，过于兴奋的情壮。",
+  "example": ""
+ },
+ {
+  "num": 457,
+  "idiom": "飘飘欲仙",
+  "explanation": "欲：将要。飘飞上升，像要超脱尘世而成仙。多指人的感受轻松爽快。亦形容诗文、书法等的情致轻快飘逸。",
+  "example": ""
+ },
+ {
+  "num": 458,
+  "idiom": "超然迈伦",
+  "explanation": "伦：同辈。超越同辈，无人可比。",
+  "example": ""
+ },
+ {
+  "num": 459,
+  "idiom": "对牛弹琴",
+  "explanation": "比喻说话不看对象，对外行说内行话或对不讲理的人讲理。",
+  "example": ""
+ },
+ {
+  "num": 460,
+  "idiom": "寡廉鲜耻",
+  "explanation": "寡、鲜：少。旧指不廉洁，不知耻。现指不知羞耻。",
+  "example": ""
+ },
+ {
+  "num": 461,
+  "idiom": "猴头猴脑",
+  "explanation": "像猴子那样好动。形容行动浮躁。",
+  "example": ""
+ },
+ {
+  "num": 462,
+  "idiom": "怅然自失",
+  "explanation": "怅然：因不如意而感到不痛快。形容神志迷乱，像失去什么似的样子。",
+  "example": ""
+ },
+ {
+  "num": 463,
+  "idiom": "荒无人烟",
+  "explanation": "人烟：指住户、居民，因有炊烟的地方就有人居住。形容地方偏僻荒凉，见不到人家。",
+  "example": ""
+ },
+ {
+  "num": 464,
+  "idiom": "耳提面命",
+  "explanation": "表示长辈的谆谆教导。不用于同辈之间和贬义。",
+  "example": ""
+ },
+ {
+  "num": 465,
+  "idiom": "欢呼雀跃",
+  "explanation": "高兴得像麻雀那样跳跃起来。形容十分欢乐的情景。",
+  "example": ""
+ },
+ {
+  "num": 466,
+  "idiom": "费尽心机",
+  "explanation": "心机：计谋。挖空心思，想尽办法。",
+  "example": ""
+ },
+ {
+  "num": 467,
+  "idiom": "面目全非",
+  "explanation": "事物的样子变得很厉害，贬义。指变得很糟。",
+  "example": ""
+ },
+ {
+  "num": 468,
+  "idiom": "进道若退",
+  "explanation": "指前进之道反若后退。",
+  "example": ""
+ },
+ {
+  "num": 469,
+  "idiom": "大刀阔斧",
+  "explanation": "原指使用阔大的刀斧砍杀敌人。后比喻办事果断而有魄力。",
+  "example": ""
+ },
+ {
+  "num": 470,
+  "idiom": "一马当先",
+  "explanation": "原指作战时策马冲锋在前。形容领先。也比喻工作走在群众前面，积极带头。",
+  "example": ""
+ },
+ {
+  "num": 471,
+  "idiom": "情投意合",
+  "explanation": "投：相合。形容双方思想感情融洽，合得来。",
+  "example": ""
+ },
+ {
+  "num": 472,
+  "idiom": "肃然起敬",
+  "explanation": "肃然：恭敬的样子；起敬：产生敬佩的心情。形容产生严肃敬仰的感情。",
+  "example": ""
+ },
+ {
+  "num": 473,
+  "idiom": "喜眉笑眼",
+  "explanation": "形容面带笑容、十分高兴的样子。",
+  "example": ""
+ },
+ {
+  "num": 474,
+  "idiom": "曾不惨然",
+  "explanation": "竟不觉得惨痛。",
+  "example": ""
+ },
+ {
+  "num": 475,
+  "idiom": "鸡鸣狗盗",
+  "explanation": "指微不足道的技能；也指具有这类技能的人。常形容偷偷摸摸等不正当的行为。",
+  "example": ""
+ },
+ {
+  "num": 476,
+  "idiom": "巍然屹立",
+  "explanation": "巍然：极高的样子；屹立：山势直立高耸。比喻象高山一样直立地上，不可动摇。",
+  "example": ""
+ },
+ {
+  "num": 477,
+  "idiom": "马到成功",
+  "explanation": "形容事情顺利，一做就办成了或取得了胜利。",
+  "example": ""
+ },
+ {
+  "num": 478,
+  "idiom": "杀鸡儆猴",
+  "explanation": "杀鸡给猴子看。比喻用惩罚一个人的办法来警告别的人。",
+  "example": ""
+ },
+ {
+  "num": 479,
+  "idiom": "气势恢宏",
+  "explanation": "气势磅礴，场面大气。恢，弘大；宏，广大。",
+  "example": ""
+ },
+ {
+  "num": 480,
+  "idiom": "千方百计",
+  "explanation": "方：方法。讲：办法。想尽和用尽各种办法。",
+  "example": ""
+ },
+ {
+  "num": 481,
+  "idiom": "其道亡繇",
+  "explanation": "找不到门径；无法办到。亦作“其道无由”。",
+  "example": ""
+ },
+ {
+  "num": 482,
+  "idiom": "情比金坚",
+  "explanation": "情比金坚就译为感情比金子还坚固，所以有些人对待感情是至死不渝的！形容感情非常坚定，常作于男女爱情。",
+  "example": ""
+ },
+ {
+  "num": 483,
+  "idiom": "轩鹤冠猴",
+  "explanation": "轩：古代供士大夫乘坐的车。乘轩的鹤，戴冠的猴。比喻窃据高位、虚有其表的人。",
+  "example": ""
+ },
+ {
+  "num": 484,
+  "idiom": "呆若木鸡",
+  "explanation": "愣着不动；像只木头鸡。形容人痴或因惊恐而发愣的神态。",
+  "example": ""
+ },
+ {
+  "num": 485,
+  "idiom": "黯然销魂",
+  "explanation": "黯然：心怀沮丧、面色难看的样子；销魂：灵魂离开肉体。心怀沮丧得好象丢了魂似的。形容非常悲伤或愁苦。",
+  "example": ""
+ },
+ {
+  "num": 486,
+  "idiom": "万马齐喑",
+  "explanation": "比喻人们都沉默，不说话，不发表意见。",
+  "example": ""
+ },
+ {
+  "num": 487,
+  "idiom": "亲如手足",
+  "explanation": "象兄弟一样的亲密。多形容朋友的情谊深厚。",
+  "example": ""
+ },
+ {
+  "num": 488,
+  "idiom": "黯然神伤",
+  "explanation": "指心神悲沮的样子。",
+  "example": ""
+ },
+ {
+  "num": 489,
+  "idiom": "欣然自得",
+  "explanation": "心情舒适、自觉得意的样子。",
+  "example": ""
+ },
+ {
+  "num": 490,
+  "idiom": "才占八斗",
+  "explanation": "才：文才，才华。形容人学问高，文才好。",
+  "example": ""
+ },
+ {
+  "num": 491,
+  "idiom": "鸡肠狗肚",
+  "explanation": "比喻狭窄的度量，狠毒的心肠。",
+  "example": ""
+ },
+ {
+  "num": 492,
+  "idiom": "问道于盲",
+  "explanation": "向瞎子问路。比喻向什么也不懂的人请教，不解决问题。",
+  "example": ""
+ },
+ {
+  "num": 493,
+  "idiom": "始作俑者",
+  "explanation": "首先干某件坏事的人。滥用于一切倡导。",
+  "example": ""
+ },
+ {
+  "num": 494,
+  "idiom": "守株待兔",
+  "explanation": "株：露出地面的树根。原比喻希图不经过努力而得到成功的侥幸心理。现也比喻死守狭隘经验，不知变通。",
+  "example": ""
+ },
+ {
+  "num": 495,
+  "idiom": "一箭双雕",
+  "explanation": "原指射箭技术高超，一箭射中两只雕。后比喻做一件事达到两个目的。",
+  "example": ""
+ },
+ {
+  "num": 496,
+  "idiom": "璞玉浑金",
+  "explanation": "比方自然美质，未加修饰。多用来形容人的品质淳朴和善。",
+  "example": ""
+ },
+ {
+  "num": 497,
+  "idiom": "寂然不动",
+  "explanation": "寂：寂静。寂静无声，一点动静都没有。",
+  "example": ""
+ },
+ {
+  "num": 498,
+  "idiom": "超然自引",
+  "explanation": "指超脱世事，自动引退。",
+  "example": ""
+ },
+ {
+  "num": 499,
+  "idiom": "一笔抹杀",
+  "explanation": "指轻率地把成绩、优点全盘否定，一般不用于否定错误或罪行。",
+  "example": ""
+ },
+ {
+  "num": 500,
+  "idiom": "慨然允诺",
+  "explanation": "慨然：慷慨、爽快。形容豪不犹豫地答应下来。",
+  "example": ""
+ },
+ {
+  "num": 501,
+  "idiom": "藕断丝连",
+  "explanation": "比喻表面上断了关系，实际上仍有牵连，321、所向披靡：比喻力量所达到的地方，一切障碍全被扫除。",
+  "example": ""
+ },
+ {
+  "num": 502,
+  "idiom": "淡然置之",
+  "explanation": "很冷淡地放在一旁。形容毫不在意。",
+  "example": ""
+ },
+ {
+  "num": 503,
+  "idiom": "理所必然",
+  "explanation": "指按道理必定如此。",
+  "example": ""
+ },
+ {
+  "num": 504,
+  "idiom": "不在话下",
+  "explanation": "指事物轻微，或者理所当然，不值得一提。",
+  "example": ""
+ },
+ {
+  "num": 505,
+  "idiom": "祸起萧墙",
+  "explanation": "祸乱发生在家里，比喻内部发生祸乱。",
+  "example": ""
+ },
+ {
+  "num": 506,
+  "idiom": "红豆相思",
+  "explanation": "红豆：植物名，又叫相思子，详见红豆树。古人常用以象征爱情。比喻男女相思。",
+  "example": ""
+ },
+ {
+  "num": 507,
+  "idiom": "万象更新",
+  "explanation": "象：事物或景象。更：改变，改换。一切事物或景象都变得面貌一新。也作“万物更新”。",
+  "example": ""
+ },
+ {
+  "num": 508,
+  "idiom": "相濡以沫",
+  "explanation": "人在困境中相互辱骂，不吵就不能活似的，就不如放下恩怨！互助共渡难关！",
+  "example": ""
+ },
+ {
+  "num": 509,
+  "idiom": "眼笑眉飞",
+  "explanation": "形容极度高兴。",
+  "example": ""
+ },
+ {
+  "num": 510,
+  "idiom": "长才广度",
+  "explanation": "指才能出众器量宏大的人。",
+  "example": ""
+ },
+ {
+  "num": 511,
+  "idiom": "营私舞弊",
+  "explanation": "营：谋求；舞：玩弄；弊：指坏事。因图谋私利而玩弄欺骗手段做犯法的事。",
+  "example": ""
+ },
+ {
+  "num": 512,
+  "idiom": "欢欣鼓舞",
+  "explanation": "欢欣：欣喜；鼓舞：振奋。形容高兴而振奋。",
+  "example": ""
+ },
+ {
+  "num": 513,
+  "idiom": "闪烁其词",
+  "explanation": "：形容说话吞吞吐吐，躲躲闪闪。",
+  "example": ""
+ },
+ {
+  "num": 514,
+  "idiom": "笔走龙蛇",
+  "explanation": "形容书法生动而有气势。",
+  "example": ""
+ },
+ {
+  "num": 515,
+  "idiom": "弃道任术",
+  "explanation": "指统治者不行王道而行霸术。",
+  "example": ""
+ },
+ {
+  "num": 516,
+  "idiom": "大喜若狂",
+  "explanation": "高兴得几乎发狂。",
+  "example": ""
+ },
+ {
+  "num": 517,
+  "idiom": "画蛇添足",
+  "explanation": "比喻多此一举，弄巧成拙。",
+  "example": ""
+ },
+ {
+  "num": 518,
+  "idiom": "声名狼藉",
+  "explanation": "声名：名声。狼籍：乱七八糟。形容行为不检点，名声坏到了极点。",
+  "example": ""
+ },
+ {
+  "num": 519,
+  "idiom": "虎穴龙潭",
+  "explanation": "龙潜居的深水坑，老虎藏身的巢穴。比喻极险恶的地方。",
+  "example": ""
+ },
+ {
+  "num": 520,
+  "idiom": "痛心疾首",
+  "explanation": "形容伤心悔恨之极，也形容怨恨之深。",
+  "example": ""
+ },
+ {
+  "num": 521,
+  "idiom": "惘然若失",
+  "explanation": "惘然：失意的样子。心情不舒畅，好象丢掉了什么东西似的。",
+  "example": ""
+ },
+ {
+  "num": 522,
+  "idiom": "海誓山盟",
+  "explanation": "多指相爱的男女双方对未来生活的盟约和誓言，表达自己对爱人的信任以及对美好爱情和生活的向往和追求。",
+  "example": ""
+ },
+ {
+  "num": 523,
+  "idiom": "喜笑颜开",
+  "explanation": "颜开：脸面舒开，指笑容。形容心里高兴，满面笑容。",
+  "example": ""
+ },
+ {
+  "num": 524,
+  "idiom": "幡然悔悟",
+  "explanation": "思想转变很快，彻底悔悟。",
+  "example": ""
+ },
+ {
+  "num": 525,
+  "idiom": "亡羊补牢",
+  "explanation": "亡：失去。牢：牲口圈。意指羊丢失了再去修补羊圈，还不算晚。后用“亡羊补牢”比喻出了问题以后及时想法补救，以免继续受损失。也指出了问题才想法补救，已经太晚了。",
+  "example": ""
+ },
+ {
+  "num": 526,
+  "idiom": "鬼斧神工",
+  "explanation": "形容技艺的精巧，似非人工之能为。（形容人工技艺的精巧）",
+  "example": ""
+ },
+ {
+  "num": 527,
+  "idiom": "春意盎然",
+  "explanation": "意：意味；盎然：洋溢，深厚。春天的意味正浓。",
+  "example": ""
+ },
+ {
+  "num": 528,
+  "idiom": "亲痛仇快",
+  "explanation": "做事不要使自己人痛心，使敌人高兴。指某种举坳只利于敌人，不利于自己。",
+  "example": ""
+ },
+ {
+  "num": 529,
+  "idiom": "良金美玉",
+  "explanation": "比方文章非常完善。也比方人道德品质极好。",
+  "example": ""
+ },
+ {
+  "num": 530,
+  "idiom": "怡然自乐",
+  "explanation": "怡然：喜悦的样子。形容高兴而满足。",
+  "example": ""
+ },
+ {
+  "num": 531,
+  "idiom": "轩然大波",
+  "explanation": "轩然：波涛高高涌起的样子。高高涌起的波涛。比喻大的纠纷或乱子。",
+  "example": ""
+ },
+ {
+  "num": 532,
+  "idiom": "鲜蹦活跳",
+  "explanation": "谓鱼、禽等乱蹦乱跳而有生气。",
+  "example": ""
+ },
+ {
+  "num": 533,
+  "idiom": "叶公好龙",
+  "explanation": "比喻口头上说爱好某事物，实际上并不真爱好。",
+  "example": ""
+ },
+ {
+  "num": 534,
+  "idiom": "涣然冰释",
+  "explanation": "嫌隙、误会消除。",
+  "example": ""
+ },
+ {
+  "num": 535,
+  "idiom": "包罗万象",
+  "explanation": "包罗：包括；万象：宇宙间的一切景象，指各种事物。形容内容丰富，应有尽有。",
+  "example": ""
+ },
+ {
+  "num": 536,
+  "idiom": "素昧平生",
+  "explanation": "一向不相识。",
+  "example": ""
+ },
+ {
+  "num": 537,
+  "idiom": "轻轻快快",
+  "explanation": "轻松愉快。",
+  "example": ""
+ },
+ {
+  "num": 538,
+  "idiom": "含笑九泉",
+  "explanation": "九泉：地下深处，旧指人死之后埋葬的地方。也作：“黄泉”。在九泉之下满含笑容。表示死后也感到欣慰和高兴。",
+  "example": ""
+ },
+ {
+  "num": 539,
+  "idiom": "棘刺母猴",
+  "explanation": "棘：多刺的植物。在棘刺尖端雕刻的猕猴。形容欺骗的勾当或艰难的事业。",
+  "example": ""
+ },
+ {
+  "num": 540,
+  "idiom": "耳听八方",
+  "explanation": "耳朵同时察听各方面来的声音。形容人很机警。",
+  "example": ""
+ },
+ {
+  "num": 541,
+  "idiom": "抑郁寡欢",
+  "explanation": "由于心情不舒畅而很少高兴的时候。",
+  "example": ""
+ },
+ {
+  "num": 542,
+  "idiom": "其道无由",
+  "explanation": "找不到门径；无法办到。同“其道亡繇”。",
+  "example": ""
+ },
+ {
+  "num": 543,
+  "idiom": "漫无止境",
+  "explanation": "指永远不会停止或没有边际。",
+  "example": ""
+ },
+ {
+  "num": 544,
+  "idiom": "欣喜若狂",
+  "explanation": "欣喜：快乐；若：好象；狂：失去控制。形容高兴到了极点。",
+  "example": ""
+ },
+ {
+  "num": 545,
+  "idiom": "抱头鼠窜",
+  "explanation": "抱着头，象老鼠那样惊慌逃跑。形容受到打击后狼狈逃跑。",
+  "example": ""
+ },
+ {
+  "num": 546,
+  "idiom": "息怒停瞋",
+  "explanation": "发怒时睁大眼睛。停止发怒和生气。多用作劝说，停息恼怒之辞。",
+  "example": ""
+ },
+ {
+  "num": 547,
+  "idiom": "神采奕然",
+  "explanation": "奕奕：精神焕发的样子。形容精神饱满，容光焕发。",
+  "example": ""
+ },
+ {
+  "num": 548,
+  "idiom": "毛发悚然",
+  "explanation": "毛发竖起。极言惊骇、恐惧。亦作“毛发耸然”。",
+  "example": ""
+ },
+ {
+  "num": 549,
+  "idiom": "才秀人微",
+  "explanation": "秀：优异。微：卑微，低微。指才能优异而地位卑微。",
+  "example": ""
+ },
+ {
+  "num": 550,
+  "idiom": "手舞足蹈",
+  "explanation": "蹈：顿足踏地。两手舞动，两只脚也跳了起来。形容高兴到了极点。也手乱舞、脚乱跳的狂态。",
+  "example": ""
+ },
+ {
+  "num": 551,
+  "idiom": "悦目娱心",
+  "explanation": "使眼睛高兴，使心里快乐。形容使人感到美好快乐。",
+  "example": ""
+ },
+ {
+  "num": 552,
+  "idiom": "怀材抱器",
+  "explanation": "犹言德才兼备。既有好的思想品质，又有工作的才能和力量。材，才能；器，器度。",
+  "example": ""
+ },
+ {
+  "num": 553,
+  "idiom": "鸡皮鹤发",
+  "explanation": "皮肤发皱，头发苍白。指老人。",
+  "example": ""
+ },
+ {
+  "num": 554,
+  "idiom": "卓然不群",
+  "explanation": "指超出常人。",
+  "example": ""
+ },
+ {
+  "num": 555,
+  "idiom": "旗开得胜",
+  "explanation": "刚一打开旗帜进入战斗，就取得了胜利。比喻事情刚一开始，就取得好成绩。",
+  "example": ""
+ },
+ {
+  "num": 556,
+  "idiom": "眉开眼笑",
+  "explanation": "眉头舒展，眼含笑意。形容高兴愉快的样子。",
+  "example": ""
+ },
+ {
+  "num": 557,
+  "idiom": "蔚然成风",
+  "explanation": "蔚然：草木茂盛的样子。指一件事情逐渐发展盛行，形成一种良好风气。",
+  "example": ""
+ },
+ {
+  "num": 558,
+  "idiom": "缚鸡之力",
+  "explanation": "缚：捆绑。捆绑一只鸡的力量。形容体力很弱。",
+  "example": ""
+ },
+ {
+  "num": 559,
+  "idiom": "超然独立",
+  "explanation": "指超出世事离群独居。",
+  "example": ""
+ },
+ {
+  "num": 560,
+  "idiom": "虎口余生",
+  "explanation": "比喻大难不死，侥幸保存下来的生命。",
+  "example": ""
+ },
+ {
+  "num": 561,
+  "idiom": "水落石出",
+  "explanation": "形容真相大白。",
+  "example": ""
+ },
+ {
+  "num": 562,
+  "idiom": "道头知尾",
+  "explanation": "说个开头就知道结果。形容思维敏捷、悟性好。",
+  "example": ""
+ },
+ {
+  "num": 563,
+  "idiom": "鸡犬不宁",
+  "explanation": "宁：安宁。形容骚扰得厉害，连鸡狗都不得安宁。",
+  "example": ""
+ },
+ {
+  "num": 564,
+  "idiom": "塞翁失马",
+  "explanation": "塞：边界险要之处；翁：老头。比喻一时虽然受到损失，也许反而因此能得到好处。",
+  "example": ""
+ },
+ {
+  "num": 565,
+  "idiom": "论道经邦",
+  "explanation": "研究治国之道，以经营治理国家。",
+  "example": ""
+ },
+ {
+  "num": 566,
+  "idiom": "拾人牙慧",
+  "explanation": "拾取别人的只言片语当作自己的话。",
+  "example": ""
+ },
+ {
+  "num": 567,
+  "idiom": "兴致勃勃",
+  "explanation": "形容心情愉悦，精神开朗，兴头儿很高。",
+  "example": ""
+ },
+ {
+  "num": 568,
+  "idiom": "火中取栗",
+  "explanation": "比喻冒危险给别人出力自己上了大当，一无所得。",
+  "example": ""
+ },
+ {
+  "num": 569,
+  "idiom": "琨玉秋霜",
+  "explanation": "比方坚贞劲烈的品质。",
+  "example": ""
+ },
+ {
+  "num": 570,
+  "idiom": "身体力行",
+  "explanation": "亲身体验，努力实践。体，行。",
+  "example": ""
+ },
+ {
+  "num": 571,
+  "idiom": "活龙活现",
+  "explanation": "形容神情生动逼真，好像就在眼前一样。",
+  "example": ""
+ },
+ {
+  "num": 572,
+  "idiom": "韬光养晦",
+  "explanation": "比喻隐藏才能，不使外露。",
+  "example": ""
+ },
+ {
+  "num": 573,
+  "idiom": "怫然不悦",
+  "explanation": "怫然：忧愁或愤怒的样子；悦：愉快，高兴。愤怒，很不愉快。",
+  "example": ""
+ },
+ {
+  "num": 574,
+  "idiom": "荒诞不经",
+  "explanation": "不经，不正常的。虚妄离奇，不合正理。",
+  "example": ""
+ },
+ {
+  "num": 575,
+  "idiom": "幸灾乐祸",
+  "explanation": "幸：高兴。指人缺乏善意，在别人遇到灾祸时感到高兴。",
+  "example": ""
+ },
+ {
+  "num": 576,
+  "idiom": "霍然而愈",
+  "explanation": "霍然：很快的样子。很快病就好了。",
+  "example": ""
+ },
+ {
+  "num": 577,
+  "idiom": "虎头蛇尾",
+  "explanation": "①比喻言行不一致，狡诈阴险。②比喻做事前紧后松，有始无终。",
+  "example": ""
+ },
+ {
+  "num": 578,
+  "idiom": "谋道作舍",
+  "explanation": "造房子请教路人。比喻人多嘴杂，意见纷纷，办不成事。",
+  "example": ""
+ },
+ {
+  "num": 579,
+  "idiom": "井然有序",
+  "explanation": "井然：整齐不乱的样子。序：次序。整整齐齐，次序分明，条理清楚。",
+  "example": ""
+ },
+ {
+  "num": 580,
+  "idiom": "伏龙凤雏",
+  "explanation": "伏龙：（卧龙）诸葛孔明。凤雏：庞士元。两人都是汉末三国时期著名的谋略家，军事家。后指隐而未现的有较高学问和能耐的人。",
+  "example": ""
+ }
+]

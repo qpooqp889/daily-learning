@@ -41871,5 +41871,131 @@
       }
     ],
     "phonetic": "[ˈziːbrə]"
+  },
+  {
+    "id": 2224,
+    "word": "volcano",
+    "pos": "名詞",
+    "meaning": "火山",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=volcano&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The volcano is very high and sometimes it erupts.",
+        "translation": "這座火山很高，有時會噴發。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20volcano%20is%20very%20high%20and%20sometimes%20it%20erupts.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2223,
+    "word": "teamwork",
+    "pos": "名詞",
+    "meaning": "團隊合作",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=teamwork&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Good teamwork helps us finish the project faster.",
+        "translation": "良好的團隊合作幫助我們更快完成專案。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Good%20teamwork%20helps%20us%20finish%20the%20project%20faster.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2222,
+    "word": "telescope",
+    "pos": "名詞",
+    "meaning": "望遠鏡",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=telescope&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "He looked at the stars through the telescope.",
+        "translation": "他用望遠鏡觀看星星。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=He%20looked%20at%20the%20stars%20through%20the%20telescope.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2221,
+    "word": "cheerful",
+    "pos": "形容詞",
+    "meaning": "愉快的；開心的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=cheerful&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "My sister is always cheerful in the morning.",
+        "translation": "我姊姊早上總是很愉快。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20sister%20is%20always%20cheerful%20in%20the%20morning.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2220,
+    "word": "valuable",
+    "pos": "形容詞",
+    "meaning": "有價值的；寶貴的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=valuable&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "This old book is very valuable to me.",
+        "translation": "這本舊書對我來說非常珍貴。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=This%20old%20book%20is%20very%20valuable%20to%20me.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2219,
+    "word": "journey",
+    "pos": "名詞",
+    "meaning": "旅程；旅行",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=journey&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The journey to the mountain took three hours.",
+        "translation": "前往那座山的旅程花了三個小時。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20journey%20to%20the%20mountain%20took%20three%20hours.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2218,
+    "word": "explore",
+    "pos": "動詞",
+    "meaning": "探索；探險",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=explore&op=translate",
+    "created_at": "2026-08-04",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We want to explore the forest this weekend.",
+        "translation": "我們這個週末想去探索森林。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20want%20to%20explore%20the%20forest%20this%20weekend.&op=translate",
+        "created_at": "2026-08-04",
+        "topic": "其他"
+      }
+    ]
   }
 ]
