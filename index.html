@@ -166,7 +166,12 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 
 /* ---------- 學習計畫 ---------- */
 .plan-form-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.plan-config { background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 16px; border: 1px solid var(--border); }
+.plan-config .plan-form-row { margin-bottom: 10px; }
+.plan-config .plan-form-row:last-child { margin-bottom: 0; }
 .plan-form-row label { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
+.plan-form-row label { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
+.plan-config input[type="number"] { width: 64px; }
 .plan-form-row input[type="text"], .plan-form-row input[type="date"], .plan-form-row input[type="number"] {
   padding: 7px 10px; border-radius: 8px; border: 1px solid var(--border);
   background: var(--card); color: var(--text); font-size: 14px; outline: none;
@@ -353,18 +358,20 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
         <label>開始日期 <input type="date" id="planStart"></label>
         <label>天數 <input type="number" id="planDays" min="1" max="90" value="30" style="width:70px;"></label>
       </div>
-      <div class="plan-pick">
-        <div>
-          <b>🇺🇸 英文單字</b>
-          <button class="mini-btn" data-sel="en">全選</button>
-          <button class="mini-btn" data-sel="en" data-clear="1">清空</button>
-          <div class="pick-list" id="pickWords"></div>
+      <div class="plan-config">
+        <div class="plan-form-row">
+          <label>🇺🇸 單字/日 <input type="number" id="planWordsPerDay" min="0" max="50" value="1" style="width:64px;"></label>
+          <label>📝 句子/日 <input type="number" id="planSentPerDay" min="0" max="50" value="1" style="width:64px;"></label>
+          <label>🀄 成語/日 <input type="number" id="planIdiomPerDay" min="0" max="50" value="1" style="width:64px;"></label>
+          <span class="filter-label" style="margin-left:8px;">（0 = 不含此類）</span>
         </div>
-        <div>
-          <b>🀄 國語成語</b>
-          <button class="mini-btn" data-sel="cn">全選</button>
-          <button class="mini-btn" data-sel="cn" data-clear="1">清空</button>
-          <div class="pick-list" id="pickIdioms"></div>
+        <div class="plan-form-row">
+          <span class="filter-label">📑 句子主題：</span>
+          <button class="topic-chip active" data-ptopic="">隨機/全部</button>
+          <span id="planTopicChips"></span>
+        </div>
+        <div class="plan-form-row" style="font-size:12px;color:var(--muted);">
+          ※ 單字來自所選主題（含該主題句子的單字）；句子從所選主題中隨機抽取；成語不受主題限制。
         </div>
       </div>
       <div class="plan-actions">
@@ -761,27 +768,59 @@ function shuffle(arr) {
 }
 
 function renderPickLists() {
-  $('#pickWords').innerHTML = allWords.map(w =>
-    `<label><input type="checkbox" value="${esc(w.word)}"> ${esc(w.word)} <span style="color:var(--muted)">(${esc(w.meaning || '')})</span></label>`).join('');
-  $('#pickIdioms').innerHTML = allIdioms.map(i =>
-    `<label><input type="checkbox" value="${esc(i.idiom)}"> ${esc(i.idiom)}</label>`).join('');
+  renderPlanTopicChips();
 }
-document.querySelectorAll('.mini-btn').forEach(btn => {
-  btn.onclick = () => {
-    const list = btn.dataset.sel === 'en' ? '#pickWords' : '#pickIdioms';
-    document.querySelectorAll(list + ' input').forEach(c => c.checked = btn.dataset.clear ? false : true);
-  };
-});
+function renderPlanTopicChips() {
+  const counts = {};
+  allWords.forEach(w => (w.sentences || []).forEach(s => {
+    const t = s.topic || '未分類';
+    counts[t] = (counts[t] || 0) + 1;
+  }));
+  $('#planTopicChips').innerHTML = Object.keys(counts).map(t =>
+    `<button class="topic-chip" data-ptopic="${esc(t)}">${esc(t)} ${counts[t]}</button>`
+  ).join('');
+  $('#planTopicChips').querySelectorAll('.topic-chip').forEach(b => b.onclick = () => {
+    planTopicFilter = b.dataset.ptopic;
+    document.querySelectorAll('#planTopicChips .topic-chip').forEach(c => c.classList.toggle('active', c.dataset.ptopic === planTopicFilter));
+    const all = document.querySelector('[data-ptopic=""]');
+    if (all) all.classList.toggle('active', planTopicFilter === '');
+  });
+}
 
-function buildPlan(name, startDate, days, selWords, selIdioms) {
+
+let planTopicFilter = '';
+
+function buildPlan(name, startDate, days, wordsPerDay, sentPerDay, idiomPerDay, topicFilter) {
+  // 根據主題過濾單字池（單字至少要有一句在該主題）
+  let wordPool = allWords.filter(w =>
+    topicFilter === '' || (w.sentences || []).some(s => (s.topic || '未分類') === topicFilter)
+  );
+  // 句子池
+  let sentPool = [];
+  if (sentPerDay > 0) {
+    allWords.forEach(w => (w.sentences || []).forEach(s => {
+      if (topicFilter === '' || (s.topic || '未分類') === topicFilter) {
+        sentPool.push({ word: w.word, sentence: s.sentence, translation: s.translation, topic: s.topic || '未分類' });
+      }
+    }));
+  }
+  // 成語池
+  const idiomPool = allIdioms;
+
+  // 每天的 entry
   const entries = [];
-  for (let d = 0; d < days; d++) entries.push({ date: addDays(startDate, d), words: [], idioms: [] });
-  // 隨機分配、不重複：打亂後輪流放入每一天
-  shuffle(selWords).forEach((wd, i) => entries[i % days].words.push({ word: wd, done: false }));
-  shuffle(selIdioms).forEach((idm, i) => entries[i % days].idioms.push({ idiom: idm, done: false }));
+  for (let d = 0; d < days; d++) {
+    entries.push({ date: addDays(startDate, d), words: [], sentences: [], idioms: [] });
+  }
+
+  // 隨機分配
+  shuffle(wordPool).slice(0, wordsPerDay * days).forEach((w, i) => entries[i % days].words.push({ word: w.word, done: false }));
+  shuffle(sentPool).slice(0, sentPerDay * days).forEach((s, i) => entries[i % days].sentences.push({ word: s.word, sentence: s.sentence, translation: s.translation, topic: s.topic, done: false }));
+  shuffle(idiomPool).slice(0, idiomPerDay * days).forEach((idm, i) => entries[i % days].idioms.push({ idiom: idm.idiom, done: false }));
+
   return {
     id: 'plan_' + Date.now() + '_' + Math.floor(Math.random() * 1e6),
-    name, startDate, days,
+    name, startDate, days, wordsPerDay, sentPerDay, idiomPerDay, topicFilter,
     createdAt: new Date().toISOString(),
     entries
   };
@@ -791,15 +830,17 @@ $('#btnCreatePlan').onclick = async () => {
   const name = $('#planName').value.trim() || '學習計畫';
   const start = $('#planStart').value || todayStr();
   const days = Math.min(90, Math.max(1, parseInt($('#planDays').value) || 30));
-  const selWords = [...document.querySelectorAll('#pickWords input:checked')].map(c => c.value);
-  const selIdioms = [...document.querySelectorAll('#pickIdioms input:checked')].map(c => c.value);
-  if (!selWords.length && !selIdioms.length) {
-    $('#createMsg').textContent = '⚠️ 請至少勾選一個單字或成語';
+  const wordsPerDay = Math.max(0, parseInt($('#planWordsPerDay').value) || 0);
+  const sentPerDay  = Math.max(0, parseInt($('#planSentPerDay').value)  || 0);
+  const idiomPerDay = Math.max(0, parseInt($('#planIdiomPerDay').value) || 0);
+  if (!wordsPerDay && !sentPerDay && !idiomPerDay) {
+    $('#createMsg').textContent = '⚠️ 請至少填寫一項每日數量（> 0）';
     return;
   }
-  const plan = buildPlan(name, start, days, selWords, selIdioms);
+  const plan = buildPlan(name, start, days, wordsPerDay, sentPerDay, idiomPerDay, planTopicFilter);
   await idbPut('plans', plan);
-  $('#createMsg').textContent = `✅ 已建立「${name}」：${days} 天，單字 ${selWords.length} 個、成語 ${selIdioms.length} 則（隨機分配・不重複）`;
+  const topicHint = planTopicFilter ? `（主題：${planTopicFilter}）` : '（主題：隨機）';
+  $('#createMsg').textContent = `✅ 已建立「${name}」：${days} 天，單字 ${wordsPerDay}×${days}=${wordsPerDay*days} 個、句子 ${sentPerDay}×${days}=${sentPerDay*days} 句、成語 ${idiomPerDay}×${days}=${idiomPerDay*days} 則 ${topicHint}`;
   loadPlans();
 };
 
@@ -811,13 +852,14 @@ async function loadPlans() {
     return;
   }
   el.innerHTML = plans.map(plan => {
-    const total = plan.entries.reduce((n, e) => n + e.words.length + e.idioms.length, 0);
-    const done = plan.entries.reduce((n, e) => n + e.words.filter(w => w.done).length + e.idioms.filter(i => i.done).length, 0);
+    const total = plan.entries.reduce((n, e) => n + (e.words||[]).length + (e.sentences||[]).length + (e.idioms||[]).length, 0);
+    const done = plan.entries.reduce((n, e) => n + (e.words||[]).filter(w=>w.done).length + (e.sentences||[]).filter(s=>s.done).length + (e.idioms||[]).filter(i=>i.done).length, 0);
     const pct = total ? Math.round(done / total * 100) : 0;
     const rows = plan.entries.map(e => {
       const items = [
-        ...e.words.map(w => ({ key: 'w|' + e.date + '|' + w.word, label: w.word, done: w.done })),
-        ...e.idioms.map(i => ({ key: 'i|' + e.date + '|' + i.idiom, label: i.idiom, done: i.done }))
+        ...(e.words||[]).map(w => ({ key: 'w|' + e.date + '|' + w.word, label: w.word, done: w.done, type: 'word' })),
+        ...(e.sentences||[]).map(s => ({ key: 's|' + e.date + '|' + s.word + '|' + s.sentence, label: '📝 '+s.sentence.slice(0,20)+(s.sentence.length>20?'…':''), done: s.done, type: 'sent' })),
+        ...(e.idioms||[]).map(i => ({ key: 'i|' + e.date + '|' + i.idiom, label: i.idiom, done: i.done, type: 'idiom' }))
       ];
       if (!items.length) return '';
       return `<div class="day-row">
@@ -832,7 +874,7 @@ async function loadPlans() {
       <div class="plan-head">
         <div>
           <span class="plan-name">${esc(plan.name)}</span>
-          <span class="plan-meta">　${esc(plan.startDate)} 起 ${plan.days} 天 ｜ 完成 ${done}/${total}（${pct}%）</span>
+          <span class="plan-meta">　${esc(plan.startDate)} 起 ${plan.days} 天 ｜ 完成 ${done}/${total}（${pct}%）${plan.topicFilter ? '｜📑'+esc(plan.topicFilter) : ''}</span>
         </div>
         <div class="plan-ctrl">
           <button class="ghost-btn" data-exp="${esc(plan.id)}">${plan._open ? '收合' : '展開'}每日進度</button>
@@ -859,13 +901,23 @@ async function loadPlans() {
   });
   el.querySelectorAll('.day-item input').forEach(cb => cb.onchange = async () => {
     const key = cb.dataset.key; // w|date|word 或 i|date|idiom
-    const [type, date, item] = [key.slice(0, 1), key.slice(2).split('|')[0], key.slice(2).split('|').slice(1).join('|')];
+    const parts = key.split('|'); // s|date|word|sentence 或 w|date|word 或 i|date|idiom
+    const type = parts[0];
+    const date = parts[1];
     const planId = cb.closest('.plan-card').dataset.plan;
     const plans = await idbGetAll('plans');
     const plan = plans.find(x => x.id === planId);
     const en = plan.entries.find(e => e.date === date);
-    if (type === 'w') { const it = en.words.find(w => w.word === item); if (it) it.done = cb.checked; }
-    else { const it = en.idioms.find(i => i.idiom === item); if (it) it.done = cb.checked; }
+    if (type === 'w') {
+      const item = parts.slice(2).join('|');
+      const it = (en.words||[]).find(w => w.word === item); if (it) it.done = cb.checked;
+    } else if (type === 'i') {
+      const item = parts.slice(2).join('|');
+      const it = (en.idioms||[]).find(i => i.idiom === item); if (it) it.done = cb.checked;
+    } else if (type === 's') {
+      const word = parts[2], sentence = parts.slice(3).join('|');
+      const it = (en.sentences||[]).find(s => s.word === word && s.sentence === sentence); if (it) it.done = cb.checked;
+    }
     await idbPut('plans', plan);
     loadPlans();
   });
@@ -1208,8 +1260,9 @@ async function exportPlanCsv(planId) {
   if (!plan) return;
   const rows = [['計畫名稱', '日期', '類型', '項目', '完成']];
   plan.entries.forEach(e => {
-    e.words.forEach(w => rows.push([plan.name, e.date, '單字', w.word, w.done ? '是' : '否']));
-    e.idioms.forEach(i => rows.push([plan.name, e.date, '成語', i.idiom, i.done ? '是' : '否']));
+    (e.words||[]).forEach(w => rows.push([plan.name, e.date, '單字', w.word, w.done ? '是' : '否']));
+    (e.sentences||[]).forEach(s => rows.push([plan.name, e.date, '句子', s.word + ': ' + s.sentence + ' / ' + s.translation, s.done ? '是' : '否']));
+    (e.idioms||[]).forEach(i => rows.push([plan.name, e.date, '成語', i.idiom, i.done ? '是' : '否']));
   });
   downloadCsv('學習計畫_' + plan.name + '.csv', rows.map(r => r.map(csvEscape).join(',')).join('\r\n'));
 }
