@@ -285,6 +285,7 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
     <div class="tabs">
       <button class="tab-btn active" data-tab="en">🇺🇸 英文</button>
       <button class="tab-btn" data-tab="cn">🀄 國語</button>
+      <button class="tab-btn" data-tab="fav">⭐ 收藏</button>
       <button class="tab-btn" data-tab="plan">📅 學習計畫</button>
       <button class="tab-btn" data-tab="pet">🎮 養成遊戲</button>
     </div>
@@ -305,6 +306,7 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
     <div class="mobile-tabs" id="mobileTabs">
       <button class="tab-btn active" data-tab="en">🇺🇸 英文</button>
       <button class="tab-btn" data-tab="cn">🀄 國語</button>
+      <button class="tab-btn" data-tab="fav">⭐ 收藏</button>
       <button class="tab-btn" data-tab="plan">📅 學習計畫</button>
       <button class="tab-btn" data-tab="pet">🎮 養成遊戲</button>
     </div>
@@ -381,6 +383,16 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
     <div id="plansList"></div>
   </section>
 
+  <section id="page-fav" class="page">
+    <div class="section-title">⭐ 我的收藏</div>
+    <div class="filter-bar" style="margin-bottom:8px;">
+      <button class="ghost-btn active" id="favFilterAll" data-fav="all">全部</button>
+      <button class="ghost-btn" id="favFilterWord" data-fav="word">🇺🇸 單字</button>
+      <button class="ghost-btn" id="favFilterIdiom" data-fav="idiom">🀄 成語</button>
+    </div>
+    <div id="favList"></div>
+  </section>
+
   <section id="page-pet" class="page">
     <div class="section-title">🎮 養成遊戲</div>
     <div id="petCard"></div>
@@ -390,7 +402,8 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 
 <script>
 const $ = s => document.querySelector(s);
-const statsEl = $('#stats'), wordsList = $('#wordsList'), idiomsList = $('#idiomsList');
+const statsEl = $('#stats'), wordsList = $('#wordsList'), idiomsList = $('#idiomsList'),
+    FAV_KEY = 'dl_favorites_v1';
 let allWords = [], allIdioms = [];
 
 /* ================= 分頁（桌面 + 手機共用） ================= */
@@ -401,6 +414,7 @@ function switchTab(tab) {
   $('#page-' + tab).classList.add('active');
   if (tab === 'plan') loadPlans();
   if (tab === 'pet') renderPet();
+  if (tab === 'fav') renderFavorites();
   // 關閉手機 drawer
   document.getElementById('mobileDrawer').classList.remove('open');
   document.getElementById('hamburger').textContent = '☰';
@@ -436,6 +450,97 @@ document.getElementById('themeToggleMobile') && (document.getElementById('themeT
 const savedTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.dataset.theme = savedTheme;
 applyTheme(savedTheme);
+
+/* ================= 收藏 CRUD ================= */
+function getFavorites() {
+  try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch { return []; }
+}
+function saveFavorites(arr) {
+  localStorage.setItem(FAV_KEY, JSON.stringify(arr));
+}
+function toggleFav(type, id) {
+  const fav = getFavorites();
+  const key = type + '|' + id;
+  const idx = fav.findIndex(f => f.key === key);
+  if (idx >= 0) fav.splice(idx, 1); else fav.push({ key, type, id, addedAt: Date.now() });
+  saveFavorites(fav);
+  return idx < 0; // true = 新增, false = 移除
+}
+function isFav(type, id) {
+  return getFavorites().some(f => f.type === type && f.id === id);
+}
+
+/* 收藏列表渲染 */
+let favFilter = 'all';
+function renderFavorites() {
+  const fav = getFavorites();
+  const favMap = {};
+  fav.forEach(f => { favMap[f.type + '|' + f.id] = f; });
+
+  const words = allWords.filter(w => favMap['word|' + w.id]);
+  const idioms = allIdioms.filter(i => favMap['idiom|' + i.id]);
+
+  const q = searchQ;
+  const showWords = favFilter === 'all' || favFilter === 'word';
+  const showIdioms = favFilter === 'all' || favFilter === 'idiom';
+
+  const favWordCards = showWords ? words.map(w => {
+    const sents = (w.sentences || []).map(s => `
+      <div class="sentence">
+        <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
+        <div class="zh">${highlight(s.translation, q)}</div>
+      </div>`).join('');
+    return `<div class="card">
+      <div class="word-head">
+        <span class="word">${highlight(w.word, q)}</span>
+        ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
+        <span class="meaning">${highlight(w.meaning, q)}</span>
+        <button class="mini-btn danger-btn" style="margin-left:auto;" onclick="doToggleFav('word',${w.id},this)">★ 已收藏</button>
+      </div>
+      ${sents}
+    </div>`;
+  }) : [];
+
+  const favIdiomCards = showIdioms ? idioms.map(i => {
+    const meaning = i.explanation ? `<div class="explanation">📖 ${highlight(i.explanation, q)}</div>` : '';
+    const examples = i.example ? `<div class="example">${highlight(i.example, q)}</div>` : '';
+    return `<div class="card">
+      <div class="idiom-head">
+        <span class="idiom">${highlight(i.idiom, q)}</span>
+        ${i.category ? `<span class="cat-badge">${esc(i.category)}</span>` : ''}
+        <button class="mini-btn danger-btn" style="margin-left:auto;" onclick="doToggleFav('idiom',${i.id},this)">★ 已收藏</button>
+      </div>
+      ${meaning}${examples}
+    </div>`;
+  }) : [];
+
+  const html = [...favWordCards, ...favIdiomCards];
+  $('#favList').innerHTML = html.length
+    ? html.join('')
+    : '<div class="empty">還沒有收藏內容，點擊任意單字或成語旁的 ☆ 即可收藏～</div>';
+}
+
+function doToggleFav(type, id, btn) {
+  const added = toggleFav(type, id);
+  btn.textContent = added ? '★ 已收藏' : '☆ 收藏';
+  btn.className = added ? 'mini-btn danger-btn' : 'mini-btn';
+  // 重新統計
+  const fav = getFavorites();
+  statsEl.textContent = `單字 ${allWords.length} · 句子 ${allWords.reduce((n,w)=>n+(w.sentences||[]).length,0)} · 成語 ${allIdioms.length} · ⭐ ${getFavorites().length}`;
+}
+
+// 收藏頁篩選按鈕
+['favFilterAll','favFilterWord','favFilterIdiom'].forEach(id => {
+  const btn = document.getElementById(id);
+  if (btn) btn.onclick = () => {
+    favFilter = btn.dataset.fav;
+    ['favFilterAll','favFilterWord','favFilterIdiom'].forEach(x => {
+      const b = document.getElementById(x);
+      if (b) b.classList.toggle('active', x === id);
+    });
+    renderFavorites();
+  };
+});
 
 /* ================= 搜尋（模糊）+ A-Z / 主題 / 分類篩選 ================= */
 let searchQ = '';
@@ -523,7 +628,8 @@ async function loadAll() {
     renderAlphaBar(); renderTopicBar(); renderCatBar();
     renderWords(words); renderIdioms(idioms); renderPickLists();
     const nSent = words.reduce((n, w) => n + (w.sentences || []).length, 0);
-    const txt = `單字 ${words.length} · 句子 ${nSent} · 成語 ${idioms.length}`;
+    const favCount = getFavorites().length;
+    const txt = `單字 ${words.length} · 句子 ${nSent} · 成語 ${idioms.length} · ⭐ ${favCount}`;
     statsEl.textContent = txt;
     const sm = document.getElementById('statsMobile');
     if (sm) sm.textContent = txt;
@@ -553,12 +659,14 @@ function renderWords(words) {
         <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
         <div class="zh">${highlight(s.translation, q)}</div>
       </div>`).join('');
+    const favd = isFav('word', w.id);
     return `
     <div class="card">
       <div class="word-head">
         <span class="word">${highlight(w.word, q)}</span>
         ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
         <span class="meaning">${highlight(w.meaning, q)}</span>
+        <button class="mini-btn${favd ? ' danger-btn' : ''}" style="margin-left:auto;" onclick="doToggleFav('word',${w.id},this)">${favd ? '★ 已收藏' : '☆ 收藏'}</button>
         ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
       </div>
       ${sents}
@@ -574,12 +682,19 @@ function renderIdioms(idioms) {
   // 分類篩選
   if (catFilter) filtered = filtered.filter(i => (i.category || '未分類') === catFilter);
   if (!filtered.length) { idiomsList.innerHTML = '<div class="empty">沒有符合的成語～</div>'; return; }
-  idiomsList.innerHTML = filtered.map(i => `
+  idiomsList.innerHTML = filtered.map(i => {
+    const favd = isFav('idiom', i.id);
+    return `
     <div class="card">
-      <div class="idiom-head"><span class="idiom">${highlight(i.idiom, q)}</span>${i.category ? `<span class="cat-badge">${esc(i.category)}</span>` : ''}</div>
+      <div class="idiom-head">
+        <span class="idiom">${highlight(i.idiom, q)}</span>
+        ${i.category ? `<span class="cat-badge">${esc(i.category)}</span>` : ''}
+        <button class="mini-btn${favd ? ' danger-btn' : ''}" style="margin-left:auto;" onclick="doToggleFav('idiom',${i.id},this)">${favd ? '★ 已收藏' : '☆ 收藏'}</button>
+      </div>
       <div class="explanation">📖 ${highlight(i.explanation, q)}</div>
       ${i.example ? `<div class="example">${highlight(i.example, q)}</div>` : ''}
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 /* ================= 學習計畫（IndexedDB） ================= */
