@@ -1336,7 +1336,7 @@ function showQuiz(qs, petType) {
   let idx = 0, score = 0;
   const area = $('#quizArea');
   function renderQ() {
-    if (idx >= qs.length) return showResult(score, qs.length);
+    if (idx >= qs.length) return showResult(score, qs.length, petType);
     const q = qs[idx];
     area.innerHTML = `
       <div class="quiz-progress"><div style="width:${idx / qs.length * 100}%"></div></div>
@@ -1378,7 +1378,8 @@ async function addWrong(type) {
 }
 
 async function showResult(score, total, petType) {
-  const p = await getPet(petType);
+  const p = await getPet(petType || _quizPetType);
+  if (!p) { startQuiz(); return; }
   const t = PET_TYPES[p.type];
   const perfect = score === total && total > 0;
   $('#quizArea').innerHTML = `
@@ -1388,8 +1389,8 @@ async function showResult(score, total, petType) {
       <div style="font-size:14px;color:var(--muted);margin-bottom:12px;">${perfect ? '太完美了！全對！' : score >= total * 0.6 ? '很棒！繼續加油！' : '別灰心，再試一次！'}</div>
       <button class="primary-btn" id="btnAgain">🔁 再玩一次</button>
     </div>`;
-  $('#btnAgain').onclick = startQuiz;
-  renderPet();
+  $('#btnAgain').onclick = () => startQuiz();
+  renderPet(petType || _quizPetType);
 }
 
 let _quizPetType = null;
