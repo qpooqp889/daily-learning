@@ -1108,10 +1108,6 @@ function stageEmoji(p) {
   return t.emoji[0];
 }
 
-function xpMultiplier(p) {
-  // 等級加權：Lv2 = 1.1 倍、Lv3 = 1.2 倍 ... 每升一等 +0.1
-  return 1 + (Math.max(1, p.lv) - 1) * 0.1;
-}
 
 async function getPet(type) {
   const db = await openDB();
@@ -1171,7 +1167,7 @@ async function renderPet() {
         <div class="pet-info">
           <div class="pet-name">${esc(pet.name)} <span style="font-size:13px;color:var(--muted)">(${t.name})</span></div>
           <div class="pet-level">Lv.${pet.lv} / ${t.maxLv}　${pet.lv >= t.maxLv ? '🌟 已滿等！' : ''}</div>
-          <div class="pet-xp-text">經驗值 ${pet.xp.toFixed(1)} / ${xpNeed}（答對 +${xpMultiplier(pet).toFixed(1)} EXP，隨等級加權）</div>
+          <div class="pet-xp-text">經驗值 ${pet.xp} / ${xpNeed}（答對 +1 EXP）</div>
           <div class="progress"><div style="width:${Math.min(100, pet.xp / xpNeed * 100)}%"></div></div>
           <div style="font-size:13px;color:var(--muted);margin-top:6px;">
             🍗 飽食度 ${pet.hunger}%　🎾 心情 ${pet.fun}%　|　答對 ${pet.correct} / 答錯 ${pet.wrong}
@@ -1362,8 +1358,7 @@ function showQuiz(qs, petType) {
 async function addXp(n, type) {
   const p = await getPet(type);
   if (!p) return;
-  const gain = n * xpMultiplier(p);   // 加權：Lv2=1.1x、Lv3=1.2x...
-  p.xp += gain; p.correct++;
+  p.xp += n; p.correct++;
   const t = PET_TYPES[p.type];
   while (p.xp >= p.lv * 10 && p.lv < t.maxLv) { p.xp -= p.lv * 10; p.lv++; }
   if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 10);
