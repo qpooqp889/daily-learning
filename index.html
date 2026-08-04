@@ -229,6 +229,7 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
   font-weight: 600; font-size: 14px; cursor: pointer; color: var(--primary);
   text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px;
 }
+.day-item-group { display: inline-flex; align-items: center; gap: 4px; }
 .day-word-link:hover { color: var(--accent); }
 .day-expand-btn {
   background: none; border: none; cursor: pointer; font-size: 10px;
@@ -238,6 +239,20 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 .plan-sent-row { display: flex; flex-direction: column; gap: 1px; padding: 2px 0; }
 .plan-sent-en { font-size: 13px; color: var(--text); }
 .plan-sent-zh { font-size: 12px; color: var(--muted); padding-left: 8px; }
+/* Modal */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.45); align-items: center; justify-content: center;
+  padding: 16px;
+}
+.modal-overlay.open { display: flex; }
+.modal-card {
+  background: var(--card); border-radius: 16px; padding: 24px;
+  max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.modal-word-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+.modal-sentences { border-top: 1px solid var(--border); padding-top: 14px; }
 .danger-btn {
   padding: 6px 12px; border-radius: 16px; border: 1px solid var(--danger);
   background: transparent; color: var(--danger); cursor: pointer; font-size: 13px;
@@ -415,6 +430,11 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
     <div id="favList"></div>
   </section>
 
+  <!-- 單字詳情 Modal -->
+  <div id="wordModal" class="modal-overlay">
+    <div class="modal-card" id="wordModalCard"></div>
+  </div>
+
   <section id="page-pet" class="page">
     <div class="section-title">🎮 養成遊戲</div>
     <div id="petCard"></div>
@@ -440,6 +460,9 @@ function switchTab(tab) {
   // 關閉手機 drawer
   document.getElementById('mobileDrawer').classList.remove('open');
   document.getElementById('hamburger').textContent = '☰';
+  // 關閉 word modal
+  const m = document.getElementById('wordModal');
+  if (m) m.classList.remove('open');
 }
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.onclick = () => switchTab(btn.dataset.tab);
@@ -805,15 +828,52 @@ function renderPlanTopicChips() {
 
 let planTopicFilter = '';
 
-/* 從計畫點擊單字 → 跳到英文分頁並帶入搜尋 */
+/* ================= 單字詳情 Modal（計畫/收藏共用的檢視泡泡） ================= */
+function showWordModal(word, fromPlan) {
+  const m = document.getElementById('wordModal');
+  const mc = document.getElementById('wordModalCard');
+  const w = allWords.find(x => x.word === word);
+  if (!w) return;
+  const sents = (w.sentences || []).map(s => `
+    <div class="sentence">
+      <div class="en">
+        ${esc(s.sentence)}
+        ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}
+        ${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}
+      </div>
+      <div class="zh">${esc(s.translation)}</div>
+    </div>`).join('') || '<div class="empty">尚無例句</div>';
+  mc.innerHTML = `
+    <div class="modal-word-head">
+      <span class="word" style="font-size:24px;font-weight:700;">${esc(w.word)}</span>
+      ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
+      <span class="meaning" style="font-size:16px;">${esc(w.meaning)}</span>
+      ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
+    </div>
+    <div class="modal-sentences">${sents}</div>
+    ${fromPlan ? `<div style="text-align:center;margin-top:14px;">
+      <button class="primary-btn" id="modalDoneBtn">✅ 完成學習</button>
+    </div>` : ''}
+  `;
+  if (fromPlan) {
+    document.getElementById('modalDoneBtn').onclick = () => {
+      // 在所有 entries 裡把同日期同字的 done 設 true，向上廣播
+      document.getElementById('wordModal').classList.remove('open');
+      document.dispatchEvent(new CustomEvent('plan-word-done', { detail: { word }, bubbles: true }));
+    };
+  }
+  m.classList.add('open');
+}
+
+// 點擊 Modal 背景關閉
+document.addEventListener('click', e => {
+  const m = document.getElementById('wordModal');
+  if (e.target === m) m.classList.remove('open');
+});
+
+/* 從計畫點擊單字 → 開啟 Modal */
 function jumpToWord(word) {
-  searchQ = word;
-  alphaFilter = '';
-  topicFilter = '';
-  switchTab('en');
-  const inp = document.getElementById('searchInput');
-  if (inp) { inp.value = word; }
-  renderWords(allWords);
+  showWordModal(word, true);
 }
 
 function buildPlan(name, startDate, days, wordsPerDay, sentPerDay, idiomPerDay, topicFilter) {
@@ -895,25 +955,15 @@ async function loadPlans() {
 
     const htmlParts = [];
 
-    // 單字群（可展開句子）
+    // 單字（點名稱開 Modal）
     wordItems.forEach(wi => {
-      const expId = 'exp_' + plan.id + '_' + e.date + '_' + wi.word.replace(/\s+/g,'_');
-      const hasSent = wi.sentences.length > 0;
-      const sentsHtml = hasSent ? wi.sentences.map(s => `
-        <div class="plan-sent-row">
-          <span class="plan-sent-en">${esc(s.sentence)}</span>
-          <span class="plan-sent-zh">${esc(s.translation)}</span>
-        </div>`).join('') : '<div class="plan-sent-row"><span class="plan-sent-zh" style="color:var(--muted);font-size:12px;">（尚無句子）</span></div>';
-      htmlParts.push(`<div class="day-word-group">
-        <div class="day-word-head">
-          <label class="day-item ${wi.done ? 'done' : ''}" data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
-            <input type="checkbox" ${wi.done ? 'checked' : ''} data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
-          </label>
-          <span class="day-word-link" onclick="jumpToWord('${esc(wi.word)}')">${esc(wi.word)}</span>
-          ${hasSent ? `<button class="day-expand-btn" data-exp="${expId}">▶</button>` : '<span style="width:20px;display:inline-block;"></span>'}
-        </div>
-        <div class="day-sentences" id="${expId}" style="display:none;">${sentsHtml}</div>
-      </div>`);
+      htmlParts.push(`
+      <span class="day-item-group">
+        <label class="day-item ${wi.done ? 'done' : ''}" data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
+          <input type="checkbox" ${wi.done ? 'checked' : ''} data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
+        </label>
+        <span class="day-word-link" onclick="jumpToWord('${esc(wi.word)}')">${esc(wi.word)}</span>
+      </span>`);
     });
 
     // 成語（不變）
@@ -981,15 +1031,22 @@ async function loadPlans() {
     await idbPut('plans', plan);
     loadPlans();
   });
-  // 展開/收合句子
-  el.querySelectorAll('.day-expand-btn').forEach(btn => {
-    btn.onclick = () => {
-      const el2 = document.getElementById(btn.dataset.exp);
-      if (!el2) return;
-      const open = el2.style.display !== 'none';
-      el2.style.display = open ? 'none' : 'block';
-      btn.textContent = open ? '▶' : '▼';
+  // 監聽 Modal 裡的「完成學習」按鈕廣播事件
+  document.getElementById('plansList').querySelectorAll('.plan-card').forEach(card => {
+    const planId = card.dataset.plan;
+    const handleDone = async (e) => {
+      const { word } = e.detail;
+      const plans = await idbGetAll('plans');
+      const plan = plans.find(x => x.id === planId);
+      if (!plan) return;
+      let changed = false;
+      plan.entries.forEach(en => {
+        const wi = (en.words||[]).find(w => w.word === word);
+        if (wi) { wi.done = true; changed = true; }
+      });
+      if (changed) { await idbPut('plans', plan); loadPlans(); }
     };
+    card.addEventListener('plan-word-done', handleDone);
   });
 }
 
