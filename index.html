@@ -223,6 +223,21 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
 .day-item input { accent-color: var(--primary); cursor: pointer; }
 .day-item.done { opacity: .5; text-decoration: line-through; }
 .plan-ctrl { display: flex; gap: 8px; }
+.day-word-group { display: flex; flex-direction: column; gap: 2px; }
+.day-word-head { display: flex; align-items: center; gap: 4px; }
+.day-word-link {
+  font-weight: 600; font-size: 14px; cursor: pointer; color: var(--primary);
+  text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px;
+}
+.day-word-link:hover { color: var(--accent); }
+.day-expand-btn {
+  background: none; border: none; cursor: pointer; font-size: 10px;
+  color: var(--muted); padding: 0 2px; line-height: 1;
+}
+.day-sentences { padding: 4px 0 4px 32px; display: flex; flex-direction: column; gap: 3px; }
+.plan-sent-row { display: flex; flex-direction: column; gap: 1px; padding: 2px 0; }
+.plan-sent-en { font-size: 13px; color: var(--text); }
+.plan-sent-zh { font-size: 12px; color: var(--muted); padding-left: 8px; }
 .danger-btn {
   padding: 6px 12px; border-radius: 16px; border: 1px solid var(--danger);
   background: transparent; color: var(--danger); cursor: pointer; font-size: 13px;
@@ -790,6 +805,17 @@ function renderPlanTopicChips() {
 
 let planTopicFilter = '';
 
+/* 從計畫點擊單字 → 跳到英文分頁並帶入搜尋 */
+function jumpToWord(word) {
+  searchQ = word;
+  alphaFilter = '';
+  topicFilter = '';
+  switchTab('en');
+  const inp = document.getElementById('searchInput');
+  if (inp) { inp.value = word; }
+  renderWords(allWords);
+}
+
 function buildPlan(name, startDate, days, wordsPerDay, sentPerDay, idiomPerDay, topicFilter) {
   // 根據主題過濾單字池（單字至少要有一句在該主題）
   let wordPool = allWords.filter(w =>
@@ -852,23 +878,57 @@ async function loadPlans() {
     return;
   }
   el.innerHTML = plans.map(plan => {
-    const total = plan.entries.reduce((n, e) => n + (e.words||[]).length + (e.sentences||[]).length + (e.idioms||[]).length, 0);
-    const done = plan.entries.reduce((n, e) => n + (e.words||[]).filter(w=>w.done).length + (e.sentences||[]).filter(s=>s.done).length + (e.idioms||[]).filter(i=>i.done).length, 0);
+    const total = plan.entries.reduce((n, e) => n + (e.words||[]).length + (e.idioms||[]).length, 0);
+    const done = plan.entries.reduce((n, e) => n + (e.words||[]).filter(w=>w.done).length + (e.idioms||[]).filter(i=>i.done).length, 0);
     const pct = total ? Math.round(done / total * 100) : 0;
-    const rows = plan.entries.map(e => {
-      const items = [
-        ...(e.words||[]).map(w => ({ key: 'w|' + e.date + '|' + w.word, label: w.word, done: w.done, type: 'word' })),
-        ...(e.sentences||[]).map(s => ({ key: 's|' + e.date + '|' + s.word + '|' + s.sentence, label: '📝 '+s.sentence.slice(0,20)+(s.sentence.length>20?'…':''), done: s.done, type: 'sent' })),
-        ...(e.idioms||[]).map(i => ({ key: 'i|' + e.date + '|' + i.idiom, label: i.idiom, done: i.done, type: 'idiom' }))
-      ];
-      if (!items.length) return '';
-      return `<div class="day-row">
-        <span class="day-date">${e.date}</span>
-        <span class="day-items">${items.map(it => `
-          <label class="day-item ${it.done ? 'done' : ''}" data-key="${esc(it.key)}">
-            <input type="checkbox" ${it.done ? 'checked' : ''} data-key="${esc(it.key)}"> ${esc(it.label)}
-          </label>`).join('')}</span>
-      </div>`;
+    // 建立 {word, sentences:[...], done} 結構（以 word 為主體，綁定其句子）
+    const sentByWord = {};
+    (e.sentences||[]).forEach(s => {
+      if (!sentByWord[s.word]) sentByWord[s.word] = [];
+      sentByWord[s.word].push(s);
+    });
+    const wordItems = (e.words||[]).map(w => ({
+      word: w.word,
+      sentences: sentByWord[w.word] || [],
+      done: w.done
+    }));
+
+    const htmlParts = [];
+
+    // 單字群（可展開句子）
+    wordItems.forEach(wi => {
+      const expId = 'exp_' + plan.id + '_' + e.date + '_' + wi.word.replace(/\s+/g,'_');
+      const hasSent = wi.sentences.length > 0;
+      const sentsHtml = hasSent ? wi.sentences.map(s => `
+        <div class="plan-sent-row">
+          <span class="plan-sent-en">${esc(s.sentence)}</span>
+          <span class="plan-sent-zh">${esc(s.translation)}</span>
+        </div>`).join('') : '<div class="plan-sent-row"><span class="plan-sent-zh" style="color:var(--muted);font-size:12px;">（尚無句子）</span></div>';
+      htmlParts.push(`<div class="day-word-group">
+        <div class="day-word-head">
+          <label class="day-item ${wi.done ? 'done' : ''}" data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
+            <input type="checkbox" ${wi.done ? 'checked' : ''} data-type="w" data-date="${esc(e.date)}" data-word="${esc(wi.word)}">
+          </label>
+          <span class="day-word-link" onclick="jumpToWord('${esc(wi.word)}')">${esc(wi.word)}</span>
+          ${hasSent ? `<button class="day-expand-btn" data-exp="${expId}">▶</button>` : '<span style="width:20px;display:inline-block;"></span>'}
+        </div>
+        <div class="day-sentences" id="${expId}" style="display:none;">${sentsHtml}</div>
+      </div>`);
+    });
+
+    // 成語（不變）
+    (e.idioms||[]).forEach(i => {
+      htmlParts.push(`
+      <label class="day-item ${i.done ? 'done' : ''}" data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}">
+        <input type="checkbox" ${i.done ? 'checked' : ''} data-type="i" data-date="${esc(e.date)}" data-idiom="${esc(i.idiom)}"> ${esc(i.idiom)}
+      </label>`);
+    });
+
+    if (!htmlParts.length) return '';
+    return `<div class="day-row">
+      <span class="day-date">${e.date}</span>
+      <span class="day-items">${htmlParts.join('')}</span>
+    </div>`;
     }).join('');
     return `<div class="card plan-card" data-plan="${esc(plan.id)}">
       <div class="plan-head">
@@ -899,27 +959,37 @@ async function loadPlans() {
     await idbDelete('plans', b.dataset.del);
     loadPlans();
   });
-  el.querySelectorAll('.day-item input').forEach(cb => cb.onchange = async () => {
-    const key = cb.dataset.key; // w|date|word 或 i|date|idiom
-    const parts = key.split('|'); // s|date|word|sentence 或 w|date|word 或 i|date|idiom
-    const type = parts[0];
-    const date = parts[1];
+  // 單字勾選（自動完成所有句子，或各自獨立）
+  el.querySelectorAll('input[data-type="w"]').forEach(cb => cb.onchange = async () => {
+    const date = cb.dataset.date, word = cb.dataset.word;
     const planId = cb.closest('.plan-card').dataset.plan;
     const plans = await idbGetAll('plans');
     const plan = plans.find(x => x.id === planId);
     const en = plan.entries.find(e => e.date === date);
-    if (type === 'w') {
-      const item = parts.slice(2).join('|');
-      const it = (en.words||[]).find(w => w.word === item); if (it) it.done = cb.checked;
-    } else if (type === 'i') {
-      const item = parts.slice(2).join('|');
-      const it = (en.idioms||[]).find(i => i.idiom === item); if (it) it.done = cb.checked;
-    } else if (type === 's') {
-      const word = parts[2], sentence = parts.slice(3).join('|');
-      const it = (en.sentences||[]).find(s => s.word === word && s.sentence === sentence); if (it) it.done = cb.checked;
-    }
+    const it = (en.words||[]).find(w => w.word === word); if (it) it.done = cb.checked;
     await idbPut('plans', plan);
     loadPlans();
+  });
+  // 成語勾選
+  el.querySelectorAll('input[data-type="i"]').forEach(cb => cb.onchange = async () => {
+    const date = cb.dataset.date, idiom = cb.dataset.idiom;
+    const planId = cb.closest('.plan-card').dataset.plan;
+    const plans = await idbGetAll('plans');
+    const plan = plans.find(x => x.id === planId);
+    const en = plan.entries.find(e => e.date === date);
+    const it = (en.idioms||[]).find(i => i.idiom === idiom); if (it) it.done = cb.checked;
+    await idbPut('plans', plan);
+    loadPlans();
+  });
+  // 展開/收合句子
+  el.querySelectorAll('.day-expand-btn').forEach(btn => {
+    btn.onclick = () => {
+      const el2 = document.getElementById(btn.dataset.exp);
+      if (!el2) return;
+      const open = el2.style.display !== 'none';
+      el2.style.display = open ? 'none' : 'block';
+      btn.textContent = open ? '▶' : '▼';
+    };
   });
 }
 
