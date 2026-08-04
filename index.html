@@ -764,8 +764,14 @@ const PET_TYPES = {
 };
 const PET_STORE = 'pet';
 
-function defaultPet() {
-  return { type: 'chicken', name: '小雞', lv: 1, xp: 0, hunger: 100, fun: 100, fed: 0, played: 0, correct: 0, wrong: 0, createdAt: Date.now() };
+function fmtDay(d) {
+  const dt = new Date(d);
+  return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+}
+function todayKey() { return fmtDay(Date.now()); }
+
+function defaultPet(type) {
+  return { type, name: { chicken:'小雞', dog:'小狗', cat:'小貓' }[type], lv: 1, xp: 0, hunger: 100, fun: 100, fed: 0, played: 0, correct: 0, wrong: 0, lastFedDay: null, lastPlayedDay: null, createdAt: Date.now() };
 }
 
 function stageEmoji(p) {
@@ -780,21 +786,36 @@ function xpMultiplier(p) {
   return 1 + (Math.max(1, p.lv) - 1) * 0.1;
 }
 
-async function getPet() {
+async function getPet(type) {
   const db = await openDB();
   return new Promise((res, rej) => {
     const tx = db.transaction(PET_STORE, 'readonly');
-    const rq = tx.objectStore(PET_STORE).get('pet');
-    rq.onsuccess = () => res(rq.result || defaultPet());
+    const rq = tx.objectStore(PET_STORE).get('pet_' + type);
+    rq.onsuccess = () => res(rq.result || null);
     rq.onerror = () => rej(rq.error);
   });
 }
 
+async function getCurrentPetType() {
+  // 找出最近一次選過的寵物類型（任意一隻有資料即為當前顯示的）
+  for (const t of ['chicken','dog','cat']) {
+    const p = await getPet(t);
+    if (p) return t;
+  }
+  return null;
+}
+
 async function renderPet() {
-  const pet = await getPet();
+  // 找出目前有資料的寵物（優先顯示最近有資料的那一隻）
+  const types = ['chicken', 'dog', 'cat'];
+  let pet = null, petType = null;
+  for (const t of types) {
+    const p = await getPet(t);
+    if (p) { pet = p; petType = t; break; }
+  }
   const root = $('#petCard');
   // 首次：尚未選擇寵物
-  if (!pet.created) {
+  if (!pet) {
     root.innerHTML = `
       <div class="card">
         <div style="font-size:18px;font-weight:700;text-align:center;margin-bottom:4px;">🐣 選擇你的寵物夥伴！</div>
@@ -806,12 +827,10 @@ async function renderPet() {
         </div>
       </div>`;
     $('#petQuiz').innerHTML = '';
-    const names = { chicken: '小雞', dog: '小狗', cat: '小貓' };
     root.querySelectorAll('[data-pick]').forEach(btn => btn.onclick = async () => {
       const type = btn.dataset.pick;
-      const p = defaultPet();
-      p.type = type; p.name = names[type]; p.created = true;
-      await idbPut(PET_STORE, p, 'pet');
+      const p = defaultPet(type);
+      await idbPut(PET_STORE, p, 'pet_' + type);
       renderPet();
     });
     return;
@@ -831,26 +850,59 @@ async function renderPet() {
             🍗 飽食度 ${pet.hunger}%　🎾 心情 ${pet.fun}%　|　答對 ${pet.correct} / 答錯 ${pet.wrong}
           </div>
           <div class="pet-actions">
-            <button class="chip-btn" data-feed>🍗 餵食 +15</button>
-            <button class="chip-btn" data-play>🎾 玩 +15</button>
+            <button class="chip-btn" id="btnFeed">🍗 餵食</button>
+            <button class="chip-btn" id="btnPlay">🎾 玩</button>
             <button class="chip-btn" data-name>✏️ 改名</button>
-            <button class="chip-btn" data-retrain style="border-color:var(--danger);color:var(--danger);">🔄 重新選擇</button>
+            <button class="chip-btn" id="btnSwitch">🔄 切換寵物</button>
           </div>
           <div class="pet-msg" id="petMsg"></div>
         </div>
       </div>
     </div>`;
 
-  root.querySelector('[data-feed]').onclick = async () => {
-    const p = await getPet();
-    p.hunger = Math.min(100, p.hunger + 15); p.fed++;
-    await idbPut(PET_STORE, p, 'pet');
+  const today = todayKey();
+
+  // 更新按鈕狀態文字
+  const fedToday = pet.lastFedDay === today;
+  const playedToday = pet.lastPlayedDay === today;
+  const btnFeed = root.querySelector('#btnFeed');
+  const btnPlay = root.querySelector('#btnPlay');
+  btnFeed.textContent = fedToday ? '🍗 今日已餵食' : '🍗 餵食 +3 EXP';
+  btnPlay.textContent = playedToday ? '🎾 今日已玩耍' : '🎾 玩 +3 EXP';
+  btnFeed.disabled = fedToday;
+  btnPlay.disabled = playedToday;
+  if (fedToday) btnFeed.style.opacity = '0.45';
+  if (playedToday) btnPlay.style.opacity = '0.45';
+
+  btnFeed.onclick = async () => {
+    if (pet.lastFedDay === todayKey()) {
+      setPetMsg('🍗 今天已經餵過了，明天 08:00 再來！');
+      return;
+    }
+    const p = await getPet(pet.type);
+    p.hunger = Math.min(100, p.hunger + 15);
+    p.xp += 3; p.fed++; p.lastFedDay = todayKey();
+    const t = PET_TYPES[p.type];
+    while (p.xp >= p.lv * 10 && p.lv < t.maxLv) { p.xp -= p.lv * 10; p.lv++; }
+    if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 10);
+    await idbPut(PET_STORE, p, 'pet_' + p.type);
+    setPetMsg('🍗 吃飽了！+3 EXP，明天再來～');
     renderPet();
   };
-  root.querySelector('[data-play]').onclick = async () => {
-    const p = await getPet();
-    p.fun = Math.min(100, p.fun + 15); p.played++;
-    await idbPut(PET_STORE, p, 'pet');
+
+  btnPlay.onclick = async () => {
+    if (pet.lastPlayedDay === todayKey()) {
+      setPetMsg('🎾 今天已經玩過了，明天 08:00 再來！');
+      return;
+    }
+    const p = await getPet(pet.type);
+    p.fun = Math.min(100, p.fun + 15);
+    p.xp += 3; p.played++; p.lastPlayedDay = todayKey();
+    const t = PET_TYPES[p.type];
+    while (p.xp >= p.lv * 10 && p.lv < t.maxLv) { p.xp -= p.lv * 10; p.lv++; }
+    if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 10);
+    await idbPut(PET_STORE, p, 'pet_' + p.type);
+    setPetMsg('🎾 玩得開心！+3 EXP，明天再來～');
     renderPet();
   };
   root.querySelector('[data-name]').onclick = async () => {
@@ -858,16 +910,38 @@ async function renderPet() {
     const nn = prompt('幫寵物取新名字：', p.name);
     if (nn && nn.trim()) { p.name = nn.trim(); await idbPut(PET_STORE, p, 'pet'); renderPet(); }
   };
-  const retrainBtn = root.querySelector('[data-retrain]');
-  if (retrainBtn) retrainBtn.onclick = async () => {
-    if (!confirm('確定要重新選擇寵物嗎？目前的進度（等級/經驗/飽食/心情）將全部重置！')) return;
-    await idbDelete(PET_STORE, 'pet');
-    renderPet();
+  function setPetMsg(msg) {
+    const el = root.querySelector('#petMsg');
+    if (el) { el.textContent = msg; setTimeout(() => { if (el) el.textContent = ''; }, 3000); }
+  }
+
+  root.querySelector('#btnSwitch').onclick = () => {
+    // 切換：顯示選擇畫面，但不改任何已存的資料
+    root.innerHTML = `
+      <div class="card">
+        <div style="font-size:18px;font-weight:700;text-align:center;margin-bottom:4px;">🔄 切換寵物</div>
+        <div style="font-size:13px;color:var(--muted);text-align:center;margin-bottom:8px;">進度各自獨立保存，隨時可以切換～</div>
+        <div class="pet-choose">
+          <button class="pet-choice-btn" data-pick="chicken"><span class="emoji">🐔</span>電子雞</button>
+          <button class="pet-choice-btn" data-pick="dog"><span class="emoji">🐶</span>電子狗</button>
+          <button class="pet-choice-btn" data-pick="cat"><span class="emoji">🐱</span>電子貓</button>
+        </div>
+      </div>`;
+    root.querySelectorAll('[data-pick]').forEach(btn => btn.onclick = async () => {
+      const type = btn.dataset.pick;
+      const p = await getPet(type);
+      if (!p) {
+        const np = defaultPet(type);
+        await idbPut(PET_STORE, np, 'pet_' + type);
+      }
+      renderPet();
+    });
   };
-  renderQuizPanel();
+  renderQuizPanel(pet, petType);
 }
 
-function renderQuizPanel() {
+function renderQuizPanel(pet, petType) {
+  _quizPetType = petType || (pet ? pet.type : null);
   $('#petQuiz').innerHTML = `
     <div class="card">
       <div style="font-size:16px;font-weight:700;margin-bottom:10px;">❓ 四選一答題</div>
@@ -886,7 +960,12 @@ function renderQuizPanel() {
       </div>
       <div id="quizArea"></div>
     </div>`;
-  $('#btnStartQuiz').onclick = startQuiz;
+  $('#btnStartQuiz').onclick = () => {
+    if (!_quizPetType) return;
+    const qs = buildQuiz({ words: allWords, idioms: allIdioms });
+    if (!qs.length) { $('#quizArea').innerHTML = '<div class="empty">題庫不足（至少需要 4 個單字/句子/成語才能出四選一）</div>'; return; }
+    showQuiz(qs, _quizPetType);
+  };
 }
 
 function buildQuiz(seed) {
@@ -926,7 +1005,7 @@ function buildQuiz(seed) {
   return qs;
 }
 
-function showQuiz(qs) {
+function showQuiz(qs, petType) {
   let idx = 0, score = 0;
   const area = $('#quizArea');
   function renderQ() {
@@ -945,32 +1024,34 @@ function showQuiz(qs) {
         if (q.opts[+b.dataset.oi] === q.ans) b.classList.add('correct');
         else if (+b.dataset.oi === +btn.dataset.oi) b.classList.add('wrong');
       });
-      if (ok) { score++; await addXp(1); }
-      else { await addWrong(); }
+      if (ok) { score++; await addXp(1, petType); }
+      else { await addWrong(petType); }
       setTimeout(() => { idx++; renderQ(); }, 900);
     });
   }
   renderQ();
 }
 
-async function addXp(n) {
-  const p = await getPet();
+async function addXp(n, type) {
+  const p = await getPet(type);
+  if (!p) return;
   const gain = n * xpMultiplier(p);   // 加權：Lv2=1.1x、Lv3=1.2x...
   p.xp += gain; p.correct++;
   const t = PET_TYPES[p.type];
   while (p.xp >= p.lv * 10 && p.lv < t.maxLv) { p.xp -= p.lv * 10; p.lv++; }
   if (p.lv >= t.maxLv) p.xp = Math.min(p.xp, p.lv * 10);
-  await idbPut(PET_STORE, p, 'pet');
+  await idbPut(PET_STORE, p, 'pet_' + p.type);
 }
 
-async function addWrong() {
-  const p = await getPet();
+async function addWrong(type) {
+  const p = await getPet(type);
+  if (!p) return;
   p.wrong++;
-  await idbPut(PET_STORE, p, 'pet');
+  await idbPut(PET_STORE, p, 'pet_' + p.type);
 }
 
-async function showResult(score, total) {
-  const p = await getPet();
+async function showResult(score, total, petType) {
+  const p = await getPet(petType);
   const t = PET_TYPES[p.type];
   const perfect = score === total && total > 0;
   $('#quizArea').innerHTML = `
@@ -984,10 +1065,13 @@ async function showResult(score, total) {
   renderPet();
 }
 
+let _quizPetType = null;
+
 function startQuiz() {
   const qs = buildQuiz({ words: allWords, idioms: allIdioms });
   if (!qs.length) { $('#quizArea').innerHTML = '<div class="empty">題庫不足（至少需要 4 個單字/句子/成語才能出四選一）</div>'; return; }
-  showQuiz(qs);
+  if (!_quizPetType) return;
+  showQuiz(qs, _quizPetType);
 }
 
 /* ================= CSV 匯出 / 匯入 ================= */
