@@ -870,14 +870,10 @@ function showDetailModal(type, key, fromPlan) {
     html = `
       <div class="modal-word-head">
         <span class="word" style="font-size:24px;font-weight:700;">${esc(i.idiom)}</span>
-        <span class="meaning" style="font-size:16px;">${esc(i.meaning)}</span>
+        ${i.category ? `<span class="topic-badge">${esc(i.category)}</span>` : ''}
       </div>
-      ${i.example ? `<div class="modal-sentences">
-        <div class="sentence">
-          <div class="en">${esc(i.example)}${i.example_url ? `<a class="link-btn" href="${esc(i.example_url)}" target="_blank">🔊</a>` : ''}</div>
-          <div class="zh">${esc(i.translation)}</div>
-        </div>
-      </div>` : ''}`;
+      ${i.explanation ? `<div class="explanation">📖 ${esc(i.explanation)}</div>` : ''}
+      ${i.example ? `<div class="example">${esc(i.example)}</div>` : ''}`;
   }
 
   if (fromPlan) {
