@@ -1,0 +1,28 @@
+=== WORD CHECK ===
+environment -> DUPLICATE
+celebrate -> DUPLICATE
+invention -> OK
+generous -> DUPLICATE
+experience -> DUPLICATE
+foreign -> DUPLICATE
+language -> DUPLICATE
+geography -> DUPLICATE
+recycle -> DUPLICATE
+brave -> DUPLICATE
+dinosaur -> DUPLICATE
+library -> DUPLICATE
+=== IDIOM CHECK ===
+有志竟成 -> DUPLICATE
+亡羊補牢 -> DUPLICATE
+畫蛇添足 -> DUPLICATE
+半途而廢 -> DUPLICATE
+滴水穿石 -> DUPLICATE
+聚精會神 -> DUPLICATE
+按部就班 -> DUPLICATE
+舉一反三 -> DUPLICATE
+融會貫通 -> DUPLICATE
+刮目相看 -> DUPLICATE
+如魚得水 -> OK
+百折不撓 -> DUPLICATE
+懸樑刺股 -> DUPLICATE
+鐵杵磨針 -> DUPLICATE

@@ -1,5 +1,131 @@
 [
   {
+    "id": 2231,
+    "word": "unusual",
+    "pos": "形容詞",
+    "meaning": "不尋常的；罕見的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=unusual&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "It is unusual to see snow in Taiwan in summer.",
+        "translation": "在台灣夏天看到雪很不尋常。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=It%20is%20unusual%20to%20see%20snow%20in%20Taiwan%20in%20summer.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2230,
+    "word": "mystery",
+    "pos": "名詞",
+    "meaning": "謎；神秘的事",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=mystery&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The missing cat is a mystery to the whole family.",
+        "translation": "那隻失蹤的貓對全家人來說是個謎。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20missing%20cat%20is%20a%20mystery%20to%20the%20whole%20family.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2229,
+    "word": "astronaut",
+    "pos": "名詞",
+    "meaning": "太空人",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=astronaut&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The astronaut travels to space in a rocket.",
+        "translation": "太空人搭乘火箭前往太空。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20astronaut%20travels%20to%20space%20in%20a%20rocket.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2228,
+    "word": "electricity",
+    "pos": "名詞",
+    "meaning": "電；電力",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=electricity&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Remember to turn off the lights to save electricity.",
+        "translation": "記得關燈以節省電力。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Remember%20to%20turn%20off%20the%20lights%20to%20save%20electricity.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2227,
+    "word": "plastic",
+    "pos": "名詞",
+    "meaning": "塑膠",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=plastic&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Please put the plastic bottles in the recycling bin.",
+        "translation": "請把塑膠瓶放進回收桶裡。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20put%20the%20plastic%20bottles%20in%20the%20recycling%20bin.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2226,
+    "word": "preserve",
+    "pos": "動詞",
+    "meaning": "保護；保存",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=preserve&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We should preserve clean water for the future.",
+        "translation": "我們應該為未來保護乾淨的水資源。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20should%20preserve%20clean%20water%20for%20the%20future.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2225,
+    "word": "community",
+    "pos": "名詞",
+    "meaning": "社區；社群",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=community&op=translate",
+    "created_at": "2026-08-05",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Our community has a big park for everyone to enjoy.",
+        "translation": "我們社區有一個大公園讓大家享用。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Our%20community%20has%20a%20big%20park%20for%20everyone%20to%20enjoy.&op=translate",
+        "created_at": "2026-08-05",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 108,
     "word": "volunteer",
     "pos": "名詞",
