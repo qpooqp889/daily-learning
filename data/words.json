@@ -1,5 +1,131 @@
 [
   {
+    "id": 2238,
+    "word": "compass",
+    "pos": "n.",
+    "meaning": "指南針；羅盤",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=compass&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "A compass helps us find our way in the forest.",
+        "translation": "指南針幫助我們在森林裡找到方向。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=A%20compass%20helps%20us%20find%20our%20way%20in%20the%20forest.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2237,
+    "word": "harvest",
+    "pos": "n./v.",
+    "meaning": "收穫；收割",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=harvest&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Farmers harvest the rice in autumn.",
+        "translation": "農夫在秋天收割稻米。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Farmers%20harvest%20the%20rice%20in%20autumn.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2236,
+    "word": "voyage",
+    "pos": "n.",
+    "meaning": "航行；航海",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=voyage&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The ship began its long voyage across the sea.",
+        "translation": "那艘船開始了橫越海洋的漫長航行。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20ship%20began%20its%20long%20voyage%20across%20the%20sea.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2235,
+    "word": "finally",
+    "pos": "adv.",
+    "meaning": "最後；終於",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=finally&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We finally finished our homework.",
+        "translation": "我們終於完成了功課。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20finally%20finished%20our%20homework.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2234,
+    "word": "breathe",
+    "pos": "v.",
+    "meaning": "呼吸",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=breathe&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Please breathe slowly and deeply.",
+        "translation": "請慢慢地深呼吸。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20breathe%20slowly%20and%20deeply.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "食物"
+      }
+    ]
+  },
+  {
+    "id": 2233,
+    "word": "kindness",
+    "pos": "n.",
+    "meaning": "善良；仁慈",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=kindness&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Her kindness made everyone feel welcome.",
+        "translation": "她的善良讓每個人都感到受歡迎。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Her%20kindness%20made%20everyone%20feel%20welcome.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "心情感受"
+      }
+    ]
+  },
+  {
+    "id": 2232,
+    "word": "rescue",
+    "pos": "v.",
+    "meaning": "拯救；營救",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=rescue&op=translate",
+    "created_at": "2026-08-06",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The firefighter helped rescue the cat from the tree.",
+        "translation": "消防員幫忙從樹上救下那隻貓。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20firefighter%20helped%20rescue%20the%20cat%20from%20the%20tree.&op=translate",
+        "created_at": "2026-08-06",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2231,
     "word": "unusual",
     "pos": "形容詞",

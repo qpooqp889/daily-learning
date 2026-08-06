@@ -1,74 +1,67 @@
 # -*- coding: utf-8 -*-
-"""Driver: run add.py CLI to insert today's (2026-08-05) learning content."""
-import subprocess, sys, os
+"""每日學習內容批次新增：呼叫 add.py 加入單字/句子/成語"""
+import subprocess, sys, json, urllib.parse, os
+sys.stdout.reconfigure(encoding='utf-8')
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-PY = sys.executable
-env = dict(os.environ, PYTHONIOENCODING='utf-8')
+ADD = os.path.join(BASE, 'add.py')
+
+def gurl(sentence):
+    # 空格用 %20、撇號用 %E2%80%99，其餘做 URL 編碼
+    s = sentence.replace(' ', '%20').replace("'", '%E2%80%99')
+    return "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text={}&op=translate".format(s)
+
+def cambridge(word):
+    return "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/{}".format(word)
 
 def run(args):
-    r = subprocess.run([PY, 'add.py'] + args, capture_output=True, text=True,
-                       encoding='utf-8', cwd=BASE, env=env)
-    return (r.stdout or '').strip() + ((' ERR:' + r.stderr.strip()) if r.stderr.strip() else '')
+    r = subprocess.run([sys.executable, ADD] + args, capture_output=True, text=True, encoding='utf-8')
+    out = (r.stdout or '').strip() or (r.stderr or '').strip()
+    print(out)
+    return r.returncode
 
-out = []
-
-# ---------- 1. Words ----------
+# ============ 今日內容 ============
 words = [
-    ('community', '名詞', '社區；社群'),
-    ('preserve', '動詞', '保護；保存'),
-    ('plastic', '名詞', '塑膠'),
-    ('electricity', '名詞', '電；電力'),
-    ('astronaut', '名詞', '太空人'),
-    ('mystery', '名詞', '謎；神秘的事'),
-    ('unusual', '形容詞', '不尋常的；罕見的'),
+    ("rescue", "v.", "拯救；營救"),
+    ("kindness", "n.", "善良；仁慈"),
+    ("breathe", "v.", "呼吸"),
+    ("finally", "adv.", "最後；終於"),
+    ("voyage", "n.", "航行；航海"),
+    ("harvest", "n./v.", "收穫；收割"),
+    ("compass", "n.", "指南針；羅盤"),
 ]
-for w, pos, mean in words:
-    camb = 'https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/{}'.format(w)
-    out.append('WORD {}: {}'.format(w, run(['word', w, '--pos', pos, '--meaning', mean, '--cambridge', camb])))
 
-# ---------- 2. Sentences ----------
 sentences = [
-    ('community', 'Our community has a big park for everyone to enjoy.',
-     '我們社區有一個大公園讓大家享用。'),
-    ('preserve', 'We should preserve clean water for the future.',
-     '我們應該為未來保護乾淨的水資源。'),
-    ('plastic', 'Please put the plastic bottles in the recycling bin.',
-     '請把塑膠瓶放進回收桶裡。'),
-    ('electricity', 'Remember to turn off the lights to save electricity.',
-     '記得關燈以節省電力。'),
-    ('astronaut', 'The astronaut travels to space in a rocket.',
-     '太空人搭乘火箭前往太空。'),
-    ('mystery', 'The missing cat is a mystery to the whole family.',
-     '那隻失蹤的貓對全家人來說是個謎。'),
-    ('unusual', 'It is unusual to see snow in Taiwan in summer.',
-     '在台灣夏天看到雪很不尋常。'),
+    ("rescue", "The firefighter helped rescue the cat from the tree.", "消防員幫忙從樹上救下那隻貓。"),
+    ("kindness", "Her kindness made everyone feel welcome.", "她的善良讓每個人都感到受歡迎。"),
+    ("breathe", "Please breathe slowly and deeply.", "請慢慢地深呼吸。"),
+    ("finally", "We finally finished our homework.", "我們終於完成了功課。"),
+    ("voyage", "The ship began its long voyage across the sea.", "那艘船開始了橫越海洋的漫長航行。"),
+    ("harvest", "Farmers harvest the rice in autumn.", "農夫在秋天收割稻米。"),
+    ("compass", "A compass helps us find our way in the forest.", "指南針幫助我們在森林裡找到方向。"),
 ]
-for w, en, zh in sentences:
-    enc = en.replace(' ', '%20')
-    gurl = 'https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text={}&op=translate'.format(enc)
-    out.append('SENT {}: {}'.format(w, run(['sentence', w, '--en', en, '--zh', zh, '--gtranslate', gurl])))
 
-# ---------- 3. Idioms ----------
 idioms = [
-    ('如魚得水', '好像魚得到水一樣，比喻得到跟自己很投合的人或很適合的環境。',
-     '小明轉到新的籃球隊後，就像如魚得水，打得越來越出色。'),
-    ('有志者事竟成', '只要有堅定的決心與毅力，事情終究會成功。',
-     '姊姊每天努力練習鋼琴，果然有志者事竟成，贏得了比賽冠軍。'),
-    ('九牛二虎之力', '形容花費很大的力氣。',
-     '弟弟費了九牛二虎之力，才把沉重的書包搬上樓。'),
-    ('大顯身手', '充分展現自己的本領與才華。',
-     '運動會上，選手們個個大顯身手，贏得觀眾熱烈的掌聲。'),
-    ('耳目一新', '形容所見所聞都令人感到新鮮，與以往不同。',
-     '教室經過重新布置後，讓人覺得耳目一新。'),
-    ('念念不忘', '牢記在心，時時刻刻都想著。',
-     '那趟旅行看到的壯麗風景，讓我念念不忘。'),
-    ('相輔相成', '互相配合、互相幫助，使效果更好。',
-     '讀書和運動相輔相成，讓我們的學習更有活力。'),
+    ("一鳴驚人", "比喻平時沒有特殊表現，一有舉動就令人吃驚。", "他平常很少說話，這次演講比賽卻一鳴驚人，得了全校第一名。"),
+    ("春暖花開", "春天氣候溫暖，百花盛開，形容春天的美景。", "春暖花開的時候，我們全家到陽明山賞花。"),
+    ("苦口婆心", "形容勸說別人時非常懇切、有耐心。", "老師苦口婆心地勸我們要好好用功，不要浪費時間。"),
+    ("得心應手", "心裡怎麼想，手就能怎麼做，形容做事非常熟練。", "她練習鋼琴多年，彈奏這首曲子已經得心應手。"),
+    ("望梅止渴", "比喻用空想來安慰自己，無法解決實際問題。", "他沒錢買遊戲機，只好看著圖片望梅止渴。"),
+    ("聚沙成塔", "把細沙堆積成高塔，比喻積少成多。", "每天存十塊錢，聚沙成塔，一年後也是一筆不小的數目。"),
+    ("鶴立雞群", "比喻一個人的才能或儀表在眾人中特別突出。", "小明長得高又帥，站在人群裡就像鶴立雞群。"),
 ]
-for i, exp, ex in idioms:
-    out.append('IDIOM {}: {}'.format(i, run(['idiom', i, '--explain', exp, '--example', ex])))
 
-with open('add_result.txt', 'w', encoding='utf-8') as f:
-    f.write('\n'.join(out))
-print('ALL DONE')
+# ============ 執行 ============
+print("=== 單字 ===")
+for w, pos, meaning in words:
+    run(["word", w, "--pos", pos, "--meaning", meaning, "--cambridge", cambridge(w)])
+
+print("=== 句子 ===")
+for w, en, zh in sentences:
+    run(["sentence", w, "--en", en, "--zh", zh, "--gtranslate", gurl(en)])
+
+print("=== 成語 ===")
+for i, ex, eg in idioms:
+    run(["idiom", i, "--explain", ex, "--example", eg])
+
+print("=== 完成 ===")
