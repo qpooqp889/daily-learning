@@ -1,0 +1,152 @@
+新單字候選（不在資料庫中）：
+OK  invention
+OK  earthquake
+OK  glacier
+OK  pirate,
+courageous
+OK  curiousity
+OK  educate
+OK  publish
+OK  librarian
+OK  certificate,
+graduation
+OK  laboratory
+OK  microscope
+OK  experiment
+OK  gravity
+OK  satellite,
+orbit
+OK  rocket
+OK  spaceship
+OK  comet
+OK  eclipse
+OK  species
+OK  habitat
+OK  recycle,
+reduce
+OK  reuse
+OK  solar
+OK  battery
+OK  metal,
+plastic
+OK  leather
+OK  wool
+OK  silk
+OK  disease
+OK  muscle,
+balance
+OK  stretch
+OK  answer,
+explain
+OK  disagree
+OK  reason,
+purpose
+OK  decade
+OK  appointment,
+invitation
+OK  website,
+email
+OK  keyboard
+OK  drawing
+OK  museum,
+gallery
+OK  concert
+OK  curtain,
+piano
+OK  melody
+OK  rhythm
+OK  poet
+OK  writer,
+chapter
+OK  villain
+OK  fantasy
+OK  weather,
+storm
+OK  cloud
+OK  snow
+OK  degree,
+season
+OK  valley,
+river
+OK  jungle
+OK  cave
+OK  street,
+city
+OK  capital
+OK  firefighter,
+doctor
+OK  pilot
+OK  engineer,
+scientist
+OK  draw,
+champion
+OK  trophy
+OK  medal
+OK  runner
+OK  swimmer
+OK  jumper
+OK  shoot,
+goal
+OK  stadium
+OK  swimming
+OK  skating
+OK  skiing
+OK  climbing
+OK  hiking,
+camping
+OK  fishing
+OK  boating
+OK  sailing
+OK  surfing
+OK  diving
+OK  snorkeling
+OK  party,
+festival
+OK  luggage
+OK  backpack
+OK  suitcase,
+passport
+OK  boat,
+ferry
+OK  cruise
+OK  helmet
+OK  seatbelt
+OK  rule,
+sign
+OK  signal
+OK  crosswalk
+OK  first aid
+OK  bandage,
+hospital
+OK  clinic
+OK  pharmacy
+OK  pill
+OK  stomach,
+toothache
+OK  allergy
+
+新成語候選（不在資料庫中）：
+OK  一見如故
+OK  九牛一毛,
+人山人海
+OK  口若懸河
+OK  小心翼翼,
+川流不息
+OK  中流砥柱
+OK  五光十色
+OK  打草驚蛇,
+正大光明
+OK  汗流浹背,
+自相矛盾
+OK  刻舟求劍,
+杯弓蛇影
+OK  破釜沉舟,
+馬到成功
+OK  塞翁失馬,
+愚公移山
+OK  舉一反三,
+臨危不亂
+OK  獨一無二,
+聞雞起舞
+OK  紙上談兵,
+笨鳥先飛

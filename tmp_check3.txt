@@ -1,0 +1,21 @@
+recycle sentences: Remember to separate your trash and put plastic and paper in the recycling bin to protect our environment. || We can recycle paper and bottles to help the earth.
+count: 2
+has today sentence: True
+word solar in db: False
+word satellite in db: False
+word rocket in db: False
+word comet in db: False
+word microscope in db: False
+word telescope in db: True
+idiom 望塵莫及 in db: False
+idiom 完璧歸趙 in db: False
+idiom 負荊請罪 in db: False
+idiom 朝三暮四 in db: False
+idiom 鷸蚌相爭 in db: False
+idiom 螳螂捕蟬 in db: False
+idiom 天衣無縫 in db: False
+idiom 三顧茅廬 in db: False
+idiom 臥薪嘗膽 in db: False
+idiom 五十步笑百步 in db: False
+idiom 風和日麗 in db: False
+idiom 一鳴驚人 in db: True

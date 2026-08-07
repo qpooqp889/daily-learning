@@ -1,5 +1,131 @@
 [
   {
+    "id": 2245,
+    "word": "solar",
+    "pos": "adj.",
+    "meaning": "太陽的；太陽能的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=solar&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The solar panels on our roof give us clean energy.",
+        "translation": "我們屋頂上的太陽能板為我們提供乾淨的能源。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20solar%20panels%20on%20our%20roof%20give%20us%20clean%20energy.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2244,
+    "word": "generate",
+    "pos": "v.",
+    "meaning": "產生；發電",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=generate&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Solar panels use sunlight to generate electricity.",
+        "translation": "太陽能板利用陽光來發電。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Solar%20panels%20use%20sunlight%20to%20generate%20electricity.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2243,
+    "word": "spaceship",
+    "pos": "n.",
+    "meaning": "太空船",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=spaceship&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The spaceship flew to the moon and came back safely.",
+        "translation": "太空船飛到月球，然後安全地回來了。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20spaceship%20flew%20to%20the%20moon%20and%20came%20back%20safely.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2242,
+    "word": "laboratory",
+    "pos": "n.",
+    "meaning": "實驗室",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=laboratory&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The scientists work in a big laboratory every day.",
+        "translation": "科學家們每天都在一間很大的實驗室裡工作。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20scientists%20work%20in%20a%20big%20laboratory%20every%20day.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2241,
+    "word": "experiment",
+    "pos": "n.",
+    "meaning": "實驗",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=experiment&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We did a science experiment to see how plants grow.",
+        "translation": "我們做了一個科學實驗，觀察植物如何生長。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20did%20a%20science%20experiment%20to%20see%20how%20plants%20grow.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2240,
+    "word": "earthquake",
+    "pos": "n.",
+    "meaning": "地震",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=earthquake&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The earthquake shook the whole city, so everyone ran outside.",
+        "translation": "地震搖晃了整座城市，所以大家都跑到外面。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20earthquake%20shook%20the%20whole%20city,%20so%20everyone%20ran%20outside.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2239,
+    "word": "invention",
+    "pos": "n.",
+    "meaning": "發明",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=invention&op=translate",
+    "created_at": "2026-08-07",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The telephone was a great invention that changed the world.",
+        "translation": "電話是一項改變世界的偉大發明。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20telephone%20was%20a%20great%20invention%20that%20changed%20the%20world.&op=translate",
+        "created_at": "2026-08-07",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2238,
     "word": "compass",
     "pos": "n.",

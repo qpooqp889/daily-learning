@@ -1,0 +1,16 @@
+courage (2 句): It takes courage to admit when you have made a mistake. || She showed great courage when she gave a speech in front of the whole school.
+celebrate (2 句): We celebrate my grandma's birthday every year. || We will celebrate my birthday with a big cake and lots of friends.
+environment (2 句): We should protect our environment. || We should recycle more to protect the environment.
+science (2 句): Science class this week is about the water cycle, which explains how rain is formed and returns to the ocean. || I learned a lot of interesting things in my science class today.
+discover (2 句): Columbus is often credited with discovering the Americas in the late 15th century. || Scientists discover new things about the ocean every year.
+important (2 句): It is important to drink water. || It is important to drink enough water every day.
+dictionary (2 句): If you encounter an unfamiliar word, look it up in an English dictionary. || I looked up the new word in my dictionary.
+
+今日句子重複檢查：
+重複! :: She showed great courage when she gave a speech in front of 
+重複! :: We will celebrate my birthday with a big cake and lots of fr
+重複! :: We should recycle more to protect the environment.
+重複! :: I learned a lot of interesting things in my science class to
+重複! :: Scientists discover new things about the ocean every year.
+重複! :: It is important to drink enough water every day.
+重複! :: I looked up the new word in my dictionary.
