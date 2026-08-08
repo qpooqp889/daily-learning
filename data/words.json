@@ -1,5 +1,131 @@
 [
   {
+    "id": 2252,
+    "word": "backpack",
+    "pos": "n.",
+    "meaning": "背包",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=backpack&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "I put my books in my backpack.",
+        "translation": "我把書放進背包裡。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20put%20my%20books%20in%20my%20backpack%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2251,
+    "word": "drought",
+    "pos": "n.",
+    "meaning": "乾旱",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=drought&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The long drought made the river dry.",
+        "translation": "長期的乾旱讓河流乾涸了。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20long%20drought%20made%20the%20river%20dry%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2250,
+    "word": "nutrition",
+    "pos": "n.",
+    "meaning": "營養",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=nutrition&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Milk is full of nutrition.",
+        "translation": "牛奶富含營養。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Milk%20is%20full%20of%20nutrition%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2249,
+    "word": "oxygen",
+    "pos": "n.",
+    "meaning": "氧氣",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=oxygen&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We need oxygen to breathe.",
+        "translation": "我們需要氧氣來呼吸。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20need%20oxygen%20to%20breathe%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2248,
+    "word": "orbit",
+    "pos": "n./v.",
+    "meaning": "軌道；繞行",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=orbit&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The moon orbits around the Earth.",
+        "translation": "月球繞著地球運行。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20moon%20orbits%20around%20the%20Earth%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2247,
+    "word": "gravity",
+    "pos": "n.",
+    "meaning": "重力；地心引力",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=gravity&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Gravity keeps us on the ground.",
+        "translation": "重力讓我們留在地面上。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Gravity%20keeps%20us%20on%20the%20ground%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2246,
+    "word": "satellite",
+    "pos": "n.",
+    "meaning": "人造衛星",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=satellite&op=translate",
+    "created_at": "2026-08-08",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The satellite sends pictures of the Earth from space.",
+        "translation": "這顆衛星從太空傳送地球的圖片。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20satellite%20sends%20pictures%20of%20the%20Earth%20from%20space%2E&op=translate",
+        "created_at": "2026-08-08",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2245,
     "word": "solar",
     "pos": "adj.",
