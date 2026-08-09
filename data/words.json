@@ -1,5 +1,131 @@
 [
   {
+    "id": 2259,
+    "word": "palace",
+    "pos": "n.",
+    "meaning": "皇宮；宮殿",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=palace&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The king lives in a big palace.",
+        "translation": "國王住在宏偉的皇宮裡。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20king%20lives%20in%20a%20big%20palace.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2258,
+    "word": "parade",
+    "pos": "n.",
+    "meaning": "遊行",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=parade&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The parade was full of color and music.",
+        "translation": "那場遊行充滿了色彩與音樂。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20parade%20was%20full%20of%20color%20and%20music.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2257,
+    "word": "firework",
+    "pos": "n.",
+    "meaning": "煙火；煙花",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=firework&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We watched the fireworks on New Year's Eve.",
+        "translation": "我們在除夕夜觀賞煙火。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20watched%20the%20fireworks%20on%20New%20Year%E2%80%99s%20Eve.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2256,
+    "word": "resource",
+    "pos": "n.",
+    "meaning": "資源",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=resource&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Water is an important natural resource.",
+        "translation": "水是一種重要的自然資源。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Water%20is%20an%20important%20natural%20resource.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2255,
+    "word": "global",
+    "pos": "adj.",
+    "meaning": "全球的；全世界的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=global&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Global warming is a serious problem.",
+        "translation": "全球暖化是一個嚴重的問題。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Global%20warming%20is%20a%20serious%20problem.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2254,
+    "word": "reduce",
+    "pos": "v.",
+    "meaning": "減少；降低",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=reduce&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We should reduce the use of plastic bags.",
+        "translation": "我們應該減少使用塑膠袋。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20should%20reduce%20the%20use%20of%20plastic%20bags.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2253,
+    "word": "suddenly",
+    "pos": "adv.",
+    "meaning": "突然地；忽然",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=suddenly&op=translate",
+    "created_at": "2026-08-09",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Suddenly, it started to rain heavily.",
+        "translation": "突然間，天開始下起大雨。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Suddenly,%20it%20started%20to%20rain%20heavily.&op=translate",
+        "created_at": "2026-08-09",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2252,
     "word": "backpack",
     "pos": "n.",
