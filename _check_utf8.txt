@@ -1,0 +1,6 @@
+chinese ok: True
+'palace' | '皇宮；宮殿'
+'parade' | '遊行'
+'firework' | '煙火；煙花'
+'resource' | '資源'
+'global' | '全球的；全世界的'

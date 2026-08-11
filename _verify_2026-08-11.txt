@@ -1,0 +1,50 @@
+TOTAL words=2265 idioms=945
+bamboo | n. | 竹子 | 2026-08-11 | cam=
+    EN: The panda likes to eat fresh bamboo.
+    ZH: 貓熊喜歡吃新鮮的竹子。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20panda%20
+lighthouse | n. | 燈塔 | 2026-08-11 | cam=
+    EN: The lighthouse guides the ships at night.
+    ZH: 燈塔在夜裡為船隻指引方向。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20lighthou
+helmet | n. | 安全帽；頭盔 | 2026-08-11 | cam=
+    EN: You must wear a helmet when you ride a bike.
+    ZH: 騎腳踏車時必須戴安全帽。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=You%20must%20w
+apron | n. | 圍裙 | 2026-08-11 | cam=
+    EN: Mom wears an apron when she cooks.
+    ZH: 媽媽煮飯時穿圍裙。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Mom%20wears%20
+ladder | n. | 梯子 | 2026-08-11 | cam=
+    EN: My father used a ladder to fix the roof.
+    ZH: 我爸爸用梯子修理屋頂。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20father%20
+whistle | n. | 哨子；口哨 | 2026-08-11 | cam=
+    EN: The referee blew the whistle to stop the game.
+    ZH: 裁判吹哨子停止比賽。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20referee%
+scissors | n. | 剪刀 | 2026-08-11 | cam=
+    EN: Please cut the paper with the scissors.
+    ZH: 請用剪刀剪紙。
+    GT: https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20cut%2
+志同道合 | 勵志 | 2026-08-11
+    解釋: 形容彼此志向相同、理念相合。
+    造句: 我和小華志同道合，都想當醫生幫助病人。
+對症下藥 | 情境 | 2026-08-11
+    解釋: 比喻針對問題所在，採取有效的解決方法。
+    造句: 老師對症下藥，幫小明解決了數學上的困難。
+鷸蚌相爭 | 情境 | 2026-08-11
+    解釋: 比喻雙方相爭不下，反而讓第三者得到好處。
+    造句: 兩家店惡性競爭，結果鷸蚌相爭，漁翁得利。
+大器晚成 | 勵志 | 2026-08-11
+    解釋: 比喻能擔當大事的人，成就往往來得比較晚。
+    造句: 他小時候成績平平，如今事業有成，真是大器晚成。
+背水一戰 | 情境 | 2026-08-11
+    解釋: 比喻沒有退路，只能下定決心奮力一搏。
+    造句: 比賽進入最後一局，兩隊都背水一戰，全力以赴。
+負荊請罪 | 警示 | 2026-08-11
+    解釋: 主動向對方認錯賠罪，請求原諒。
+    造句: 他知道自己誤會了好朋友，立刻負荊請罪，請求原諒。
+三顧茅廬 | 為人 | 2026-08-11
+    解釋: 比喻誠心誠意一再邀請，就像劉備三次拜訪諸葛亮一樣。
+    造句: 為了請李老師來演講，校長三顧茅廬，終於感動了他。

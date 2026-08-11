@@ -1,0 +1,64 @@
+=== WORDS missing (safe to add) ===
+earthquake: EXISTS
+volcano: EXISTS
+rescue: EXISTS
+ambulance: EXISTS
+museum: EXISTS
+planet: EXISTS
+costume: ok
+celebrate: EXISTS
+tradition: EXISTS
+harvest: EXISTS
+surprised: ok
+delicious: EXISTS
+protect: EXISTS
+environment: EXISTS
+island: EXISTS
+temple: EXISTS
+polite: EXISTS
+stranger: EXISTS
+memory: EXISTS
+brave: EXISTS
+=== IDIOMS missing (safe to add) ===
+畫蛇添足: EXISTS
+井底之蛙: EXISTS
+對牛彈琴: EXISTS
+守株待兔: EXISTS
+亡羊補牢: EXISTS
+拔苗助長: EXISTS
+半途而廢: EXISTS
+一毛不拔: ok
+心想事成: ok
+一鳴驚人: EXISTS
+再接再厲: ok
+精益求精: EXISTS
+廢寢忘食: EXISTS
+聚沙成塔: EXISTS
+水滴石穿: EXISTS
+臥薪嘗膽: EXISTS
+負荊請罪: ok
+望梅止渴: EXISTS
+狐假虎威: EXISTS
+刻舟求劍: EXISTS
+=== LAST 10 WORDS ===
+youth | n. | 青少年；青春
+yummy | a. | 美味的；好吃的
+zebra | n. | 斑馬
+volcano | 名詞 | 火山
+teamwork | 名詞 | 團隊合作
+telescope | 名詞 | 望遠鏡
+cheerful | 形容詞 | 愉快的；開心的
+valuable | 形容詞 | 有價值的；寶貴的
+journey | 名詞 | 旅程；旅行
+explore | 動詞 | 探索；探險
+=== LAST 10 IDIOMS ===
+活龍活現 | 形容神情生動逼真，好像就在眼前一樣。
+韜光養晦 | 比喻隱藏才能，不使外露。
+怫然不悅 | 怫然：憂愁或憤怒的樣子；悅：愉快，高興。憤怒，很不愉快。
+荒誕不經 | 不經，不正常的。虛妄離奇，不合正理。
+幸災樂禍 | 幸：高興。指人缺乏善意，在別人遇到災禍時感到高興。
+霍然而愈 | 霍然：很快的樣子。很快病就好了。
+虎頭蛇尾 | ①比喻言行不一致，狡詐陰險。②比喻做事前緊後松，有始無終。
+謀道作舍 | 造房子請教路人。比喻人多嘴雜，意見紛紛，辦不成事。
+井然有序 | 井然：整齊不亂的樣子。序：次序。整整齊齊，次序分明，條理清楚。
+伏龍鳳雛 | 伏龍：（臥龍）諸葛孔明。鳳雛：龐士元。兩人都是漢末三國時期著名的謀略家，軍事家。後指隱而未現的有較高學問和能耐的人。
