@@ -1,3 +1,0 @@
-keys in recent words: ['created_at', 'gtranslate_url', 'id', 'meaning', 'pos', 'sentences', 'word']
-entries with cambridge_url: 0 / 2265
-entries with gtranslate_url: 2265 / 2265
