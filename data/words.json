@@ -1,5 +1,131 @@
 [
   {
+    "id": 2273,
+    "word": "excited",
+    "pos": "形容詞",
+    "meaning": "興奮的；激動的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=excited&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "I’m so excited about our school trip.",
+        "translation": "我對我們的校外教學感到非常興奮。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%E2%80%99m%20so%20excited%20about%20our%20school%20trip.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2272,
+    "word": "globe",
+    "pos": "名詞",
+    "meaning": "地球儀；地球",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=globe&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "She turned the globe and pointed at Taiwan.",
+        "translation": "她轉動地球儀，指著臺灣。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=She%20turned%20the%20globe%20and%20pointed%20at%20Taiwan.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2271,
+    "word": "shelter",
+    "pos": "名詞",
+    "meaning": "遮蔽處；避難所",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=shelter&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We found shelter under the big tree.",
+        "translation": "我們在大樹下找到了遮蔽的地方。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20found%20shelter%20under%20the%20big%20tree.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2270,
+    "word": "forecast",
+    "pos": "名詞",
+    "meaning": "預報；天氣預報",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=forecast&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The weather forecast says it will rain tomorrow.",
+        "translation": "天氣預報說明天會下雨。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20weather%20forecast%20says%20it%20will%20rain%20tomorrow.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2269,
+    "word": "rocket",
+    "pos": "名詞",
+    "meaning": "火箭",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=rocket&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The rocket flew high into the sky.",
+        "translation": "火箭飛向高高的天空。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20rocket%20flew%20high%20into%20the%20sky.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2268,
+    "word": "discovery",
+    "pos": "名詞",
+    "meaning": "發現；被發現的事物",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=discovery&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The discovery of the old map surprised everyone.",
+        "translation": "那張舊地圖的發現讓大家都很驚訝。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20discovery%20of%20the%20old%20map%20surprised%20everyone.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2267,
+    "word": "camping",
+    "pos": "名詞",
+    "meaning": "露營；露營活動",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=camping&op=translate",
+    "created_at": "2026-08-12",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We are going camping in the mountains this weekend.",
+        "translation": "我們這個週末要去山上露營。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20are%20going%20camping%20in%20the%20mountains%20this%20weekend.&op=translate",
+        "created_at": "2026-08-12",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2266,
     "word": "bamboo",
     "pos": "n.",
