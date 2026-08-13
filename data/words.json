@@ -1,5 +1,131 @@
 [
   {
+    "id": 2280,
+    "word": "tourist",
+    "pos": "n.",
+    "meaning": "觀光客；旅客",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=tourist&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The tourist took photos of the old temple.",
+        "translation": "那名觀光客拍了古老寺廟的照片。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20tourist%20took%20photos%20of%20the%20old%20temple.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2279,
+    "word": "technology",
+    "pos": "n.",
+    "meaning": "科技；工藝",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=technology&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Technology helps us learn in new ways.",
+        "translation": "科技幫助我們用新的方式學習。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Technology%20helps%20us%20learn%20in%20new%20ways.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2278,
+    "word": "stadium",
+    "pos": "n.",
+    "meaning": "體育場；體育館",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=stadium&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Thousands of fans cheered in the stadium.",
+        "translation": "成千上萬的球迷在體育場裡歡呼。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Thousands%20of%20fans%20cheered%20in%20the%20stadium.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2277,
+    "word": "rainforest",
+    "pos": "n.",
+    "meaning": "雨林",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=rainforest&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The rainforest is home to many rare animals.",
+        "translation": "雨林是許多稀有動物的家。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20rainforest%20is%20home%20to%20many%20rare%20animals.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "自然環境"
+      }
+    ]
+  },
+  {
+    "id": 2276,
+    "word": "recognize",
+    "pos": "v.",
+    "meaning": "認出；承認",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=recognize&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "I did not recognize my friend with a new haircut.",
+        "translation": "我沒認出剪了新髮型的那位朋友。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20did%20not%20recognize%20my%20friend%20with%20a%20new%20haircut.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2275,
+    "word": "donate",
+    "pos": "v.",
+    "meaning": "捐贈；捐助",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=donate&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "My family decided to donate clothes to the shelter.",
+        "translation": "我們家決定捐衣服給收容所。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20family%20decided%20to%20donate%20clothes%20to%20the%20shelter.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2274,
+    "word": "cooperate",
+    "pos": "v.",
+    "meaning": "合作；協力",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=cooperate&op=translate",
+    "created_at": "2026-08-13",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We should cooperate to finish the project.",
+        "translation": "我們應該合作完成這個專案。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20should%20cooperate%20to%20finish%20the%20project.&op=translate",
+        "created_at": "2026-08-13",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2273,
     "word": "excited",
     "pos": "形容詞",
