@@ -1,0 +1,20 @@
+{
+  "cambridge": {
+    "battery": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/battery",
+    "pilot": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/pilot",
+    "shell": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/shell",
+    "giraffe": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/giraffe",
+    "whisper": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/whisper",
+    "recipe": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/recipe",
+    "tornado": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/tornado"
+  },
+  "gtranslate": {
+    "battery": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20remote%20control%20stopped%20working%20because%20the%20battery%20was%20dead.&op=translate",
+    "pilot": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20pilot%20flew%20the%20plane%20safely%20through%20the%20storm.&op=translate",
+    "shell": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20collected%20a%20colorful%20shell%20on%20the%20beach.&op=translate",
+    "giraffe": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20giraffe%20stretched%20its%20long%20neck%20to%20eat%20the%20leaves.&op=translate",
+    "whisper": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20whisper%20so%20you%20don%27t%20wake%20the%20baby.&op=translate",
+    "recipe": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Mom%20followed%20a%20simple%20recipe%20to%20bake%20chocolate%20cookies.&op=translate",
+    "tornado": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20tornado%20destroyed%20several%20houses%20in%20the%20small%20town.&op=translate"
+  }
+}

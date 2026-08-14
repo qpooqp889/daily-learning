@@ -1,5 +1,138 @@
 [
   {
+    "id": 2287,
+    "word": "tornado",
+    "pos": "n.",
+    "meaning": "龍捲風",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=tornado&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The tornado destroyed several houses in the small town.",
+        "translation": "龍捲風摧毀了小鎮上幾間房子。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20tornado%20destroyed%20several%20houses%20in%20the%20small%20town.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/tornado"
+  },
+  {
+    "id": 2286,
+    "word": "recipe",
+    "pos": "n.",
+    "meaning": "食譜；配方",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=recipe&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Mom followed a simple recipe to bake chocolate cookies.",
+        "translation": "媽媽照著簡單的食譜烤巧克力餅乾。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Mom%20followed%20a%20simple%20recipe%20to%20bake%20chocolate%20cookies.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/recipe"
+  },
+  {
+    "id": 2285,
+    "word": "whisper",
+    "pos": "v.",
+    "meaning": "低聲說；耳語",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=whisper&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Please whisper so you don't wake the baby.",
+        "translation": "請小聲說話，這樣才不會吵醒寶寶。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20whisper%20so%20you%20don%E2%80%99t%20wake%20the%20baby.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/whisper"
+  },
+  {
+    "id": 2284,
+    "word": "giraffe",
+    "pos": "n.",
+    "meaning": "長頸鹿",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=giraffe&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The giraffe stretched its long neck to eat the leaves.",
+        "translation": "長頸鹿伸長牠的長脖子去吃樹葉。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20giraffe%20stretched%20its%20long%20neck%20to%20eat%20the%20leaves.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/giraffe"
+  },
+  {
+    "id": 2283,
+    "word": "shell",
+    "pos": "n.",
+    "meaning": "貝殼；外殼",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=shell&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We collected a colorful shell on the beach.",
+        "translation": "我們在海灘上收集了一個色彩繽紛的貝殼。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20collected%20a%20colorful%20shell%20on%20the%20beach.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/shell"
+  },
+  {
+    "id": 2282,
+    "word": "pilot",
+    "pos": "n.",
+    "meaning": "飛行員",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=pilot&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The pilot flew the plane safely through the storm.",
+        "translation": "飛行員安全地駕駛飛機穿過暴風雨。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20pilot%20flew%20the%20plane%20safely%20through%20the%20storm.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/pilot"
+  },
+  {
+    "id": 2281,
+    "word": "battery",
+    "pos": "n.",
+    "meaning": "電池",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=battery&op=translate",
+    "created_at": "2026-08-14",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The remote control stopped working because the battery was dead.",
+        "translation": "遙控器因為電池沒電而停止運作。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20remote%20control%20stopped%20working%20because%20the%20battery%20was%20dead.&op=translate",
+        "created_at": "2026-08-14",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/battery"
+  },
+  {
     "id": 2280,
     "word": "tourist",
     "pos": "n.",
