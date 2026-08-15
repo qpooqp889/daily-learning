@@ -1,5 +1,131 @@
 [
   {
+    "id": 2294,
+    "word": "garlic",
+    "pos": "n.",
+    "meaning": "大蒜",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=garlic&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Add a little garlic to the soup to make it taste better.",
+        "translation": "在湯裡加一點大蒜，讓它更好吃。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Add%20a%20little%20garlic%20to%20the%20soup%20to%20make%20it%20taste%20better.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2293,
+    "word": "cucumber",
+    "pos": "n.",
+    "meaning": "小黃瓜；黃瓜",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=cucumber&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "My mom made a salad with fresh cucumber and tomato.",
+        "translation": "我媽媽用新鮮的小黃瓜和番茄做了沙拉。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20mom%20made%20a%20salad%20with%20fresh%20cucumber%20and%20tomato.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2292,
+    "word": "submarine",
+    "pos": "n.",
+    "meaning": "潛水艇",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=submarine&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The submarine can travel deep under the ocean.",
+        "translation": "潛水艇可以在海洋深處航行。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20submarine%20can%20travel%20deep%20under%20the%20ocean.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2291,
+    "word": "glacier",
+    "pos": "n.",
+    "meaning": "冰川；冰河",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=glacier&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The glacier is melting slowly because the weather is getting warmer.",
+        "translation": "因為天氣越來越暖，冰川正在慢慢融化。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20glacier%20is%20melting%20slowly%20because%20the%20weather%20is%20getting%20warmer.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2290,
+    "word": "flame",
+    "pos": "n.",
+    "meaning": "火焰",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=flame&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Please keep your hands away from the flame of the candle.",
+        "translation": "請把你的手遠離蠟燭的火焰。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20keep%20your%20hands%20away%20from%20the%20flame%20of%20the%20candle.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2289,
+    "word": "feather",
+    "pos": "n.",
+    "meaning": "羽毛",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=feather&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The bird has a soft white feather on its wing.",
+        "translation": "這隻鳥的翅膀上有一根柔軟的白色羽毛。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20bird%20has%20a%20soft%20white%20feather%20on%20its%20wing.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "食物"
+      }
+    ]
+  },
+  {
+    "id": 2288,
+    "word": "parachute",
+    "pos": "n.",
+    "meaning": "降落傘",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=parachute&op=translate",
+    "created_at": "2026-08-15",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The pilot opened his parachute and landed safely in the field.",
+        "translation": "飛行員打開降落傘，安全降落在田野裡。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20pilot%20opened%20his%20parachute%20and%20landed%20safely%20in%20the%20field.&op=translate",
+        "created_at": "2026-08-15",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2287,
     "word": "tornado",
     "pos": "n.",
