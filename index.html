@@ -1376,7 +1376,7 @@ function buildQuiz(seed) {
       const others = shuffle(seed.words.filter(x => x.word !== w.word)).slice(0, 3);
       if (others.length < 3) continue;
       const opts = shuffle([w, ...others]).map(x => x.meaning || x.word);
-      qs.push({ q: w.word, opts, ans: w.meaning || w.word, tag: '單字' });
+      qs.push({ q: w.word, opts, ans: w.meaning || w.word, tag: '單字', speak: w.word, lang: 'en-US' });
     }
   } else if (type === 'sentence') {
     const sents = [];
@@ -1387,7 +1387,7 @@ function buildQuiz(seed) {
       const others = shuffle(sents.filter(x => x !== it)).slice(0, 3);
       if (others.length < 3) continue;
       const opts = shuffle([it, ...others]).map(x => x.s.sentence);
-      qs.push({ q: it.s.translation, opts, ans: it.s.sentence, tag: '句子' });
+      qs.push({ q: it.s.translation, opts, ans: it.s.sentence, tag: '句子', speak: it.s.sentence, lang: 'en-US' });
     }
   } else {
     const pool = shuffle(seed.idioms);
@@ -1396,7 +1396,7 @@ function buildQuiz(seed) {
       const others = shuffle(seed.idioms.filter(x => x.idiom !== idm.idiom)).slice(0, 3);
       if (others.length < 3) continue;
       const opts = shuffle([idm, ...others]).map(x => x.idiom);
-      qs.push({ q: idm.explanation, opts, ans: idm.idiom, tag: '成語' });
+      qs.push({ q: idm.explanation, opts, ans: idm.idiom, tag: '成語', speak: idm.idiom, lang: 'zh-TW' });
     }
   }
   return qs;
@@ -1408,10 +1408,11 @@ function showQuiz(qs, petType) {
   function renderQ() {
     if (idx >= qs.length) return showResult(score, qs.length, petType);
     const q = qs[idx];
+    const spk = q.speak ? `<button class="speak-btn sm" style="vertical-align:middle;margin-left:8px;" title="發音" onclick="speak('${esc(q.speak).replace(/&#39;/g, "\\'")}','${q.lang}')">🔊</button>` : '';
     area.innerHTML = `
       <div class="quiz-progress"><div style="width:${idx / qs.length * 100}%"></div></div>
       <div style="font-size:13px;color:var(--muted);">第 ${idx + 1} / ${qs.length} 題（${q.tag}）</div>
-      <div class="quiz-prompt">${esc(q.q)}</div>
+      <div class="quiz-prompt">${esc(q.q)}${spk}</div>
       ${q.opts.map((o, oi) => `<button class="option-btn" data-oi="${oi}">${esc(o)}</button>`).join('')}`;
     area.querySelectorAll('.option-btn').forEach(btn => btn.onclick = async () => {
       const chosen = q.opts[+btn.dataset.oi];
