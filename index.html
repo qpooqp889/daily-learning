@@ -122,20 +122,38 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
   background: var(--card); border: 1px solid var(--border); border-radius: 14px;
   padding: 16px 18px; margin-bottom: 14px; box-shadow: var(--shadow);
 }
-.word-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.word-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .word { font-size: 20px; font-weight: 700; color: var(--primary); }
 .pos { font-size: 13px; color: var(--muted); background: var(--chip); padding: 2px 8px; border-radius: 10px; }
 .meaning { font-size: 15px; }
-.link-btn {
-  display: inline-block; font-size: 12px; text-decoration: none; color: var(--primary);
-  border: 1px solid var(--primary); border-radius: 10px; padding: 2px 8px; margin-left: 6px;
-  transition: all .2s;
+/* 發音大按鈕（瀏覽器內建語音） */
+.speak-btn {
+  width: 46px; height: 46px; border-radius: 50%; border: none;
+  background: var(--primary); color: #fff; cursor: pointer;
+  font-size: 20px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(30, 111, 217, .28);
+  transition: transform .15s, background .2s;
 }
-.link-btn:hover { background: var(--primary); color: #fff; }
+.speak-btn:hover { background: var(--primary-dark); transform: scale(1.08); }
+.speak-btn:active { transform: scale(.94); }
+.speak-btn.sm { width: 34px; height: 34px; font-size: 15px; }
+[data-theme="dark"] .speak-btn { box-shadow: 0 2px 8px rgba(255, 61, 139, .35); }
+
+/* 外部發音/字典圖示連結 */
+.icon-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 9px;
+  border: 1px solid var(--border); background: var(--card);
+  text-decoration: none; font-size: 14px; color: var(--primary);
+  transition: all .2s; flex-shrink: 0;
+}
+.icon-link:hover { border-color: var(--primary); background: var(--chip); transform: scale(1.06); }
 .sentence { margin: 10px 0 6px 8px; padding-left: 12px; border-left: 3px solid var(--primary); }
-.sentence .en { font-size: 15px; }
+.sentence .en { font-size: 15px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .sentence .zh { font-size: 13px; color: var(--muted); margin-top: 2px; }
-.idiom-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.idiom-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .idiom { font-size: 20px; font-weight: 700; color: var(--primary); }
 .explanation { font-size: 14px; margin-top: 6px; line-height: 1.6; }
 .example { font-size: 14px; margin-top: 8px; color: var(--muted); line-height: 1.6; }
@@ -251,7 +269,7 @@ main { max-width: 900px; margin: 16px auto 24px; padding: 0 20px; }
   max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0,0,0,.25);
 }
-.modal-word-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+.modal-word-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; }
 .modal-sentences { border-top: 1px solid var(--border); padding-top: 14px; }
 .danger-btn {
   padding: 6px 12px; border-radius: 16px; border: 1px solid var(--danger);
@@ -506,6 +524,41 @@ const savedTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.dataset.theme = savedTheme;
 applyTheme(savedTheme);
 
+/* ================= 語音朗讀（內建 SpeechSynthesis） ================= */
+let _voices = [];
+function loadVoices() {
+  _voices = window.speechSynthesis ? speechSynthesis.getVoices() : [];
+}
+if ('speechSynthesis' in window) {
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+function pickVoice(lang) {
+  const tag = lang + '-'; // 例如 'zh-' 或 'en-'
+  let v = _voices.find(v => (v.lang || '').toLowerCase().startsWith(tag) && /zh|TW|Taiwan/i.test(v.name + ' ' + v.lang)) ||
+          _voices.find(v => (v.lang || '').toLowerCase().startsWith(tag));
+  return v || null;
+}
+function speak(text, lang) {
+  if (!('speechSynthesis' in window)) { alert('此瀏覽器不支援語音朗讀'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang;                       // 例如 en-US / zh-TW
+  u.rate = 0.85; u.pitch = 1;
+  const v = pickVoice(lang);
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+function speakWord(text) {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; u.rate = 0.8; u.pitch = 1;
+  const v = pickVoice('en');
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+
 /* ================= 收藏 CRUD ================= */
 function getFavorites() {
   try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch { return []; }
@@ -542,7 +595,7 @@ function renderFavorites() {
   const favWordCards = showWords ? words.map(w => {
     const sents = (w.sentences || []).map(s => `
       <div class="sentence">
-        <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
+        <div class="en">${highlight(s.sentence, q)} ${sentenceSpeakBtns(s)}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
         <div class="zh">${highlight(s.translation, q)}</div>
       </div>`).join('');
     return `<div class="card">
@@ -550,6 +603,7 @@ function renderFavorites() {
         <span class="word">${highlight(w.word, q)}</span>
         ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
         <span class="meaning">${highlight(w.meaning, q)}</span>
+        ${wordSpeakBtns(w)}
         <button class="mini-btn danger-btn" style="margin-left:auto;" onclick="doToggleFav('word',${w.id},this)">★ 已收藏</button>
       </div>
       ${sents}
@@ -558,11 +612,12 @@ function renderFavorites() {
 
   const favIdiomCards = showIdioms ? idioms.map(i => {
     const meaning = i.explanation ? `<div class="explanation">📖 ${highlight(i.explanation, q)}</div>` : '';
-    const examples = i.example ? `<div class="example">${highlight(i.example, q)}</div>` : '';
+    const examples = i.example ? `<div class="example">${highlight(i.example, q)} ${idiomSentenceSpeakBtn(i.example)}</div>` : '';
     return `<div class="card">
       <div class="idiom-head">
         <span class="idiom">${highlight(i.idiom, q)}</span>
         ${i.category ? `<span class="cat-badge">${esc(i.category)}</span>` : ''}
+        ${idiomSpeakBtns(i)}
         <button class="mini-btn danger-btn" style="margin-left:auto;" onclick="doToggleFav('idiom',${i.id},this)">★ 已收藏</button>
       </div>
       ${meaning}${examples}
@@ -671,6 +726,27 @@ function highlight(text, q) {
   return esc(s.slice(0, idx)) + '<span class="hit">' + esc(s.slice(idx, idx + q.length)) + '</span>' + esc(s.slice(idx + q.length));
 }
 
+/* ================= 發音/字典連結小工具 ================= */
+// 單字旁的發音按鈕列：內建語音 + 劍橋字典圖示
+function wordSpeakBtns(w) {
+  let h = `<button class="speak-btn" title="發音" onclick="speakWord('${esc(w.word).replace(/&#39;/g, "\\'")}')">🔊</button>`;
+  if (w.cambridge_url) h += `<a class="icon-link" href="${esc(w.cambridge_url)}" target="_blank" title="劍橋字典">🔍</a>`;
+  return h;
+}
+// 句子旁的發音按鈕列：內建語音（整句）+ Google 翻譯圖示
+function sentenceSpeakBtns(s) {
+  let h = `<button class="speak-btn sm" title="朗讀整句" onclick="speak('${esc(s.sentence).replace(/&#39;/g, "\\'")}','en-US')">🔊</button>`;
+  if (s.gtranslate_url) h += `<a class="icon-link" href="${esc(s.gtranslate_url)}" target="_blank" title="Google 翻譯">🌐</a>`;
+  return h;
+}
+// 成語旁：內建語音按鈕（中文）+ Google 翻譯圖示
+function idiomSpeakBtns(i) {
+  return `<button class="speak-btn" title="朗讀成語" onclick="speak('${esc(i.idiom).replace(/&#39;/g, "\\'")}','zh-TW')">🔊</button>`;
+}
+function idiomSentenceSpeakBtn(s) {
+  return `<button class="speak-btn sm" title="朗讀造句" onclick="speak('${esc(s).replace(/&#39;/g, "\\'")}','zh-TW')">🔊</button>`;
+}
+
 /* ================= 資料載入 ================= */
 async function loadAll() {
   try {
@@ -711,7 +787,7 @@ function renderWords(words) {
   wordsList.innerHTML = filtered.map(w => {
     const sents = (w.sentences || []).map(s => `
       <div class="sentence">
-        <div class="en">${highlight(s.sentence, q)} ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
+        <div class="en">${highlight(s.sentence, q)} ${sentenceSpeakBtns(s)}${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}</div>
         <div class="zh">${highlight(s.translation, q)}</div>
       </div>`).join('');
     const favd = isFav('word', w.id);
@@ -721,8 +797,8 @@ function renderWords(words) {
         <span class="word">${highlight(w.word, q)}</span>
         ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
         <span class="meaning">${highlight(w.meaning, q)}</span>
+        ${wordSpeakBtns(w)}
         <button class="mini-btn${favd ? ' danger-btn' : ''}" style="margin-left:auto;" onclick="doToggleFav('word',${w.id},this)">${favd ? '★ 已收藏' : '☆ 收藏'}</button>
-        ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
       </div>
       ${sents}
     </div>`;
@@ -744,10 +820,11 @@ function renderIdioms(idioms) {
       <div class="idiom-head">
         <span class="idiom">${highlight(i.idiom, q)}</span>
         ${i.category ? `<span class="cat-badge">${esc(i.category)}</span>` : ''}
+        ${idiomSpeakBtns(i)}
         <button class="mini-btn${favd ? ' danger-btn' : ''}" style="margin-left:auto;" onclick="doToggleFav('idiom',${i.id},this)">${favd ? '★ 已收藏' : '☆ 收藏'}</button>
       </div>
       <div class="explanation">📖 ${highlight(i.explanation, q)}</div>
-      ${i.example ? `<div class="example">${highlight(i.example, q)}</div>` : ''}
+      ${i.example ? `<div class="example">${highlight(i.example, q)} ${idiomSentenceSpeakBtn(i.example)}</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -851,7 +928,7 @@ function showDetailModal(type, key, fromPlan) {
       <div class="sentence">
         <div class="en">
           ${esc(s.sentence)}
-          ${s.gtranslate_url ? `<a class="link-btn" href="${esc(s.gtranslate_url)}" target="_blank">🔊 聽整句</a>` : ''}
+          ${sentenceSpeakBtns(s)}
           ${s.topic ? `<span class="topic-badge">${esc(s.topic)}</span>` : ''}
         </div>
         <div class="zh">${esc(s.translation)}</div>
@@ -861,7 +938,7 @@ function showDetailModal(type, key, fromPlan) {
         <span class="word" style="font-size:24px;font-weight:700;">${esc(w.word)}</span>
         ${w.pos ? `<span class="pos">${esc(w.pos)}</span>` : ''}
         <span class="meaning" style="font-size:16px;">${esc(w.meaning)}</span>
-        ${w.gtranslate_url ? `<a class="link-btn" href="${esc(w.gtranslate_url)}" target="_blank">🔊 發音</a>` : ''}
+        ${wordSpeakBtns(w)}
       </div>
       <div class="modal-sentences">${sents}</div>`;
   } else if (type === 'idiom') {
@@ -871,9 +948,10 @@ function showDetailModal(type, key, fromPlan) {
       <div class="modal-word-head">
         <span class="word" style="font-size:24px;font-weight:700;">${esc(i.idiom)}</span>
         ${i.category ? `<span class="topic-badge">${esc(i.category)}</span>` : ''}
+        ${idiomSpeakBtns(i)}
       </div>
       ${i.explanation ? `<div class="explanation">📖 ${esc(i.explanation)}</div>` : ''}
-      ${i.example ? `<div class="example">${esc(i.example)}</div>` : ''}`;
+      ${i.example ? `<div class="example">${esc(i.example)} ${idiomSentenceSpeakBtn(i.example)}</div>` : ''}`;
   }
 
   if (fromPlan) {
