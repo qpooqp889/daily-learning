@@ -1,5 +1,131 @@
 [
   {
+    "id": 2301,
+    "word": "jellyfish",
+    "pos": "n.",
+    "meaning": "水母",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=jellyfish&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "A jellyfish floats in the blue sea.",
+        "translation": "水母在藍色的大海裡漂浮。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=A%20jellyfish%20floats%20in%20the%20blue%20sea.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "動物"
+      }
+    ]
+  },
+  {
+    "id": 2300,
+    "word": "octopus",
+    "pos": "n.",
+    "meaning": "章魚",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=octopus&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "An octopus has eight arms.",
+        "translation": "章魚有八隻觸手。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=An%20octopus%20has%20eight%20arms.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2299,
+    "word": "penguin",
+    "pos": "n.",
+    "meaning": "企鵝",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=penguin&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The penguin walks slowly on the ice.",
+        "translation": "企鵝在冰上慢慢地走。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20penguin%20walks%20slowly%20on%20the%20ice.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2298,
+    "word": "destination",
+    "pos": "n.",
+    "meaning": "目的地",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=destination&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We finally reached our destination at noon.",
+        "translation": "我們終於在中午抵達目的地。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20finally%20reached%20our%20destination%20at%20noon.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2297,
+    "word": "souvenir",
+    "pos": "n.",
+    "meaning": "紀念品",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=souvenir&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "I bought a small souvenir for my sister.",
+        "translation": "我幫妹妹買了一個小紀念品。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20bought%20a%20small%20souvenir%20for%20my%20sister.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2296,
+    "word": "passport",
+    "pos": "n.",
+    "meaning": "護照",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=passport&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "You need a passport to travel to another country.",
+        "translation": "到別的國家旅行需要護照。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=You%20need%20a%20passport%20to%20travel%20to%20another%20country.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "健康運動"
+      }
+    ]
+  },
+  {
+    "id": 2295,
+    "word": "suitcase",
+    "pos": "n.",
+    "meaning": "行李箱",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=suitcase&op=translate",
+    "created_at": "2026-08-17",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Please put your clothes in the suitcase.",
+        "translation": "請把你的衣服放進行李箱。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Please%20put%20your%20clothes%20in%20the%20suitcase.&op=translate",
+        "created_at": "2026-08-17",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2294,
     "word": "garlic",
     "pos": "n.",
