@@ -1,5 +1,131 @@
 [
   {
+    "id": 2308,
+    "word": "campaign",
+    "pos": "n.",
+    "meaning": "活動；宣傳運動",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=campaign&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Our class joined the clean-up campaign in the park.",
+        "translation": "我們班參加了公園的清潔活動。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Our%20class%20joined%20the%20clean-up%20campaign%20in%20the%20park.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2307,
+    "word": "mural",
+    "pos": "n.",
+    "meaning": "壁畫",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=mural&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "There is a beautiful mural on the wall of our school.",
+        "translation": "我們學校的牆上有一幅美麗的壁畫。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=There%20is%20a%20beautiful%20mural%20on%20the%20wall%20of%20our%20school.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2306,
+    "word": "banner",
+    "pos": "n.",
+    "meaning": "橫幅；旗幟",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=banner&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The students made a big banner for the school festival.",
+        "translation": "學生們為學校園遊會做了一面大橫幅。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20students%20made%20a%20big%20banner%20for%20the%20school%20festival.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2305,
+    "word": "chorus",
+    "pos": "n.",
+    "meaning": "合唱團；（歌曲的）副歌",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=chorus&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The whole class sang the chorus together.",
+        "translation": "全班一起唱了副歌的部分。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20whole%20class%20sang%20the%20chorus%20together.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2304,
+    "word": "melody",
+    "pos": "n.",
+    "meaning": "旋律；曲調",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=melody&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "I like the melody of this piano piece.",
+        "translation": "我喜歡這首鋼琴曲的旋律。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=I%20like%20the%20melody%20of%20this%20piano%20piece.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2303,
+    "word": "rhythm",
+    "pos": "n.",
+    "meaning": "節奏；韻律",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=rhythm&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "She can dance to the rhythm of the song.",
+        "translation": "她能跟著這首歌的節奏跳舞。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=She%20can%20dance%20to%20the%20rhythm%20of%20the%20song.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2302,
+    "word": "concert",
+    "pos": "n.",
+    "meaning": "音樂會；演奏會",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=concert&op=translate",
+    "created_at": "2026-08-18",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We went to a music concert on Saturday night.",
+        "translation": "我們星期六晚上去聽了一場音樂會。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20went%20to%20a%20music%20concert%20on%20Saturday%20night.&op=translate",
+        "created_at": "2026-08-18",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
     "id": 2301,
     "word": "jellyfish",
     "pos": "n.",
