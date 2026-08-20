@@ -1,5 +1,149 @@
 [
   {
+    "id": 2324,
+    "word": "capsule",
+    "pos": "n.",
+    "meaning": "太空艙；膠囊",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=capsule&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The astronauts came back to Earth in a small capsule.",
+        "translation": "太空人搭乘一個小太空艙回到地球。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20astronauts%20came%20back%20to%20Earth%20in%20a%20small%20capsule.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2323,
+    "word": "astronomy",
+    "pos": "n.",
+    "meaning": "天文學",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=astronomy&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "My sister is interested in astronomy and stars.",
+        "translation": "我姊姊對天文學和星星很感興趣。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=My%20sister%20is%20interested%20in%20astronomy%20and%20stars.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2322,
+    "word": "spacecraft",
+    "pos": "n.",
+    "meaning": "太空船",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=spacecraft&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The spacecraft landed safely on the moon.",
+        "translation": "太空船安全降落在月球上。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20spacecraft%20landed%20safely%20on%20the%20moon.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2321,
+    "word": "asteroid",
+    "pos": "n.",
+    "meaning": "小行星",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=asteroid&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "An asteroid once hit the Earth millions of years ago.",
+        "translation": "數百萬年前，有一顆小行星撞擊過地球。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=An%20asteroid%20once%20hit%20the%20Earth%20millions%20of%20years%20ago.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2320,
+    "word": "constellation",
+    "pos": "n.",
+    "meaning": "星座",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=constellation&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The Big Dipper is my favorite constellation.",
+        "translation": "北斗七星是我最喜歡的星座。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20Big%20Dipper%20is%20my%20favorite%20constellation.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2319,
+    "word": "meteor",
+    "pos": "n.",
+    "meaning": "流星",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=meteor&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "We saw a bright meteor in the night sky.",
+        "translation": "我們在夜空中看到一顆明亮的流星。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=We%20saw%20a%20bright%20meteor%20in%20the%20night%20sky.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2318,
+    "word": "galaxy",
+    "pos": "n.",
+    "meaning": "銀河",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=galaxy&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Our galaxy has billions of stars.",
+        "translation": "我們的銀河系有數十億顆星星。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Our%20galaxy%20has%20billions%20of%20stars.&op=translate",
+        "created_at": "2026-08-20",
+        "topic": "其他"
+      }
+    ]
+  },
+  {
+    "id": 2317,
+    "word": "launch",
+    "pos": "v.",
+    "meaning": "發射；啟動",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=launch&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": []
+  },
+  {
+    "id": 2316,
+    "word": "comet",
+    "pos": "n.",
+    "meaning": "彗星",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=comet&op=translate",
+    "created_at": "2026-08-20",
+    "sentences": []
+  },
+  {
     "id": 2315,
     "word": "crosswalk",
     "pos": "n.",
