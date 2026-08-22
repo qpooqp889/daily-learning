@@ -1,5 +1,100 @@
 [
   {
+    "id": 2329,
+    "word": "demonstrate",
+    "pos": "v",
+    "meaning": "示範、證明",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=demonstrate&op=translate",
+    "created_at": "2026-08-22",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "The teacher asked Tom to demonstrate how to do the science experiment.",
+        "translation": "老師請湯姆示範如何做科學實驗。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20teacher%20asked%20Tom%20to%20demonstrate%20how%20to%20do%20the%20science%20experiment.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/demonstrate"
+  },
+  {
+    "id": 2328,
+    "word": "essential",
+    "pos": "adj",
+    "meaning": "必要的、必不可少的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=essential&op=translate",
+    "created_at": "2026-08-22",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Water is essential for all living things.",
+        "translation": "水對所有生物都是必不可少的。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Water%20is%20essential%20for%20all%20living%20things.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/essential"
+  },
+  {
+    "id": 2327,
+    "word": "accomplish",
+    "pos": "v",
+    "meaning": "達成、完成",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=accomplish&op=translate",
+    "created_at": "2026-08-22",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "If you study hard every day, you can accomplish your goal.",
+        "translation": "如果你每天努力學習，就能達成你的目標。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=If%20you%20study%20hard%20every%20day%2C%20you%20can%20accomplish%20your%20goal.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/accomplish"
+  },
+  {
+    "id": 2326,
+    "word": "ambitious",
+    "pos": "adj",
+    "meaning": "有雄心壯志的",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=ambitious&op=translate",
+    "created_at": "2026-08-22",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "She is an ambitious girl who dreams of becoming a scientist.",
+        "translation": "她是個有雄心壯志的女孩，夢想成為科學家。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=She%20is%20an%20ambitious%20girl%20who%20dreams%20of%20becoming%20a%20scientist.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/ambitious"
+  },
+  {
+    "id": 2325,
+    "word": "contribute",
+    "pos": "v",
+    "meaning": "貢獻、捐贈",
+    "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=contribute&op=translate",
+    "created_at": "2026-08-22",
+    "sentences": [
+      {
+        "id": 1,
+        "sentence": "Everyone can contribute ideas to make our class better.",
+        "translation": "每個人都可以貢獻想法，讓我們的班級變得更好。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Everyone%20can%20contribute%20ideas%20to%20make%20our%20class%20better.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
+      }
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/contribute"
+  },
+  {
     "id": 2324,
     "word": "capsule",
     "pos": "n.",
@@ -1450,8 +1545,17 @@
         "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Solar%20panels%20use%20sunlight%20to%20generate%20electricity.&op=translate",
         "created_at": "2026-08-07",
         "topic": "其他"
+      },
+      {
+        "id": 2,
+        "sentence": "The wind can generate electricity for our town.",
+        "translation": "風可以為我們的小鎮發電。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=The%20wind%20can%20generate%20electricity%20for%20our%20town.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
       }
-    ]
+    ],
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/generate"
   },
   {
     "id": 2243,
@@ -21677,9 +21781,18 @@
         "translation": "每天練習說英語真的幫助我改善了發音。",
         "topic": "心情感受",
         "created_at": "2026-08-04T02:08:28.889Z"
+      },
+      {
+        "id": 1,
+        "sentence": "Reading English storybooks can improve your vocabulary.",
+        "translation": "閱讀英文故事書可以增進你的字彙量。",
+        "gtranslate_url": "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text=Reading%20English%20storybooks%20can%20improve%20your%20vocabulary.&op=translate",
+        "created_at": "2026-08-22",
+        "topic": "其他"
       }
     ],
-    "phonetic": "[ɪmˈpruːv]"
+    "phonetic": "[ɪmˈpruːv]",
+    "cambridge_url": "https://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/improve"
   },
   {
     "id": 1053,

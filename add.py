@@ -61,7 +61,9 @@ def idiom_exists(idiom):
     return any(norm(i["idiom"]) == norm(idiom) for i in load(IDIOMS_FILE))
 
 def next_id(items):
-    return max([it.get("id", 0) for it in items], default=0) + 1
+    # 只取整數 id（部分舊資料的 id 是字串格式，需忽略避免型別錯誤）
+    ids = [it.get("id", 0) for it in items if isinstance(it.get("id"), int)]
+    return max(ids, default=0) + 1
 
 # ---------- 自動分類（新資料自動歸類，無法判斷時用預設） ----------
 WORD_TOPIC_KEYWORDS = {
@@ -334,9 +336,11 @@ def add_word(word, pos, meaning, cambridge_url):
     words = load(WORDS_FILE)
     # 發音連結：Google 翻譯（若未提供劍橋連結，自動生成）
     gurl = "https://translate.google.com/?hl=zh-TW&eotf=0&sl=en&tl=zh-TW&text={}&op=translate".format(quote(word))
+    cambridge = (cambridge_url or "").strip()
     words.insert(0, {
         "id": next_id(words), "word": word, "pos": pos or "", "meaning": meaning or "",
-        "gtranslate_url": gurl, "created_at": date.today().isoformat(), "sentences": [],
+        "cambridge_url": cambridge, "gtranslate_url": gurl,
+        "created_at": date.today().isoformat(), "sentences": [],
     })
     save(WORDS_FILE, words)
     return True, f"已儲存單字「{word}」"
@@ -345,8 +349,12 @@ def add_sentence(word, sentence, translation, gtranslate_url):
     words = load(WORDS_FILE)
     for w in words:
         if norm(w["word"]) == norm(word):
+            sentence = (sentence or "").strip()
+            # 查重：同一單字下相同句子跳過
+            if any(norm(s.get("sentence", "")) == norm(sentence) for s in w.get("sentences", [])):
+                return False, f"句子已存在（單字：{word}），跳過儲存"
             w.setdefault("sentences", []).append({
-                "id": next_id(w["sentences"]), "sentence": (sentence or "").strip(),
+                "id": next_id(w["sentences"]), "sentence": sentence,
                 "translation": (translation or "").strip(),
                 "gtranslate_url": gtranslate_url or "", "created_at": date.today().isoformat(),
                 "topic": guess_word_topic(word),
